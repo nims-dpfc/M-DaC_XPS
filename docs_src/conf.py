@@ -12,17 +12,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+
+#import sys
+#import os
+
+#sys.path.insert(0, os.path.abspath('exts'))
 import sphinx_rtd_theme
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'test'
-copyright = '2018, Materials Data Analysis Group, DPFC, NIMS'
-author = 'test'
+project = 'Materials_Data_Repository'
+author = 'Materials Data Analysis Group, DPFC, NIMS'
+copyright = '2018, ' + author
 
 # The short X.Y version
 version = ''
@@ -41,7 +43,9 @@ release = ''
 # ones.
 extensions = [
     'nbsphinx',
-    'sphinx.ext.autodoc',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'sphinxcontrib.youtube',
+#    'sphinx.ext.autodoc',
 ]
 
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
@@ -178,6 +182,5 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
 
 # -- Extension configuration -------------------------------------------------

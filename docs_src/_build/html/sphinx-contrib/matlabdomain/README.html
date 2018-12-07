@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sphinx-contrib/matlabdomain/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<p>This package contains the MATLAB Sphinx domain and autodoc extensions.</p>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Use <a class="reference external" href="http://www.pip-installer.org/en/latest/index.html">Pip</a>,
+<a class="reference external" href="http://pythonhosted.org/setuptools/">Setuptools Easy Install</a> or
+<a class="reference external" href="http://docs.python.org/2/install/">Python Distributions Utilities (Distutils)</a>.</p>
+<p>Pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>~$ pip install -U sphinxcontrib-matlabdomain
+</pre></div>
+</div>
+<p>Easy Install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>~$ easy_install -U sphinxcontrib-matlabdomain
+</pre></div>
+</div>
+<p>Distutils:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>~/downloads$ curl https://pypi.python.org/packages/source/s/sphinxcontrib-matlabdomain/sphinxcontrib-matlabdomain-0.X.tar.gz
+~/downloads$ tar -xf sphinxcontrib-matlabdomain-0.X.tar.gz
+~/downloads$ cd sphinxcontrib_matlabdomain-0.X
+~/downloads/sphinxcontrib_matlabdomain-0.X$ python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<p>This package is an extension to <a class="reference external" href="http://sphinx-doc.org">Sphinx</a>.</p>
+</div>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>In general usage is the same as for documenting Python code.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>In your Sphinx <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.matlab</span></code> to the list of
+extensions. To use auto-documentation features, also add <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>
+to the list of extensions.</p>
+<p>In order for the Sphinx MATLAB domain to auto-document MATLAB source code, set
+the config value of <code class="docutils literal notranslate"><span class="pre">matlab_src_dir</span></code> to the absolute path instead of adding
+them to <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>. Currently only one MATLAB path can be specified, but all
+subfolders in that tree will be searched.</p>
+<p>For convenience the <a class="reference external" href="http://sphinx-doc.org/config.html#confval-primary_domain">primary domain</a>
+can be set to <code class="docutils literal notranslate"><span class="pre">mat</span></code>.</p>
+</div>
+<div class="section" id="roles-and-directives">
+<h2>Roles and Directives<a class="headerlink" href="#roles-and-directives" title="Permalink to this headline">¶</a></h2>
+<p>Please see <a class="reference external" href="http://sphinx-doc.org/domains.html">Sphinx Domains</a> and
+<a class="reference external" href="http://sphinx-doc.org/ext/autodoc.html">sphinx.ext.autodoc</a> for
+documentation on the use of roles and directives. MATLAB code can be documented
+using the following roles and directives:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Directive</th>
+<th class="head">MATLAB object</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">module::</span> <span class="pre">foldername</span></code></td>
+<td><strong>folders, packages and namespaces</strong></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">curremtmodule::</span> <span class="pre">foldername</span></code></td>
+<td><ul class="first last simple">
+<li>set folder but do not link</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">automodule::</span> <span class="pre">foldername</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:mod:`foldername`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">function::</span> <span class="pre">funcname</span></code></td>
+<td><strong>function definition and signature</strong></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">autofunction::</span> <span class="pre">funcname()</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:func:`funcname`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">class::</span> <span class="pre">classname()</span></code></td>
+<td><strong>class definition and optional signature</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">autoclass::</span> <span class="pre">classname</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:class:`classname`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">method::</span> <span class="pre">methname()</span></code></td>
+<td><strong>method definition and signature</strong></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">automethod::</span> <span class="pre">methname</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:meth:`methname`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">staticmethod::</span> <span class="pre">statmethname()</span></code></td>
+<td><strong>static method definition and signature</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">automethod::</span> <span class="pre">statmethname</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:meth:`methname`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">attribute::</span> <span class="pre">attrname</span></code></td>
+<td><strong>property definition</strong></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">autoattribute::</span> <span class="pre">attrname</span></code></td>
+<td><ul class="first last simple">
+<li>auto-document</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:attr:`attrname`</span></code></td>
+<td><ul class="first last simple">
+<li>reference</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Several options are available for auto-directives.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">:members:</span></code> auto-document public members</li>
+<li><code class="docutils literal notranslate"><span class="pre">:show-inheritance:</span></code> list bases</li>
+<li><code class="docutils literal notranslate"><span class="pre">:undoc-members:</span></code> document members without docstrings</li>
+<li><code class="docutils literal notranslate"><span class="pre">:annotation:</span></code> specifies attribute annotation instead of default</li>
+</ul>
+<p>There are also several config values that can be set in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> that will
+affect auto-docementation.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">autoclass_content</span></code> can be set to <code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">both</span></code> or <code class="docutils literal notranslate"><span class="pre">init</span></code>, which
+determines which docstring is used for classes. The constructor docstring
+is used when this is set to <code class="docutils literal notranslate"><span class="pre">init</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">autodoc_member_order</span></code> can be set to <code class="docutils literal notranslate"><span class="pre">alphabetical</span></code>, <code class="docutils literal notranslate"><span class="pre">groupwise</span></code> or
+<code class="docutils literal notranslate"><span class="pre">bysource</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">autodoc_default_flags</span></code> can be set to a list of options to apply. Use
+the <code class="docutils literal notranslate"><span class="pre">no-flag</span></code> directive option to disable this config value once.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The module roles and directives create a psuedo namespace for MATLAB
+objects, similar to a package. They represent the path to the folder
+containing the MATLAB object. If no module is specified then Sphinx will
+assume that the object is a built-in.</p>
+</div>
+<p>Example: given the following MATLAB source in folder <code class="docutils literal notranslate"><span class="pre">test_data</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>classdef MyHandleClass &lt; handle &amp; my.super.Class
+    % a handle class
+    %
+    % :param x: a variable
+
+    %% some comments
+    properties
+        x % a property
+    end
+    methods
+        function h = MyHandleClass(x)
+            h.x = x
+        end
+        function x = get.x(obj)
+        % how is this displayed?
+            x = obj.x
+        end
+    end
+    methods (Static)
+        function w = my_static_function(z)
+        % A static function in :class:`MyHandleClass`.
+        %
+        % :param z: input z
+        % :returns: w
+
+            w = z
+        end
+    end
+end
+</pre></div>
+</div>
+<p>Use the following to document:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Test Data
+=========
+This is the test data module.
+
+.. automodule:: test_data
+
+:mod:`test_data` is a really cool module.
+
+My Handle Class
+---------------
+This is the handle class definition.
+
+.. autoclass:: MyHandleClass
+    :show-inheritance:
+    :members:
+</pre></div>
+</div>
+</div>
+<div class="section" id="online-demo">
+<h2>Online Demo<a class="headerlink" href="#online-demo" title="Permalink to this headline">¶</a></h2>
+<p>The test docs in the repository are online here:
+<a class="reference external" href="http://bwanamarko.alwaysdata.net/matlabdomain/">http://bwanamarko.alwaysdata.net/matlabdomain/</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sphinx style markup are used to document parameters, types, returns and
+exceptions. There must be a blank comment line before and after the
+parameter descriptions. Currently property docstrings are only collected if
+they are on the same line following the property definition. Getter and
+setter methods are documented like methods currently, but the dot is
+replaced by an underscore. Default values for properties are represented as
+unicode strings, therefore strings will be double quoted.</p>
+</div>
+</div>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://cantera.github.io/dev-docs/sphinx/html/compiling.html?highlight=matlabdomain#optional-programs">Cantera</a></li>
+<li><a class="reference external" href="http://cosmomvpa.org/download.html?highlight=matlabdomain#developers">CoSMo MVPA</a></li>
+</ul>
+<p><a class="reference external" href="https://bitbucket.org/bwanamarko/sphinxcontrib-matlabdomain/src/default/matlabdomain/CHANGES.rst">Changes</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

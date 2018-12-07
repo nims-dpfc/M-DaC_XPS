@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LibreOffice extension for Sphinx &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>LibreOffice extension for Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-contrib/libreoffice/doc/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="libreoffice-extension-for-sphinx">
+<h1>LibreOffice extension for Sphinx<a class="headerlink" href="#libreoffice-extension-for-sphinx" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Gerard Marull-Paretas &lt;<a class="reference external" href="mailto:gerardmarull&#37;&#52;&#48;gmail&#46;com">gerardmarull<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>This extensions allows to render any supported LibreOffice drawing format
+(e.g. odg, vsd…)</p>
+</div>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>First of all, make sure to have <a class="reference external" href="http://www.libreoffice.org/">LibreOffice</a> installed.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">LibreOffice 4.3 is known to <strong>NOT</strong> work. Use other versions instead.</p>
+</div>
+<p>You can install it from PyPI:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sphinxcontrib-libreoffice
+</pre></div>
+</div>
+<p>Alternatively, you can grab it from the <code class="docutils literal notranslate"><span class="pre">sphinx-contrib</span></code> repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ hg clone https://bitbucket.org/birkenfeld/sphinx-contrib/
+$ cd sphinx-contrib/libreoffice
+$ python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enabling-the-extension">
+<h3>Enabling the extension<a class="headerlink" href="#enabling-the-extension" title="Permalink to this headline">¶</a></h3>
+<p>Just add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.libreoffice</span></code> to the list of extensions in the
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.libreoffice&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quick-example">
+<h3>Quick example<a class="headerlink" href="#quick-example" title="Permalink to this headline">¶</a></h3>
+<p>A quick example:</p>
+<p>Code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">libreoffice</span><span class="p">::</span> <span class="n">test</span><span class="o">.</span><span class="n">odg</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+   <span class="p">:</span><span class="n">autocrop</span><span class="p">:</span>
+
+   <span class="n">The</span> <span class="n">optional</span> <span class="n">caption</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">autocrop</span></code></dt>
+<dd>Remove empty margins from the rendered drawings (image formats only)</dd>
+</dl>
+<p>All options from <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive can be used (e.g. scale, target…)</p>
+</div>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<p>Two optional configurations are added to <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>. They can be set in
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<dl class="docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">libreoffice_fromat</span></code> &lt;dict&gt;:</dt>
+<dd><p class="first">image format used for the different builders. <code class="docutils literal notranslate"><span class="pre">latex</span></code> and <code class="docutils literal notranslate"><span class="pre">html</span></code> fromats
+are supported.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">libreoffice_format</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">latex</span><span class="o">=</span><span class="s1">&#39;pdf&#39;</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">These are the actual defaults.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">libreoffice_binary</span></code> &lt;str&gt;:</dt>
+<dd>path to the LibreOffice binary (soffice). LibreOffice binary path will be
+automatically determined by the extension. Use only if you need to indicate a
+specific version or you have it installed in a custom path.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="changes">
+<h2>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="verison-0-2">
+<h3>Verison 0.2<a class="headerlink" href="#verison-0-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added Sphinx documentation</li>
+<li>Improved libreoffice_find()</li>
+<li>Other small fixes</li>
+</ul>
+</div>
+<div class="section" id="version-0-1">
+<h3>Version 0.1<a class="headerlink" href="#version-0-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Initial version</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

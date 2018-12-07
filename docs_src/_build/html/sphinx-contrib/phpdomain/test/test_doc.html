@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Acceptance tests for PHPdomain &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Acceptance tests for PHPdomain</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-contrib/phpdomain/test/test_doc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="acceptance-tests-for-phpdomain">
+<h1>Acceptance tests for PHPdomain<a class="headerlink" href="#acceptance-tests-for-phpdomain" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="globals">
+<h2>Globals<a class="headerlink" href="#globals" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="traits">
+<h2>Traits<a class="headerlink" href="#traits" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="more-globals-after-classes">
+<h2>More globals after classes<a class="headerlink" href="#more-globals-after-classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-case-global-symbols-with-no-namespaces">
+<h3>Test Case - Global symbols with no namespaces<a class="headerlink" href="#test-case-global-symbols-with-no-namespaces" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id1"><span class="problematic" id="id2">:php:global:`$global_var`</span></a></p>
+<p><a href="#id3"><span class="problematic" id="id4">:php:global:`$other_global_var`</span></a></p>
+<p><a href="#id5"><span class="problematic" id="id6">:php:const:`SOME_CONSTANT`</span></a></p>
+<p><a href="#id7"><span class="problematic" id="id8">:php:func:`in_array`</span></a></p>
+<p><a href="#id9"><span class="problematic" id="id10">:php:func:`strpos`</span></a></p>
+<p><a href="#id11"><span class="problematic" id="id12">:php:class:`DateTime`</span></a></p>
+<p><a href="#id13"><span class="problematic" id="id14">:php:func:`DateTime::setTime()`</span></a></p>
+<p><a href="#id15"><span class="problematic" id="id16">:php:func:`~DateTime::setDate()`</span></a></p>
+<p><a href="#id17"><span class="problematic" id="id18">:php:func:`DateTime::ATOM`</span></a></p>
+<p><a href="#id19"><span class="problematic" id="id20">:php:func:`DateTime::$testattr`</span></a></p>
+<p><a href="#id21"><span class="problematic" id="id22">:php:func:`OtherClass::update`</span></a></p>
+<p><a href="#id23"><span class="problematic" id="id24">:php:attr:`OtherClass::$nonIndentedAttribute`</span></a></p>
+<p><a href="#id25"><span class="problematic" id="id26">:php:const:`OtherClass::NO_INDENT`</span></a></p>
+<p><a href="#id27"><span class="problematic" id="id28">:php:func:`OtherClass::staticMethod`</span></a></p>
+<p><a href="#id29"><span class="problematic" id="id30">:php:exc:`InvalidArgumentException`</span></a></p>
+<p><a href="#id31"><span class="problematic" id="id32">:php:interface:`DateTimeInterface`</span></a></p>
+<p><a href="#id33"><span class="problematic" id="id34">:php:func:`DateTimeInterface::setTime()`</span></a></p>
+<p><a href="#id35"><span class="problematic" id="id36">:php:func:`~DateTimeInterface::setDate()`</span></a></p>
+<p><a href="#id37"><span class="problematic" id="id38">:php:func:`DateTimeInterface::ATOM`</span></a></p>
+<p><a href="#id39"><span class="problematic" id="id40">:php:func:`DateTimeInterface::$testattr`</span></a></p>
+<p><a href="#id41"><span class="problematic" id="id42">:php:func:`OtherInterface`</span></a></p>
+<p><a href="#id43"><span class="problematic" id="id44">:php:trait:`LogTrait`</span></a></p>
+<p><a href="#id45"><span class="problematic" id="id46">:php:func:`LogTrait::log()`</span></a></p>
+</div>
+</div>
+<div class="section" id="namespaced-elements">
+<h2>Namespaced elements<a class="headerlink" href="#namespaced-elements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-case-not-including-namespace">
+<h3>Test Case - not including namespace<a class="headerlink" href="#test-case-not-including-namespace" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id47"><span class="problematic" id="id48">:php:ns:`LibraryName`</span></a></p>
+<p><a href="#id49"><span class="problematic" id="id50">:php:func:`namespaced_function()`</span></a></p>
+<p><a href="#id51"><span class="problematic" id="id52">:php:const:`NS_CONST`</span></a></p>
+<p><a href="#id53"><span class="problematic" id="id54">:php:class:`LibraryClass`</span></a></p>
+<p><a href="#id55"><span class="problematic" id="id56">:php:class:`~LibraryName\\LibraryClass`</span></a></p>
+<p><a href="#id57"><span class="problematic" id="id58">:php:func:`LibraryClass::instanceMethod`</span></a></p>
+<p><a href="#id59"><span class="problematic" id="id60">:php:func:`LibraryClass::staticMethod()`</span></a></p>
+<p><a href="#id61"><span class="problematic" id="id62">:php:attr:`LibraryClass::$property`</span></a></p>
+<p><a href="#id63"><span class="problematic" id="id64">:php:const:`LibraryClass::TEST_CONST`</span></a></p>
+<p><a href="#id65"><span class="problematic" id="id66">:php:class:`NamespaceClass`</span></a></p>
+<p><a href="#id67"><span class="problematic" id="id68">:php:func:`NamespaceClass::firstMethod`</span></a></p>
+<p><a href="#id69"><span class="problematic" id="id70">:php:attr:`NamespaceClass::$property`</span></a></p>
+<p><a href="#id71"><span class="problematic" id="id72">:php:const:`NamespaceClass::NAMESPACE_CONST`</span></a></p>
+<p><a href="#id73"><span class="problematic" id="id74">:php:interface:`LibraryInterface`</span></a></p>
+<p><a href="#id75"><span class="problematic" id="id76">:php:interface:`~LibraryName\\LibraryInterface`</span></a></p>
+<p><a href="#id77"><span class="problematic" id="id78">:php:func:`LibraryInterface::instanceMethod`</span></a></p>
+<p><a href="#id79"><span class="problematic" id="id80">:php:exc:`NamespaceException`</span></a></p>
+<p><a href="#id81"><span class="problematic" id="id82">:php:trait:`TemplateTrait`</span></a></p>
+<p><a href="#id83"><span class="problematic" id="id84">:php:trait:`LibraryName\\TemplateTrait`</span></a></p>
+<p><a href="#id85"><span class="problematic" id="id86">:php:func:`LibraryName\\TemplateTrait::render()`</span></a></p>
+</div>
+<div class="section" id="test-case-global-access">
+<h3>Test Case - global access<a class="headerlink" href="#test-case-global-access" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id87"><span class="problematic" id="id88">:php:class:`DateTime`</span></a></p>
+<p><a href="#id89"><span class="problematic" id="id90">:php:func:`DateTime::setTime()`</span></a></p>
+<p><a href="#id91"><span class="problematic" id="id92">:php:global:`$global_var`</span></a></p>
+<p><a href="#id93"><span class="problematic" id="id94">:php:const:`SOME_CONSTANT`</span></a></p>
+<p><a href="#id95"><span class="problematic" id="id96">:php:attr:`LibraryName\\LibraryClass::$property`</span></a></p>
+<p><a href="#id97"><span class="problematic" id="id98">:php:const:`LibraryName\\LibraryClass::TEST_CONST`</span></a></p>
+<p><a href="#id99"><span class="problematic" id="id100">:php:const:`LibraryName\\NS_CONST`</span></a></p>
+<p><a href="#id101"><span class="problematic" id="id102">:php:interface:`DateTimeInterface`</span></a></p>
+<p><a href="#id103"><span class="problematic" id="id104">:php:func:`DateTimeInterface::setTime()`</span></a></p>
+</div>
+</div>
+<div class="section" id="nested-namespaces">
+<h2>Nested namespaces<a class="headerlink" href="#nested-namespaces" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-case-test-subpackage-links">
+<h3>Test Case - Test subpackage links<a class="headerlink" href="#test-case-test-subpackage-links" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id105"><span class="problematic" id="id106">:php:ns:`LibraryName\\SubPackage`</span></a></p>
+<p><a href="#id107"><span class="problematic" id="id108">:php:class:`SubpackageClass`</span></a></p>
+<p><a href="#id109"><span class="problematic" id="id110">:php:class:`LibraryName\\SubPackage\\SubpackageClass`</span></a></p>
+<p><a href="#id111"><span class="problematic" id="id112">:php:interface:`SubpackageInterface`</span></a></p>
+<p><a href="#id113"><span class="problematic" id="id114">:php:class:`LibraryName\\SubPackage\\SubpackageInterface`</span></a></p>
+<p><a href="#id115"><span class="problematic" id="id116">:php:exc:`LibraryName\\SubPackage\\NestedNamespaceException`</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

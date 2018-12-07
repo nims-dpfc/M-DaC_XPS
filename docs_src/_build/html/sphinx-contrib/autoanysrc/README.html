@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>autoanysrc &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>autoanysrc</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sphinx-contrib/autoanysrc/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="autoanysrc">
+<h1>autoanysrc<a class="headerlink" href="#autoanysrc" title="Permalink to this headline">¶</a></h1>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Currently in early development stage</p>
+</div>
+<p>Extension for gathering reST documentation from any files.
+This is a <a class="reference external" href="http://sphinx-doc.org/extdev/appapi.html?highlight=documenter#sphinx.application.Sphinx.add_autodocumenter">documenter</a> from ext.autodoc.</p>
+<p>In current state this extension will only insert reST docs from files to
+target documentation project without auto generation definitions
+and signatures.</p>
+<p>But it simple and clean to make documentation for API and store documentation
+strings in the source code.</p>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">autoanysrc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Add autoanysrc to extensions list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autoanysrc&#39;</span><span class="p">,</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Example of usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoanysrc</span><span class="p">::</span> <span class="n">blabla</span>
+    <span class="p">:</span><span class="n">src</span><span class="p">:</span> <span class="n">app</span><span class="o">/**/*.</span><span class="n">js</span>
+    <span class="p">:</span><span class="n">analyzer</span><span class="p">:</span> <span class="n">js</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">directive argument ‘blabla’ not used now, but it required by autodoc
+behaviour</p>
+</div>
+<p>Where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>src</cite> option is the pattern to list source files where docs are stored</li>
+<li><cite>analyzer</cite> option to determine witch analyzer must be used for
+processing this files</li>
+</ul>
+</div></blockquote>
+<p>Directive will iterate over <cite>app/**/*.js</cite> files and process
+it line by line.</p>
+</div>
+<div class="section" id="custom-analyzer">
+<h2>Custom analyzer<a class="headerlink" href="#custom-analyzer" title="Permalink to this headline">¶</a></h2>
+<p>autoanysrc allow define custom analyzers.</p>
+<p>Define custom analyzer (conf.py):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make conf.py importtable</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autoanysrc</span> <span class="k">import</span> <span class="n">analyzers</span>
+
+<span class="k">class</span> <span class="nc">CustomAnalyzer</span><span class="p">(</span><span class="n">analyzers</span><span class="o">.</span><span class="n">BaseAnalyzer</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Must process content line by line</span>
+
+<span class="sd">        :param content: processing file content</span>
+<span class="sd">        :returns: generator of pairs docs line and line number</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">srcline</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)):</span>
+            <span class="k">yield</span> <span class="s1">&#39;some parsed doc line from content&#39;</span><span class="p">,</span> <span class="n">lineno</span>
+
+
+<span class="c1"># put analyzer to the autonaysrc setting</span>
+<span class="n">autoanysrc_analyzers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;my-custom&#39;</span><span class="p">:</span> <span class="s1">&#39;conf.CustomAnalyzer&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And use it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoanysrc</span><span class="p">::</span> <span class="n">blabla</span>
+    <span class="p">:</span><span class="n">src</span><span class="p">:</span> <span class="o">../</span><span class="n">src</span><span class="o">/*.</span><span class="n">js</span>
+    <span class="p">:</span><span class="n">analyzer</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">custom</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="default-analyzers">
+<h2>Default analyzers<a class="headerlink" href="#default-analyzers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jsanalyzer">
+<h3>JSAnalyzer<a class="headerlink" href="#jsanalyzer" title="Permalink to this headline">¶</a></h3>
+<p>Search comments blocks starts by <cite>/*”“”</cite> and ends by <cite>*/</cite>
+(inspired by <a class="reference external" href="https://github.com/Nuulogic/sphinx-jsapidoc">Nuulogic/sphinx-jsapidoc</a>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoanysrc</span><span class="p">::</span> <span class="n">directives</span>
+    <span class="p">:</span><span class="n">src</span><span class="p">:</span> <span class="n">app</span><span class="o">/</span><span class="n">services</span><span class="o">.</span><span class="n">js</span>
+    <span class="p">:</span><span class="n">analyzer</span><span class="p">:</span> <span class="n">js</span>
+</pre></div>
+</div>
+<p>Where services.js:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Services</span>
+<span class="s2">````````</span>
+
+<span class="s2">The function :func:`someService` does a some function.</span>
+<span class="s2">*/</span>
+
+<span class="s2">function someService(href, callback, errback) {</span>
+<span class="s2">/*&quot;&quot;&quot;</span>
+<span class="o">..</span> <span class="n">function</span><span class="p">::</span> <span class="n">someService</span><span class="p">(</span><span class="n">href</span><span class="p">,</span> <span class="n">callback</span><span class="p">[,</span> <span class="n">errback</span><span class="p">])</span>
+
+    <span class="p">:</span><span class="n">param</span> <span class="n">string</span> <span class="n">href</span><span class="p">:</span> <span class="n">An</span> <span class="n">URI</span> <span class="n">to</span> <span class="n">the</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">resource</span><span class="o">.</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">callback</span><span class="p">:</span> <span class="n">Gets</span> <span class="n">called</span> <span class="k">with</span> <span class="n">the</span> <span class="nb">object</span><span class="o">.</span>
+    <span class="p">:</span><span class="n">throws</span> <span class="n">SomeError</span><span class="p">:</span> <span class="n">For</span> <span class="n">whatever</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">case</span><span class="o">.</span>
+    <span class="p">:</span><span class="n">returns</span><span class="p">:</span> <span class="n">Something</span><span class="o">.</span>
+<span class="o">*/</span>
+    <span class="k">return</span> <span class="s1">&#39;some result&#39;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>encoding option</li>
+<li>allow internal indent in comment block</li>
+<li>generate signatures like ext.autodoc…</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

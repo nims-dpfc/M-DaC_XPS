@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Acceptance Test &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Acceptance Test</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-contrib/rubydomain/test/test_doc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="acceptance-test">
+<h1>Acceptance Test<a class="headerlink" href="#acceptance-test" title="Permalink to this headline">¶</a></h1>
+<p>If all links are valid, test is done successfully.</p>
+<div class="section" id="global">
+<h2>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="single-module-singlemodule">
+<h2>Single Module ‘SingleModule’<a class="headerlink" href="#single-module-singlemodule" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-case-access-without-module-name-1">
+<h3>Test Case - Access Without Module Name(1)<a class="headerlink" href="#test-case-access-without-module-name-1" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id1"><span class="problematic" id="id2">:rb:global:`$global_variable`</span></a></p>
+<p><a href="#id3"><span class="problematic" id="id4">:rb:const:`ConstOutofModule`</span></a></p>
+<p><a href="#id5"><span class="problematic" id="id6">:rb:class:`ClassOutofModule`</span></a></p>
+<p><a href="#id7"><span class="problematic" id="id8">:rb:func:`function_out_of_module`</span></a></p>
+<p><a href="#id9"><span class="problematic" id="id10">:rb:func:`module_function`</span></a></p>
+<p><a href="#id11"><span class="problematic" id="id12">:rb:meth:`module_method`</span></a></p>
+<p><a href="#id13"><span class="problematic" id="id14">:rb:global:`$host`</span></a></p>
+<p><a href="#id15"><span class="problematic" id="id16">:rb:class:`ClassInModule`</span></a></p>
+<p><a href="#id17"><span class="problematic" id="id18">:rb:meth:`ClassInModule#empty?`</span></a></p>
+<p><a href="#id19"><span class="problematic" id="id20">:rb:attr:`ClassInModule#name`</span></a>, <a href="#id21"><span class="problematic" id="id22">:rb:attr:`ClassInModule#addr`</span></a>,
+<a href="#id23"><span class="problematic" id="id24">:rb:attr:`ClassInModule#phone`</span></a></p>
+</div>
+</div>
+<div class="section" id="nested-module-singlemodule-nestedmodule">
+<h2>Nested Module ‘SingleModule::NestedModule’<a class="headerlink" href="#nested-module-singlemodule-nestedmodule" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-case-access-without-module-name-2">
+<h3>Test Case - Access Without Module Name(2)<a class="headerlink" href="#test-case-access-without-module-name-2" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id25"><span class="problematic" id="id26">:rb:class:`InnderClass`</span></a></p>
+<p><a href="#id27"><span class="problematic" id="id28">:rb:attr:`InnderClass#port_number`</span></a></p>
+<p><a href="#id29"><span class="problematic" id="id30">:rb:meth:`InnderClass#format`</span></a></p>
+</div>
+<div class="section" id="test-case-global-reference">
+<h3>Test Case - Global Reference<a class="headerlink" href="#test-case-global-reference" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id31"><span class="problematic" id="id32">:rb:global:`$global_variable`</span></a></p>
+<p><a href="#id33"><span class="problematic" id="id34">:rb:const:`ConstOutofModule`</span></a></p>
+<p><a href="#id35"><span class="problematic" id="id36">:rb:class:`ClassOutofModule`</span></a></p>
+<p><a href="#id37"><span class="problematic" id="id38">:rb:func:`function_out_of_module`</span></a></p>
+</div>
+<div class="section" id="test-case-access-with-module-name-in-other-module">
+<h3>Test Case - Access With Module Name in Other Module<a class="headerlink" href="#test-case-access-with-module-name-in-other-module" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id39"><span class="problematic" id="id40">:rb:mod:`SingleModule`</span></a></p>
+<p><a href="#id41"><span class="problematic" id="id42">:rb:func:`SingleModule.module_function`</span></a></p>
+<p><a href="#id43"><span class="problematic" id="id44">:rb:meth:`SingleModule#module_method`</span></a></p>
+<p><a href="#id45"><span class="problematic" id="id46">:rb:global:`$host`</span></a></p>
+<p><a href="#id47"><span class="problematic" id="id48">:rb:class:`SingleModule::ClassInModule`</span></a></p>
+<p><a href="#id49"><span class="problematic" id="id50">:rb:meth:`SingleModule::ClassInModule#empty?`</span></a></p>
+<p><a href="#id51"><span class="problematic" id="id52">:rb:attr:`SingleModule::ClassInModule#name`</span></a></p>
+<p><a href="#id53"><span class="problematic" id="id54">:rb:attr:`SingleModule::ClassInModule#addr`</span></a></p>
+<p><a href="#id55"><span class="problematic" id="id56">:rb:attr:`SingleModule::ClassInModule#phone`</span></a></p>
+</div>
+<div class="section" id="test-case-access-with-module-name-to-objects-in-nested-module">
+<h3>Test Case - Access With Module Name to Objects in Nested Module<a class="headerlink" href="#test-case-access-with-module-name-to-objects-in-nested-module" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id57"><span class="problematic" id="id58">:rb:mod:`SingleModule::NestedModule`</span></a></p>
+<p><a href="#id59"><span class="problematic" id="id60">:rb:class:`SingleModule::NestedModule::InnderClass`</span></a></p>
+<p><a href="#id61"><span class="problematic" id="id62">:rb:attr:`SingleModule::NestedModule::InnderClass#port_number`</span></a></p>
+<p><a href="#id63"><span class="problematic" id="id64">:rb:meth:`SingleModule::NestedModule::InnderClass#format`</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>See also &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+
+  
+  <script src="../../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>See also</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../_sources/sphinx-contrib/argdoc/sphinxcontrib/argdoc/test/testbuild/sphinxcontrib.argdoc.test.cases.c8_exhaustive_postargdoc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<p>Exhaustively test all argument types</p>
+<p>The following argument attributes are tested in all combinations to ensure
+they are all properly parsed and rendered:</p>
+<blockquote>
+<div><ul class="simple">
+<li>arguments with short or long names</li>
+<li>positional arguments</li>
+<li>keyword arguments starting with ‘-‘, ‘–’, or both</li>
+<li>arguments taking 0, 1, 2, (0 or more), (1 or more), or (0 or 1) arguments</li>
+<li>arguments taking choices of 1 or more items</li>
+<li>arguments with no help text</li>
+<li>arguments with short help text, which tends to be displayed on one line
+by <code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></li>
+<li>arguments with long help text, which tends to appear on multiple lines</li>
+<li>arguments including or excluding unicode characters in their names</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>Here is a table, to show that we can have rich formatting in the module
+docstring, without <code class="xref py py-obj docutils literal notranslate"><span class="pre">sphinxcontrib.argdoc</span></code> inadvertently introducing problems:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Column 1</strong></td>
+<td><strong>Column 2</strong></td>
+</tr>
+<tr class="row-even"><td>Some item</td>
+<td>Some other item.</td>
+</tr>
+<tr class="row-odd"><td>Table row 2.</td>
+<td>Table row 2 column 2.</td>
+</tr>
+<tr class="row-even"><td>Another row.</td>
+<td>Row with a link to <a class="reference external" href="https://www.python.org">Python</a></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="see-also">
+<h1>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>A definition list</dt>
+<dd>The purpose of this <cite>See also</cite> section is just to show that we can use
+a number of reStructuredText structures in the module docstring, and
+still have the argument descriptions appended below.</dd>
+<dt>Here is another item</dt>
+<dd>To show that our test works</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="command-line-arguments">
+<h1>Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="positional-arguments">
+<h2>Positional arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">shortpos1</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">shortpos2</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">shortpos3</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">reallyreallyreallyreallyreallyreallyreallyreallylongpositionalargument1</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">reallyreallyreallyreallyreallyreallyreallyreallylongpositionalargument2</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">reallyreallyreallyreallyreallyreallyreallyreallylongpositionalargument3</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="optional-arguments">
+<h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></td>
+<td>show this help message and exit</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-a</span>&#160; <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-b</span>&#160; <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-c</span>&#160; <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double1</span>&#160; <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double2</span>&#160; <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double3</span>&#160; <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-d</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo1</span>&#160; <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-e</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo2</span>&#160; <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-f</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo3</span>&#160; <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double1</span>&#160; <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double2</span>&#160; <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double3</span>&#160; <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-g</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo1</span>&#160; <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-i</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo2</span>&#160; <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-j</span>&#160; <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo3</span>&#160; <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-k</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-l</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-m</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double4</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double5</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double6</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-n</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo4</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-o</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo5</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-p</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo6</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double4</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double5</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double6</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-q</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo4</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-r</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo5</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-s</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo6</span>&#160; <span class="pre">X</span> <span class="pre">X</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-t</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-u</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-v</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double7</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double8</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double9</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-w</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo7</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-x</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo8</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-y</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo9</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double7</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double8</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double9</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-z</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo7</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-A</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo8</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-B</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo9</span>&#160; <span class="pre">X</span> <span class="pre">[X</span> <span class="pre">...]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-C</span>&#160; <span class="pre">[X]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-D</span>&#160; <span class="pre">[X]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-E</span>&#160; <span class="pre">[X]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double10</span>&#160; <span class="pre">[X]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double11</span>&#160; <span class="pre">[X]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double12</span>&#160; <span class="pre">[X]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-F</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo10</span>&#160; <span class="pre">[X]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-G</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo11</span>&#160; <span class="pre">[X]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-H</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo12</span>&#160; <span class="pre">[X]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double10</span>&#160; <span class="pre">[X]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double11</span>&#160; <span class="pre">[X]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double12</span>&#160; <span class="pre">[X]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-I</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo10</span>&#160; <span class="pre">[X]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-J</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo11</span>&#160; <span class="pre">[X]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-K</span>&#160; <span class="pre">[X]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo12</span>&#160; <span class="pre">[X]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-L</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-M</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-N</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double13</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double14</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double15</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-O</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo13</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-P</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo14</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-Q</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo15</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double13</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double14</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double15</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-R</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo13</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-S</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo14</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-T</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo15</span>&#160; <span class="pre">[X</span> <span class="pre">[X</span> <span class="pre">...]]</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-U</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-V</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-W</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double16</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double17</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double18</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-X</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo16</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-Y</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo17</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-Z</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo18</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double16</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double17</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double18</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-1</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo16</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-2</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo17</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-3</span>&#160; <span class="pre">{one_choice}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo18</span>&#160; <span class="pre">{one_choice}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-4</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-5</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-6</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double19</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--double20</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--double21</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-7</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo19</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-8</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo20</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-9</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--combo21</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double19</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double20</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_double21</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-Â</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo19</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-Ã</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo20</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>one-line help text</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-Ä</span>&#160; <span class="pre">{one,two,three,four}</span></code>, <code class="docutils literal notranslate"><span class="pre">--reallyreallyreallyreallyreallyreallylong_combo21</span>&#160; <span class="pre">{one,two,three,four}</span></code></td>
+<td>this is very, very long help text which should span multiple lines and thus require special parsing. We’ll also add <cite>special</cite> <em>chars</em> (default: 513251324)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="script-contents">
+<h1>Script contents<a class="headerlink" href="#script-contents" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

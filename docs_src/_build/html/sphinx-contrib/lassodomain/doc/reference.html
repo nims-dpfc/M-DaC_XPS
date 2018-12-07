@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lasso Domain Reference &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#movie">Movie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lasso Domain Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-contrib/lassodomain/doc/reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="lasso-domain-reference">
+<h1>Lasso Domain Reference<a class="headerlink" href="#lasso-domain-reference" title="Permalink to this headline">¶</a></h1>
+<p>The Lasso domain (name <strong>ls</strong>) provides directives for each language element, as
+well as corresponding roles for cross-referencing. See the docs for <a class="reference external" href="http://www.sphinx-doc.org/en/stable/domains.html">Sphinx
+domains</a> for more details on syntax.</p>
+<div class="section" id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h2>
+<p>The following directives act as containers for Lasso method descriptions.</p>
+<p>Options for container directives include:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">imports</span></code>:
+Name of an imported trait. Multiple entries are combined into a
+comma-separated list.</li>
+<li><code class="docutils literal notranslate"><span class="pre">parent</span></code>, <code class="docutils literal notranslate"><span class="pre">super</span></code>:
+The <code class="docutils literal notranslate"><span class="pre">parent</span></code> statement can appear in types and threads, which denotes
+the type that the current type is derived from.</li>
+</ul>
+<p>These directives describe types of methods, and can be associated with their
+container element either by being nested within the body of one of the above
+directives, or by having a fully-qualified name using the <code class="docutils literal notranslate"><span class="pre">container-&gt;name</span></code>
+syntax.</p>
+<p>Each directive with a signature supports the following options:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">param</span></code>, <code class="docutils literal notranslate"><span class="pre">parameter</span></code>:
+Descriptions of parameters, with or without a type constraint. For an unnamed
+rest parameter, use <code class="docutils literal notranslate"><span class="pre">...</span></code> for the name.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ptype</span></code>, <code class="docutils literal notranslate"><span class="pre">paramtype</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>:
+Description of parameter type if more than one word is required.</li>
+<li><code class="docutils literal notranslate"><span class="pre">return</span></code>, <code class="docutils literal notranslate"><span class="pre">returns</span></code>:
+Description of the value returned.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rtype</span></code>, <code class="docutils literal notranslate"><span class="pre">returntype</span></code>:
+Further description of the return value type.</li>
+</ul>
+<p>Every directive also supports the <code class="docutils literal notranslate"><span class="pre">see</span></code> or <code class="docutils literal notranslate"><span class="pre">url</span></code> option for adding links to
+more info, and the <code class="docutils literal notranslate"><span class="pre">author</span></code> or <code class="docutils literal notranslate"><span class="pre">authors</span></code> option for adding an attribution.
+An index entry is created for each directive.</p>
+<p>Signatures of methods can be specified as they appear in code, and may also
+indicate which parameters are optional either using square brackets or <code class="docutils literal notranslate"><span class="pre">=?</span></code>,
+including the default value if desired.</p>
+<div class="section" id="quick-examples">
+<h3>Quick examples<a class="headerlink" href="#quick-examples" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. ls:member:: string-&gt;encodeSQL92()::string
+.. ls:member:: string-&gt;merge(where::integer, what::string[, offset::integer, length::integer])
+.. ls:member:: string-&gt;beginsWith(find::string, -case::boolean =?)
+.. ls:member:: string-&gt;endsWith(find::string, -case::boolean = false)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ls</span><span class="p">:</span><span class="nb">type</span><span class="p">::</span> <span class="n">rhino</span>
+
+   <span class="n">Description</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">type</span>
+
+   <span class="p">:</span><span class="n">parent</span><span class="p">:</span> <span class="n">string</span>
+   <span class="p">:</span><span class="n">import</span><span class="p">:</span> <span class="n">trait_horned</span>
+   <span class="p">:</span><span class="n">import</span><span class="p">:</span> <span class="n">trait_herbivore</span>
+   <span class="p">:</span><span class="n">import</span><span class="p">:</span> <span class="n">trait_foreach</span>
+   <span class="p">:</span><span class="n">see</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">en</span><span class="o">.</span><span class="n">wikipedia</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Rhinoceros</span>
+
+   <span class="o">..</span> <span class="n">ls</span><span class="p">:</span><span class="n">member</span><span class="p">::</span> <span class="n">numberOfHorns</span><span class="p">(</span><span class="n">species</span><span class="p">::</span><span class="n">string</span><span class="p">)::</span><span class="n">integer</span>
+
+      <span class="n">Description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">member</span> <span class="n">method</span>
+
+      <span class="p">:</span><span class="n">param</span> <span class="n">string</span> <span class="n">species</span><span class="p">:</span> <span class="n">Specifies</span> <span class="n">the</span> <span class="n">species</span> <span class="n">name</span> <span class="n">to</span> <span class="n">look</span> <span class="n">up</span>
+      <span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">horns</span>
+      <span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">integer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<p>Cross-referencing is done with the same role syntax as other domains, except
+that member tag syntax is used to associate member methods with their containing
+type, trait, or thread using the arrow operator <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>, such as
+<code class="docutils literal notranslate"><span class="pre">:meth:`bytes-&gt;getrange`</span></code>. References are made with case-insensitive matching.
+All other syntax follows what’s described in the docs for <a class="reference external" href="http://www.sphinx-doc.org/en/stable/domains.html">Sphinx domains</a>.</p>
+<p>Use the following roles to link to definitions of each element:</p>
+<div class="section" id="quick-example">
+<h3>Quick example<a class="headerlink" href="#quick-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The :ls:type:`Pair &lt;pair&gt;` type always contains two elements which are accessed
+with the :ls:meth:`pair-&gt;first` and :ls:meth:`~pair-&gt;second` methods.
+</pre></div>
+</div>
+<p>The <a href="#id1"><span class="problematic" id="id2">:ls:type:`Pair &lt;pair&gt;`</span></a> type always contains two elements which are accessed
+with the <a href="#id3"><span class="problematic" id="id4">:ls:meth:`pair-&gt;first`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ls:meth:`~pair-&gt;second`</span></a> methods.</p>
+</div>
+</div>
+<div class="section" id="more-info">
+<h2>More Info<a class="headerlink" href="#more-info" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Docs for <a class="reference external" href="http://www.sphinx-doc.org/en/stable/domains.html">Sphinx domains</a></li>
+<li><a class="reference external" href="http://www.lassoguide.com/">LassoGuide</a></li>
+<li><a class="reference external" href="http://www.lassosoft.com/">LassoSoft</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

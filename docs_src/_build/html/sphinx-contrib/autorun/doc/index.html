@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Autorun Documentation &mdash; Materials_Data_Repository  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Materials_Data_Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html">XPSのデータ変換手順</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#id1">コマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#movie2">Movie2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#instrallation">Instrallation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xrd.html">XRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../xps_survey.html">xps_survey for jupyter notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Materials_Data_Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Autorun Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/sphinx-contrib/autorun/doc/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="autorun-documentation">
+<h1>Autorun Documentation<a class="headerlink" href="#autorun-documentation" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Vadim Gubergrits &lt;<a class="reference external" href="mailto:vadim&#46;gubergrits&#37;&#52;&#48;gmail&#46;com">vadim<span>&#46;</span>gubergrits<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>Autorun is an extension for Sphinx that can execute the code from a
+runblock directive and attach the output of the execution to the document.</p>
+<p>For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">runblock</span><span class="p">::</span> pycon
+
+    &gt;&gt;&gt; for i in range(5):
+<span class="cp">    ...    print i</span>
+<span class="cp">    ...</span>
+</pre></div>
+</div>
+<p>Produces</p>
+<p>Another example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">runblock</span><span class="p">::</span> console
+
+    $ date
+</pre></div>
+</div>
+<p>Produces</p>
+<p>Currently autorun supports <code class="docutils literal notranslate"><span class="pre">pycon</span></code> and <code class="docutils literal notranslate"><span class="pre">console</span></code> languages. It’s also
+possible to configure autorun (from <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>) to run other languages.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Installing from sources</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
+<span class="gp">$</span> <span class="nb">cd</span> sphinx-contrib/autorun
+<span class="gp">$</span> python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>To enable the autorun extension add ‘sphinxcontrib.autorun’ to the
+<code class="docutils literal notranslate"><span class="pre">extensions</span></code> list in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;sphinxcontrib.autorun&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+<p>By default autorun supports <code class="docutils literal notranslate"><span class="pre">pycon</span></code> and <code class="docutils literal notranslate"><span class="pre">console</span></code>.  It’s possible to
+configure autorun to run other languages. First you need to be able to pipe your
+source to an executable. In many cases it’s already done but you can build
+your own program to do that.</p>
+<p><code class="docutils literal notranslate"><span class="pre">autorun_languages</span></code>:</p>
+<blockquote>
+<div><p>This is a dictionary in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> that maps a language to an
+executable. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">autorun_languages</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">autorun_languages</span><span class="p">[</span><span class="s1">&#39;pycon&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;python -&#39;</span>
+</pre></div>
+</div>
+<p>In order to pipe python code to python executable we must use the <code class="docutils literal notranslate"><span class="pre">-</span></code>
+argument.</p>
+<p>It’s also possible to specify the number of characters to remove from each
+line before sending the code. To do that map <code class="docutils literal notranslate"><span class="pre">${language}_prefix_chars</span></code>
+to the number of characters to remove.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">autorun_languages</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">autorun_languages</span><span class="p">[</span><span class="s1">&#39;pycon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;python -&#39;</span>
+<span class="n">autorun_languages</span><span class="p">[</span><span class="s1">&#39;pycon_prefix_chars&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Example of configuring autorun to run gnuplot scripts.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">autorun_languages</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">autorun_languages</span><span class="p">[</span><span class="s1">&#39;gnuplot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gnuplot&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">runblock</span><span class="p">::</span> gnuplot
+
+    set term png
+    set out &#39;log.png&#39;
+    plot log(x)
+</pre></div>
+</div>
+<p>This will not produce any output on stdout but it will write the
+<code class="xref download docutils literal notranslate"><span class="pre">log.png</span></code> file that can be included with a standard image directive:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> log.png
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Materials Data Analysis Group, DPFC, NIMS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
