@@ -10,7 +10,7 @@
 
 For more information, refer to the `the documentation`__.
 
-.. __: https://github.com/nims-dpfc/Materials_Data_Repository/
+.. __: https://nims-dpfc.github.io/Materials_Data_Repository/
 
 Instrallation
 =============
