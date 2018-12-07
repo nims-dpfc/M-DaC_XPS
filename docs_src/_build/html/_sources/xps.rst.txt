@@ -37,10 +37,9 @@ For more information, refer to the `the documentation`__.
 
 .. __: https://github.com/nims-dpfc/Materials_Data_Repository/
 
-Movie2
-======
+Movie
+=====
 
-.. youtube:: 2p4ifeMhwPg
 
 Instrallation
 =============

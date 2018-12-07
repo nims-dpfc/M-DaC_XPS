@@ -40,7 +40,6 @@ For more information, refer to the `the documentation`__.
 Movie
 =====
 
-.. youtube:: J9K0bDkOFxU
 
 Instrallation
 =============
