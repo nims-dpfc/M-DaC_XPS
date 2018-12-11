@@ -2,7 +2,7 @@
 ==========================
 
 XPSのデータ変換手順
-===================
+-------------------
 
 1．XPS生データ（survey1本のでOK）:MIDATA001.104.spe
 
@@ -19,7 +19,7 @@ XPSのデータ変換手順
 7．#5から#6で作成したPNGファイル: MIDATA001.104.png
 
 コマンド
-========
+--------
 
 .spe形式のファイルをテキストファイルに変換します::
 
@@ -38,15 +38,15 @@ For more information, refer to the `the documentation`__.
 .. __: https://github.com/nims-dpfc/Materials_Data_Repository/
 
 Movie
-=====
+-----
 
 
 Instrallation
-=============
+-------------
 
 ここにインストールの手順が入ります。
 
 Documentation
-=============
+-------------
 
 ここにドキュメントがはいります。
