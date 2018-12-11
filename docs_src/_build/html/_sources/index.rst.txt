@@ -32,6 +32,8 @@ Contents
    XPS <xps>
    XRD <xrd>
    xps_survey for jupyter notebook <xps_survey>
+   LICENSE
+   Terms of Service <terms_of_service>
 
 License
 =======
