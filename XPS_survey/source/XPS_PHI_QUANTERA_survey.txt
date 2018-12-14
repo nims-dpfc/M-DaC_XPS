@@ -1,6 +1,6 @@
 //----------------------------------------
 //Multipak Exporter  1.2.5
-//Load file from MIDATA001.104.spe
+//Load file from XPS_PHI_QUANTERA_survey.spe
 //----------------------------------------
 //----------------------------------------
 //HEADER INFORMATION
