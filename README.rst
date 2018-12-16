@@ -1,12 +1,12 @@
 ========
- Materials_Data_Repository
+吉川ツール（仮称）について
 ========
 
-�������͂���܂��B
+説明がはいります。
 
-* ����1
-* ����2
-* ����3
+* 項目1
+* 項目2
+* 項目3
 
 For more information, refer to the `the documentation`__.
 
@@ -15,9 +15,9 @@ For more information, refer to the `the documentation`__.
 Instrallation
 =============
 
-�����ɃC���X�g�[���̎菇������܂��B
+ここにインストールの手順が入ります。
 
 Documentation
 =============
 
-�����Ƀh�L�������g���͂���܂��B
+ここにドキュメントがはいります。
