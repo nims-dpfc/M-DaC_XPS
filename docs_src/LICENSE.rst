@@ -1,3 +1,3 @@
-Copyright (c) 2018 NIMSÅ@DPFC
+Copyright (c) 2018 NIMS DPFC
 
 
