@@ -2,37 +2,40 @@
  XPS
 ==========================
 
-XPS�̃f�[�^�ϊ��菇
-===================
+フォルダに含まれるファイルの説明
+=============================
 
-1�DXPS���f�[�^�isurvey1�{�̂�OK�j:MIDATA001.104.spe
+1．source/XPS_PHI_QUANTERA_survey.spe: XPS生データサンプル
 
-2�DPHI�쐬�ϊ��c�[��:MPExport.exe
+2．MPExport.exe: PHI作成変換ツール
 
-3�D#1��#2�ŕϊ������e�L�X�g�f�[�^: MIDATA001.104.txt
+3．source/XPS_PHI_QUANTERA_survey.txt: #1を#2で変換したテキストデータ
 
-4�D#3����CFND�����c�[��: txttocsvforphi.py
+4．txttocsvforphi.py: #3から，FND(Formatted Numerical Data)を作るツール
 
-5�D#3����#4�ŕϊ�����FND�t�@�C��: MIDATA001.104.csv
+5．source/XPS_PHI_QUANTERA_survey.csv: #3から#4で変換したFNDファイル
 
-6�DFND�t�@�C������X�y�N�g���̐}���쐬����c�[��: csvtograph.py
+6．csvtograph.py: FND(Formatted Numerical Data)ファイルからスペクトルの図を作成するツール
 
-7�D#5����#6�ō쐬����PNG�t�@�C��: MIDATA001.104.png
+7．source/XPS_PHI_QUANTERA_survey.png: #5から#6で作成したPNGファイル
 
-�R�}���h
+コマンド
 ========
+sourceディレクトリに移動します::
 
-.spe�`���̃t�@�C�����e�L�X�g�t�@�C���ɕϊ����܂�::
+	cd source
 
-	MPExpoter.exe -Filename:MIDATA001.104.spe -TSV
+.spe形式のファイルをテキストファイルに変換します::
 
-�e�L�X�g�t�@�C�����t�H�[�}�b�g���ꂽ���l�f�[�^(csv)�ɕϊ����܂�::
+	../MPExpoter.exe -Filename:XPS_PHI_QUANTERA_survey.spe -TSV
 
-	python txttocsvforphi.py MIDATA001.104.txt
+テキストファイルをフォーマットされた数値データ(csv)に変換します::
 
-csv�t�@�C������摜���쐬���܂�::
+	python ../txttocsvforphi.py XPS_PHI_QUANTERA_survey.txt
 
-	python csvtograph.py MIDATA001.104.csv
+csvファイルから画像を作成します::
+
+	python ../csvtograph.py XPS_PHI_QUANTERA_survey.csv
 
 For more information, refer to the `the documentation`__.
 
@@ -41,9 +44,9 @@ For more information, refer to the `the documentation`__.
 Instrallation
 =============
 
-�����ɃC���X�g�[���̎菇������܂��B
+ここにインストールの手順が入ります。
 
 Documentation
 =============
 
-�����Ƀh�L�������g���͂���܂��B
+ここにドキュメントがはいります。
