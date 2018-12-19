@@ -1,0 +1,21 @@
+1．XRD生データ: XRD_RIGAKU.ras
+2．#1から，FNDを作るツール: ras2csv.py
+3．#1から#2で変換したFNDファイル: XRD_RIGAKU.csv
+4-1．FNDファイルからスペクトルの図を作成するツール(XPS_survey_narrowと共通): csv2graph.py
+4-2．FNDファイルからスペクトルの図を作成するツール(XPS_survey_narrowと共通): csv2graph_jupyter.py
+5．#3から#4で作成したPNGファイル: XRD_RIGAKU.png
+6. #1から装置出力パラメータを作成するツール: ras2raw_XRD.py
+7. 装置出力パラメータの語彙を管理するテンプレート: xrd_raw_template.xml
+8. #6,#7から主要パラメータを作成するツール: raw2primary_XRD.py
+9. 主要パラメータの語彙を管理するテンプレート: xrd_primary_template.xml
+
+> python ras2csv.py XRD_RIGAKU.ras
+> python csv2graph.py XRD_RIGAKU.csv
+> python ras2raw_XRD.py XRD_RIGAKU.ras xrd_raw_template.xml > raw.xml
+> python raw2primary_XRD.py raw.xml xrd_primary_template.xml > primary.xml
+
+jupyter notebookで実行する場合は
+In [1]: %run -i ras2csv.py XRD_RIGAKU.ras
+In [2]: %run -i csv2graph_for_jupyter.py XRD_RIGAKU.csv
+
+のようにしてください。 
