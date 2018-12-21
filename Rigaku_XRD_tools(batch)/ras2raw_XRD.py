@@ -1,8 +1,11 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
-__author__ = "nagao"
-__date__ = "$2018/11/05 10:00:00$"
+#-------------------------------------------------
+# ras2raw.py
+#
+# Copyright (c) 2018, Data PlatForm Center, NIMS
+#
+# This software is released under the MIT License.
+#-------------------------------------------------
+# coding: utf-8
 
 import argparse
 import os.path
@@ -12,13 +15,18 @@ from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
+import codecs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
+parser.add_argument("--encoding", default="utf_8")
 parser.add_argument("template_file")
+parser.add_argument("out_file")
 options = parser.parse_args()
 readfile = options.file_path
+encoding_option = options.encoding
 templatefile = options.template_file
+outputfile = options.out_file
 channel = 0
 
 template = ET.parse(templatefile)
@@ -33,7 +41,7 @@ count = 0
 wide = 1
 maxcolumn = 1
 df = pd.DataFrame(index=['value'])
-with open(readfile, 'r', encoding="utf8") as f:
+with open(readfile, 'r', encoding=encoding_option) as f:
     for line in f:
         line = line.strip()
         line = line[1:]
@@ -84,4 +92,10 @@ column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
-print(dom.toprettyxml())
+file = codecs.open(outputfile,'wb',encoding='utf-8')
+
+dom.writexml(file,'','\t','\n',encoding='utf-8')
+
+#print(dom.toprettyxml())
+file.close()
+dom.unlink()

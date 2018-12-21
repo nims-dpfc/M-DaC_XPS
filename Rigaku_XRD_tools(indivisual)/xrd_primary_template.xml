@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+  <column_name>condition</column_name>
+  <meta key="Operator_identifier" type="String" />
+  <meta key="Year" type="Numeric" />
+  <meta key="Month" type="Numeric" />
+  <meta key="Day" type="Numeric" />
+  <meta key="Hour" type="Numeric" />
+  <meta key="Minute" type="Numeric" />
+  <meta key="Second" type="Numeric" />
+  <meta key="Comment" type="String"/>
+  <meta key="Memo" type="String"/>
+  <meta key="Operator" type="String"/>
+  <meta key="Specimen" type="String"/>
+  <meta key="Detector_Pixel_Size" type="Quantity" unit="mm"/>
+  <meta key="Selected_Detector_Name" type="String"/>
+  <meta key="X-ray_Target_Material" type="String"/>
+  <meta key="K_alpha_1_Wavelength" type="Quantity" unit=""/>
+  <meta key="K_alpha_2_Wavelength" type="Quantity" unit=""/>
+  <meta key="K_beta_Wavelength" type="Quantity" unit=""/>
+  <meta key="Optics_Attribute" type="String"/>
+  <meta key="X-ray_Tube_Current" type="Quantity" unit=""/>
+  <meta key="X-ray_Tube_Voltage" type="Quantity" unit=""/>
+  <meta key="Wavelength_Type" type="String"/>
+  <meta key="Data_Point_Number" type="Numeric"/>
+  <meta key="Scan_Axis" type="String"/>
+  <meta key="Scan_Starting_Date_Time" type="String"/>
+  <meta key="Scan_Ending_Date_Time" type="String"/>
+  <meta key="Scan_Mode" type="String"/>
+  <meta key="Scan_Speed" type="Quantity" unit=""/>
+  <meta key="Scan_Step_Size" type="Quantity" unit=""/>
+  <meta key="Scan_Starting_Position" type="Quantity" unit=""/>
+  <meta key="Scan_Ending_Position" type="Quantity" unit=""/>
+  <meta key="Scan_Axis_Unit" type="String"/>
+  <meta key="Intensity_Unit" type="String"/>
+</template>

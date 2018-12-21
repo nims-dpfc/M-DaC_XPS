@@ -1,11 +1,8 @@
-#-------------------------------------------------
-# csv2graph_for_jupyter.py
-#
-# Copyright (c) 2018, Data PlatForm Center, NIMS
-#
-# This software is released under the MIT License.
-#-------------------------------------------------
-# coding: utf-8
+# To change this license header, choose License Headers in Project Properties.
+# To change this template file, choose Tools | Templates
+# and open the template in the editor.
+__author__ = "nagao"
+__date__ = "$2017/03/21 11:16:02$"
 
 import argparse
 import os.path
@@ -13,10 +10,6 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import ScalarFormatter
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-import plotly.graph_objs as go
-
-init_notebook_mode(connected=True)
 
 def getKey(key, row):
     if row[0] == key:
@@ -39,6 +32,7 @@ unit_option = options.unit
 scalename_option = options.scalename
 xrange_option = options.xrange
 yrange_option = options.yrange
+#readfile = 'SNP159.109.csv'
 name, ext = os.path.splitext(readfile)
 axis = []
 
@@ -79,7 +73,7 @@ with open(readfile, 'r') as f:
                         xunit = "(" + unit_option[0] + ")"
                     if isinstance(scalename_option, list):
                         xaxis = scalename_option[0]
-                    xaxis = xaxis + xunit
+                    xaxis = xaxis + ' ' + xunit
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             xrevFlag = True
@@ -93,7 +87,8 @@ with open(readfile, 'r') as f:
                         yunit = "(" + unit_option[1] + ")"
                     if isinstance(scalename_option, list):
                         yaxis = scalename_option[1]
-                    yaxis = yaxis + yunit
+                    yaxis = yaxis + ' ' + yunit
+#                        yaxis = yaxis + "(" + row[2] + ")"
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             yrevFlag = True
@@ -129,6 +124,7 @@ plt.ticklabel_format(style="sci",  axis="y",scilimits=(0,0))
 plt.grid(True)
 plt.subplots_adjust(left=0.155, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None)
 
+
 num = 1
 for col in df.columns:
     if num % dimension != 0:
@@ -161,9 +157,9 @@ plt.rcParams['ytick.major.width'] = 1.0
 plt.rcParams['axes.linewidth'] = 1.0
 
 plt.legend()
+#plt.show()
 writefile = name + '.png'
 plt.savefig(writefile)
-#plt.show()
 plt.close()
 
 if len(legends) > 1:
@@ -195,58 +191,9 @@ if len(legends) > 1:
             plt.rcParams['xtick.major.width'] = 1.0
             plt.rcParams['ytick.major.width'] = 1.0
             plt.rcParams['axes.linewidth'] = 1.0
+            #plt.show()
             plt.legend()
             writefile = name + '_' + col + '.png'
             plt.savefig(writefile)
-#            plt.show()
             plt.close()
         num += 1
-
-num = 1
-data = []
-for col in df.columns:
-    if num % dimension != 0:
-        if isinstance(scale_option, list):
-            x=df[col] * scale_option[0]
-        else:
-            x=df[col]
-    else:
-        if isinstance(scale_option, list):
-            y=df[col] * scale_option[1]
-        else:
-            y=df[col]
-        trace = dict(
-            name = col,
-            x = x, y = y,
-            type = "lines",
-            mode = 'lines')
-        data.append( trace )
-    num += 1
-length = 35
-
-x_axis = 'false'
-y_axis = 'false'
-if xrevFlag:
-    x_axis = 'reversed'
-if yrevFlag:
-    y_axis = 'reversed'
-    
-layout = dict(
-    width=800,
-    height=700,
-    autosize=False,
-    title=title,
-    scene = dict(
-       xaxis = dict(
-          title="x",
-       ),
-       yaxis = dict(
-          title="y"
-       ),
-    ),
-    xaxis=dict(autorange=x_axis),
-    yaxis=dict(autorange=y_axis)
-)
-
-fig = dict(data=data, layout=layout)
-iplot(fig, filename=title, validate=False)

@@ -1,4 +1,4 @@
-#title,XRD_RIGAKU.ras
+#title,../XRD_RIGAKU/XRD_RIGAKU.ras
 #dimension,x,y
 #x,2Theta-Theta,deg
 #y,Intensity,counts

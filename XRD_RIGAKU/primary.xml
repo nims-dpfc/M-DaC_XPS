@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="Operator_identifier" type="String">English</meta>
+	<meta key="Year" type="Numeric">2017</meta>
+	<meta key="Month" type="Numeric">11</meta>
+	<meta key="Day" type="Numeric">21</meta>
+	<meta key="Comment" type="String"></meta>
+	<meta key="Memo" type="String"></meta>
+	<meta key="Operator" type="String">English</meta>
+	<meta key="Specimen" type="String"></meta>
+	<meta key="Detector_Pixel_Size" type="Quantity" unit="mm">0.075</meta>
+	<meta key="Selected_Detector_Name" type="String">DteX250(H)</meta>
+	<meta key="X-ray_Target_Material" type="String">Cu</meta>
+	<meta key="K_alpha_1_Wavelength" type="Quantity" unit="Angstrom">1.540593</meta>
+	<meta key="K_alpha_2_Wavelength" type="Quantity" unit="Angstrom">1.544414</meta>
+	<meta key="K_beta_Wavelength" type="Quantity" unit="Angstrom">1.392246</meta>
+	<meta key="Optics_Attribute" type="String">DB</meta>
+	<meta key="X-ray_Tube_Current" type="Quantity" unit="mA">30</meta>
+	<meta key="X-ray_Tube_Voltage" type="Quantity" unit="kV">40</meta>
+	<meta key="Wavelength_Type" type="String">Ka</meta>
+	<meta key="Data_Point_Number" type="Numeric">3501</meta>
+	<meta key="Scan_Axis" type="String">TwoThetaTheta</meta>
+	<meta key="Scan_Starting_Date_Time" type="String">11/21/2017 08:32:31</meta>
+	<meta key="Scan_Ending_Date_Time" type="String">11/21/2017 08:37:42</meta>
+	<meta key="Scan_Mode" type="String">CONTINUOUS</meta>
+	<meta key="Scan_Speed" type="Quantity" unit="deg/min">8.0000</meta>
+	<meta key="Scan_Step_Size" type="Quantity" unit="deg">0.0100</meta>
+	<meta key="Scan_Starting_Position" type="Quantity" unit="deg">25.0000</meta>
+	<meta key="Scan_Ending_Position" type="Quantity" unit="deg">60.0000</meta>
+	<meta key="Scan_Axis_Unit" type="String">deg</meta>
+	<meta key="Intensity_Unit" type="String">counts</meta>
+	<column_num>1</column_num>
+	<column_name>condition</column_name>
+</metadata>

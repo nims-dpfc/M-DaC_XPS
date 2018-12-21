@@ -1,10 +1,11 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
-# coding: utf-8
+#-------------------------------------------------
+# ras2csv.py
 #
-#__author__ = "nagao"
-#__date__ = "$2018/10/26 17:18:43$"
+# Copyright (c) 2018, Data PlatForm Center, NIMS
+#
+# This software is released under the MIT License.
+#-------------------------------------------------
+# coding: utf-8
 
 from __future__ import print_function
 from __future__ import unicode_literals
@@ -67,7 +68,6 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                         header.append(meta)
                 else:
                     header[4].append(target+' '+wavetype+'_2')
-                    print(header)
             else:
                 if line.find('HW_XG_TARGET_NAME') > -1:
                     value = line.split(" ", 1)
