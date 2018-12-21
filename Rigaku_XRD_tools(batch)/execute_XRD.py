@@ -8,7 +8,8 @@
 # coding: utf-8
 
 import argparse
-import os.path
+import os
+import shutil
 import subprocess
 
 def getKey(key, row):
@@ -30,10 +31,10 @@ sourcedir = dirname
 resultdir = "../"
 tooldir = "./"
 
-subprocess.run(["mkdir", resultdir + name])
-subprocess.run(["cp", readfile, resultdir + name+"/."])
+os.mkdir(resultdir + name)
+shutil.copy2(readfile, resultdir + name+"/.")
 subprocess.run(["python", tooldir + "ras2csv.py", "--encoding", "sjis", resultdir + name+"/"+basename])
 subprocess.run(["python", tooldir + "csv2graph.py", resultdir + name+"/"+name+".csv"])
 subprocess.run(["python", tooldir + "ras2raw_XRD.py", resultdir + name+"/"+basename, "--encoding", "sjis", tooldir + "xrd_raw_template.xml", resultdir + name+"/raw.xml"])
 subprocess.run(["python", tooldir + "raw2primary_XRD.py", resultdir + name+"/raw.xml", tooldir + "xrd_primary_template.xml", resultdir + name+"/primary.xml"])
-subprocess.run(["rm", resultdir + name+"/"+basename])
+os.remove(resultdir + name+"/"+basename)

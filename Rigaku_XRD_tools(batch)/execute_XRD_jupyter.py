@@ -8,7 +8,8 @@
 # coding: utf-8
 
 import argparse
-import os.path
+import os
+import shutil
 import subprocess
 import csv
 import pandas as pd
@@ -56,8 +57,8 @@ sourcedir = dirname
 resultdir = "../"
 tooldir = "./"
 
-subprocess.run(["mkdir", resultdir + name])
-subprocess.run(["cp", readfile, resultdir + name+"/."])
+os.mkdir(resultdir + name)
+shutil.copy2(readfile, resultdir + name+"/.")
 subprocess.run(["python", tooldir + "ras2csv.py", "--encoding", "sjis", resultdir + name+"/"+basename])
 
 readfile_csv = resultdir + name+"/"+name+".csv"
@@ -462,5 +463,4 @@ file = codecs.open(outputfile,'wb',encoding='utf-8')
 dom.writexml(file,'','\t','\n',encoding='utf-8')
 file.close()
 dom.unlink()
-#subprocess.run(["python", "../Rigaku_XRD_tools/raw2primary_XRD.py", "../"+name+"/raw.xml", "../Rigaku_XRD_tools/xrd_primary_template.xml", "../"+name+"/primary.xml"])
-subprocess.run(["rm", resultdir + name+"/"+basename])
+os.remove(resultdir + name+"/"+basename)

@@ -12,7 +12,7 @@ News
 
 Quick Start
 ===========
-    #. Install ``hoge``
+    #. Install ``hoge```
 
     #. コマンドを実行する.
 
