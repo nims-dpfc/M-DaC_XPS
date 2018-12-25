@@ -42,24 +42,25 @@ rasファイルから装置出力パラメータを抽出します::
 
 装置出力パラメータから主要パラメータを抽出します::
 
-	python raw2primary_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis xrd_primary_template.xml primary.xml
+	python raw2primary_XRD.py raw.xml xrd_primary_template.xml primary.xml
 
 第3引数で指定したファイルで主要パラメータが作成されます。
 
-.. note::
+バッチ処理
+----------
 
-	各プログラムの基本的な使い方は上に示した通りです。
-	execute.py は、上記のコマンドをまとめて行うプログラムです。::
+	各プログラムの基本的な使い方は上に示した通りですが、上記のコマンドをまとめて実行できると便利です。
+	execute_XRD.py は、上記のコマンドをまとめて行うプログラムです。::
 
-	python execute.py ../source/XRD_RIGAKU.ras
+	python execute_XRD.py ../source/XRD_RIGAKU.ras
 
 	を実行すると、../XRD_RIGAKUというフォルダを作成し、その中にFND(Formatted Numerical Data)、
  	スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
 	連続変換を行いたい場合などに使用します。
 
-	jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_jupyter.py を使用してください。::
+	jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_XRD_jupyter.py を使用してください。::
 
-	python execute_jupyter.py ../source/XRD_RIGAKU.ras
+	python execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 
 
 For more information, refer to the `the documentation`__.
