@@ -30,7 +30,7 @@ rasファイルをフォーマットされた数値データ(csv)に変換しま
 
 csvファイルから画像を作成します::
 
-	python csv2graph.py ../source/XRD_RIGAKU.csv
+	python csv2graph.py XRD_RIGAKU.csv
 
 カレントディレクトリにXRD_RIGAKU.pngが作成されます。
 
