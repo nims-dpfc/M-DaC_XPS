@@ -29,7 +29,7 @@ dirname = os.path.dirname(readfile)
 name, ext = os.path.splitext(basename)
 
 sourcedir = dirname
-resultdir = "../"
+resultdir = "../result/"
 tooldir = "./"
 
 if os.path.isdir("temp"):
@@ -43,9 +43,13 @@ subprocess.run(["python", "../" + tooldir + "ras2raw_XRD.py", basename, "--encod
 subprocess.run(["python", "../" + tooldir + "raw2primary_XRD.py", "raw.xml", "../" + tooldir + "xrd_primary_template.xml", "primary.xml"])
 os.remove(basename)
 os.chdir("../")
-if os.path.isdir(resultdir + name):
-    shutil.rmtree(resultdir + name)
-os.mkdir(resultdir + name)
+if not(os.path.isdir(resultdir)):
+    os.mkdir(resultdir)
+os.chdir(resultdir)
+if os.path.isdir(name):
+    shutil.rmtree(name)
+os.mkdir(name)
+os.chdir("../Rigaku_XRD_tools(batch)/")
 for file in glob.glob(r'temp/*'):
     shutil.move(file, resultdir + name)
 shutil.rmtree("temp")

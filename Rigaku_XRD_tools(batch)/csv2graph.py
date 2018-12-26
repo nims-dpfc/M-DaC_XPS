@@ -1,8 +1,11 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
-__author__ = "nagao"
-__date__ = "$2017/03/21 11:16:02$"
+#-------------------------------------------------
+# csv2graph.py
+#
+# Copyright (c) 2018, Data PlatForm Center, NIMS
+#
+# This software is released under the MIT License.
+#-------------------------------------------------
+# coding: utf-8
 
 import argparse
 import os.path
@@ -32,7 +35,6 @@ unit_option = options.unit
 scalename_option = options.scalename
 xrange_option = options.xrange
 yrange_option = options.yrange
-#readfile = 'SNP159.109.csv'
 name, ext = os.path.splitext(readfile)
 axis = []
 
@@ -88,7 +90,6 @@ with open(readfile, 'r') as f:
                     if isinstance(scalename_option, list):
                         yaxis = scalename_option[1]
                     yaxis = yaxis + ' ' + yunit
-#                        yaxis = yaxis + "(" + row[2] + ")"
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             yrevFlag = True
