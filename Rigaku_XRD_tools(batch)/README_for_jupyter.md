@@ -8,7 +8,7 @@
 
 
 ```python
-%run -i csv2graph_for_jupyter.py ../source/XRD_RIGAKU.csv
+%run -i csv2graph_for_jupyter.py XRD_RIGAKU.csv
 ```
 
 

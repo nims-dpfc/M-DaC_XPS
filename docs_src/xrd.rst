@@ -30,7 +30,7 @@ rasファイルをフォーマットされた数値データ(csv)に変換しま
 
 csvファイルから画像を作成します::
 
-	python csv2graph.py ../source/XRD_RIGAKU.csv
+	python csv2graph.py XRD_RIGAKU.csv
 
 カレントディレクトリにXRD_RIGAKU.pngが作成されます。
 
@@ -52,7 +52,7 @@ rasファイルから装置出力パラメータを抽出します::
 
 	コマンドを一つずつ実行するのではなく、まとめて可視化、
 	メタ情報抽出を行うようにバッチ処理を行いたい場合は、
-	Rigaku_XRD_tools(batch) に移動し、:
+	Rigaku_XRD_tools(batch) で、:
 
 	execute_XRD.py
 
