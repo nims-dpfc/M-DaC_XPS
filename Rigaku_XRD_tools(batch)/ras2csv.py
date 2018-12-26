@@ -21,7 +21,12 @@ parser.add_argument("--encoding", default="utf_8")
 options = parser.parse_args()
 readfile = options.file_path
 encoding_option = options.encoding
-name, ext = os.path.splitext(readfile)
+
+basename = os.path.basename(readfile)
+dirname = os.path.dirname(readfile)
+name, ext = os.path.splitext(basename)
+org_name = name
+
 flag = 0
 count = 0
 column = 0

@@ -39,7 +39,11 @@ unit_option = options.unit
 scalename_option = options.scalename
 xrange_option = options.xrange
 yrange_option = options.yrange
-name, ext = os.path.splitext(readfile)
+
+basename = os.path.basename(readfile)
+dirname = os.path.dirname(readfile)
+name, ext = os.path.splitext(basename)
+org_name = name
 axis = []
 
 with open(readfile, 'r') as f:
@@ -79,7 +83,7 @@ with open(readfile, 'r') as f:
                         xunit = "(" + unit_option[0] + ")"
                     if isinstance(scalename_option, list):
                         xaxis = scalename_option[0]
-                    xaxis = xaxis + xunit
+                    xaxis = xaxis + ' ' + xunit
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             xrevFlag = True
@@ -93,7 +97,7 @@ with open(readfile, 'r') as f:
                         yunit = "(" + unit_option[1] + ")"
                     if isinstance(scalename_option, list):
                         yaxis = scalename_option[1]
-                    yaxis = yaxis + yunit
+                    yaxis = yaxis + ' ' + yunit
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             yrevFlag = True
@@ -236,18 +240,11 @@ layout = dict(
     height=700,
     autosize=False,
     title=title,
-    scene = dict(
-       xaxis = dict(
-          title="x",
-       ),
-       yaxis = dict(
-          title="y"
-       ),
-    ),
-    xaxis=dict(autorange=x_axis),
-    yaxis=dict(autorange=y_axis)
+    xaxis=dict(title=xaxis, autorange=x_axis),
+    yaxis=dict(title=yaxis, autorange=y_axis),
+    showlegend=True
 )
 
 fig = dict(data=data, layout=layout)
-#iplot(fig, filename=title, validate=False, show_link=False, config={"displaylogo":False, "modeBarButtonsToRemove":["sendDataToCloud"]})
-iplot(fig, filename=title, validate=False)
+iplot(fig, filename=title, validate=False, show_link=False, config={"displaylogo":False, "modeBarButtonsToRemove":["sendDataToCloud"]})
+#iplot(fig, filename=title, validate=False)

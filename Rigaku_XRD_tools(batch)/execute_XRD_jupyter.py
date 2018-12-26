@@ -1,5 +1,5 @@
 #-------------------------------------------------
-# execute_jupyter.py
+# execute_XRD_jupyter.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
@@ -22,6 +22,7 @@ import xml.etree.ElementTree as ET
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.graph_objs as go
 import codecs
+import glob
 
 init_notebook_mode(connected=True)
 
@@ -57,11 +58,18 @@ sourcedir = dirname
 resultdir = "../"
 tooldir = "./"
 
-os.mkdir(resultdir + name)
-shutil.copy2(readfile, resultdir + name+"/.")
-subprocess.run(["python", tooldir + "ras2csv.py", "--encoding", "sjis", resultdir + name+"/"+basename])
+if os.path.isdir("temp"):
+    shutil.rmtree("./temp")
+os.mkdir("temp")
+shutil.copy2(readfile, "temp/" + basename)
+os.chdir("temp")
+subprocess.run(["python", "../" + tooldir + "ras2csv.py", "--encoding", "sjis", basename])
 
-readfile_csv = resultdir + name+"/"+name+".csv"
+#os.mkdir(resultdir + name)
+#shutil.copy2(readfile, resultdir + name+"/.")
+#subprocess.run(["python", tooldir + "ras2csv.py", "--encoding", "sjis", resultdir + name+"/"+basename])
+
+readfile_csv = name+".csv"
 with open(readfile_csv, 'r') as f:
     reader = csv.reader(f)
     line = 1
@@ -182,7 +190,7 @@ plt.rcParams['ytick.major.width'] = 1.0
 plt.rcParams['axes.linewidth'] = 1.0
 
 plt.legend()
-writefile = resultdir + name+'/'+name + '.png'
+writefile = name + '.png'
 plt.savefig(writefile)
 #plt.show()
 plt.close()
@@ -217,7 +225,7 @@ if len(legends) > 1:
             plt.rcParams['ytick.major.width'] = 1.0
             plt.rcParams['axes.linewidth'] = 1.0
             plt.legend()
-            writefile = resultdir + name+'/'+name + '_' + col + '.png'
+            writefile = name + '_' + col + '.png'
             plt.savefig(writefile)
 #            plt.show()
             plt.close()
@@ -269,11 +277,11 @@ iplot(fig, filename=title, validate=False, show_link=False, config={"displaylogo
 
 #subprocess.run(["python", "../Rigaku_XRD_tools/csv2graph_jupyter.py", "../"+name+"/"+name+".csv"])
 #subprocess.check_call(["python", "../Rigaku_XRD_tools/ras2raw_XRD.py", "../"+name+"/"+readfile, "--encoding", "sjis", "../Rigaku_XRD_tools/xrd_raw_template.xml", "../"+name+"/raw.xml"])
-subprocess.check_call(["python", tooldir + "ras2raw_XRD.py", resultdir + name+"/"+basename, "--encoding", "sjis", tooldir + "xrd_raw_template.xml", resultdir + name+"/raw.xml"])
+subprocess.check_call(["python", "../" + tooldir + "ras2raw_XRD.py", basename, "--encoding", "sjis", "../" + tooldir + "xrd_raw_template.xml", "raw.xml"])
 
-readfile_raw = resultdir + name+"/raw.xml"
-templatefile = tooldir + "xrd_primary_template.xml"
-outputfile = resultdir+name+"/primary.xml"
+readfile_raw = "raw.xml"
+templatefile = "../" + tooldir + "xrd_primary_template.xml"
+outputfile = "primary.xml"
 def registdf(key, channel, value, metadata, unitlist, template):
     key_unit = 0
     column = key
@@ -463,4 +471,11 @@ file = codecs.open(outputfile,'wb',encoding='utf-8')
 dom.writexml(file,'','\t','\n',encoding='utf-8')
 file.close()
 dom.unlink()
-os.remove(resultdir + name+"/"+basename)
+os.remove(basename)
+os.chdir("../")
+if os.path.isdir(resultdir + name):
+    shutil.rmtree(resultdir + name)
+os.mkdir(resultdir + name)
+for file in glob.glob(r'temp/*'):
+    shutil.move(file, resultdir + name)
+shutil.rmtree("temp")

@@ -31,7 +31,9 @@ Contents
 
    XPS <xps>
    XRD <xrd>
+   test <readme_for_jupyter>
    xps_survey for jupyter notebook <xps_survey>
+   xrd for jupyter notebook <readme_for_jupyter>
    LICENSE
    Terms of Service <terms_of_service>
 

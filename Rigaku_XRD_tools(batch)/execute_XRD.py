@@ -1,5 +1,5 @@
 #-------------------------------------------------
-# execute.py
+# execute_XRD.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
@@ -11,6 +11,7 @@ import argparse
 import os
 import shutil
 import subprocess
+import glob
 
 def getKey(key, row):
     if row[0] == key:
@@ -31,10 +32,20 @@ sourcedir = dirname
 resultdir = "../"
 tooldir = "./"
 
+if os.path.isdir("temp"):
+    shutil.rmtree("./temp")
+os.mkdir("temp")
+shutil.copy2(readfile, "temp/" + basename)
+os.chdir("temp")
+subprocess.run(["python", "../" + tooldir + "ras2csv.py", "--encoding", "sjis", basename])
+subprocess.run(["python", "../" + tooldir + "csv2graph.py", name+".csv"])
+subprocess.run(["python", "../" + tooldir + "ras2raw_XRD.py", basename, "--encoding", "sjis", "../" + tooldir + "xrd_raw_template.xml", "raw.xml"])
+subprocess.run(["python", "../" + tooldir + "raw2primary_XRD.py", "raw.xml", "../" + tooldir + "xrd_primary_template.xml", "primary.xml"])
+os.remove(basename)
+os.chdir("../")
+if os.path.isdir(resultdir + name):
+    shutil.rmtree(resultdir + name)
 os.mkdir(resultdir + name)
-shutil.copy2(readfile, resultdir + name+"/.")
-subprocess.run(["python", tooldir + "ras2csv.py", "--encoding", "sjis", resultdir + name+"/"+basename])
-subprocess.run(["python", tooldir + "csv2graph.py", resultdir + name+"/"+name+".csv"])
-subprocess.run(["python", tooldir + "ras2raw_XRD.py", resultdir + name+"/"+basename, "--encoding", "sjis", tooldir + "xrd_raw_template.xml", resultdir + name+"/raw.xml"])
-subprocess.run(["python", tooldir + "raw2primary_XRD.py", resultdir + name+"/raw.xml", tooldir + "xrd_primary_template.xml", resultdir + name+"/primary.xml"])
-os.remove(resultdir + name+"/"+basename)
+for file in glob.glob(r'temp/*'):
+    shutil.move(file, resultdir + name)
+shutil.rmtree("temp")
