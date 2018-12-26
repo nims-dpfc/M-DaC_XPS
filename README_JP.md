@@ -1,8 +1,8 @@
-# 吉川プログラム（仮称）
+# 「NIMS Materials Data Conversion Tools (M-DaC)」について
 
-国立研究開発法人物質・材料研究（以下、NIMS）では、物質・材料研究の一環として、実験データの効率的な収集と高付加価値化の技術開発を行っています。本開発で提供される「吉川プログラム（仮称）」とは、NIMSが計測機器メーカーの協力を得て開発した実験の主要条件やメタデータの自動抽出とその翻訳作業（可読化）の自動化、ならびに多次元の数値データ行列のScheme on Read型の可読化を行うことができるプログラムおよびソースコード群を指します。
+国立研究開発法人物質・材料研究（以下、NIMS）では、物質・材料研究の一環として、実験データの効率的な収集と高付加価値化の技術開発を行っています。本開発で提供される「NIMS Materials Data Conversion Tools (M-DaC)」とは、NIMSが計測機器メーカーの協力を得て開発した実験の主要条件やメタデータの自動抽出とその翻訳作業（可読化）の自動化、ならびに多次元の数値データ行列のScheme on Read型の可読化を行うことができるプログラムおよびソースコード群を指します。
 
-今回開発した吉川プログラム（仮称）を研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
+今回開発したM-DaCを研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
 
 
 
@@ -26,7 +26,7 @@
 
 ・作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。
 
-　http:// GitHub\Materials_Data_Repository\docs_src\_build\html
+　http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ・各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
@@ -46,19 +46,19 @@
 
 ##### 論文などにおける引用の表記
 
-・本吉川プログラム（仮称）を使った研究や開発においての引用例を参照してください。
+・M-DaCを使った研究や開発においての引用例を参照してください。
 
 日本語引用文例）　
 
-長尾浩子、鈴木峰晴、吉川英樹：”吉川プログラム（仮称）”、2018 （http://GitHub/ Materials_Data_Repository/）
+長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "Yoshikawa Program", 2018, （http://GitHub/ Materials_Data_Repository/）
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
 
 
 
-##### 吉川プログラムに関するお問い合わせ
+##### M-DaCに関するお問い合わせ
 
 ライセンスや本プログラム等の利用方法やライセンスに関することで不明な点につきましては、以下にお問い合わせください。
 
@@ -68,4 +68,4 @@ H. Nagao, M. Suzuki, H. Yoshikawa: "Yoshikawa Program", 2018, （http://GitHub/ 
 
  　統合型材料開発・情報基盤部門 材料データプラットフォームセンター　
 
-　 吉川プログラム代表窓口  E-mail: ○○○○○@nims.go.jp
+　 M-DaC代表窓口  E-mail: ○○○○○@nims.go.jp
