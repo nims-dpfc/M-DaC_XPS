@@ -15,13 +15,17 @@ from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
+import sys
+import codecs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
 parser.add_argument("template_file")
+parser.add_argument("out_file")
 options = parser.parse_args()
 readfile = options.file_path
 templatefile = options.template_file
+outputfile = options.out_file
 channel = 0
 
 template = ET.parse(templatefile)
@@ -88,4 +92,9 @@ column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
-print(dom.toprettyxml())
+file = codecs.open(outputfile,'wb',encoding='utf-8')
+
+dom.writexml(file,'','\t','\n',encoding='utf-8')
+
+file.close()
+dom.unlink()

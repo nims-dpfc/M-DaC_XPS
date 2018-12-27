@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="Technique" type="String">XPS</meta>
+	<meta key="Instrument_model_identifier" type="String">PHI Quantera SXM</meta>
+	<meta key="Experiment_Identifier" type="Numeric">20170606</meta>
+	<meta key="Experiment_mode" type="String">SPECTRUM</meta>
+	<meta key="Year" type="Numeric">2017</meta>
+	<meta key="Month" type="Numeric">06</meta>
+	<meta key="Day" type="Numeric">06</meta>
+	<meta key="Analysis_source_beam_diameter" type="Quantity" unit="um">100.0</meta>
+	<meta key="Analysis_source_strength" type="String">103.08W_HP</meta>
+	<meta key="Analyser_mode" type="String">FAT</meta>
+	<meta key="Analyser_work_function" type="Quantity" unit="eV">4.250</meta>
+	<meta key="Analyser_axis_take_off_polar_angle" type="Quantity" unit="deg">45.0</meta>
+	<meta key="Analyser_acceptance_solid_angle" type="Quantity" unit="sr">0.38</meta>
+	<meta key="Analyser_Pass_energy" type="Quantity" unit="eV">280.00</meta>
+	<meta key="Analysis_region" type="String">Area</meta>
+	<meta key="Analysis_width_x" type="Quantity" unit="um">1400.0000</meta>
+	<meta key="Analysis_width_y" type="Quantity" unit="um">100.0000</meta>
+	<meta key="Flood_gun_Voltage" type="Quantity" unit="V">1.40</meta>
+	<meta key="Flood_gun_Emission_current" type="Quantity" unit="uA">20.0</meta>
+	<meta key="Ion_gun_Voltage" type="Quantity" unit="V">7</meta>
+	<meta key="Species_label" type="String">Survey</meta>
+	<meta key="Transitions" type="String"></meta>
+	<meta key="Abscissa_start" type="Quantity" unit="eV">1380.0000</meta>
+	<meta key="Abscissa_end" type="Quantity" unit="eV">-20.0000</meta>
+	<meta key="Abscissa_increment" type="Quantity" unit="eV">-0.5000</meta>
+	<meta key="Collection_time" type="Quantity" unit="s">0.251496</meta>
+	<meta key="Number_of_scans" type="Numeric">7</meta>
+	<meta key="Comment" type="String">1 #3 Cu foil</meta>
+	<column_num>1</column_num>
+	<column_name>condition</column_name>
+</metadata>

@@ -8,7 +8,7 @@ XPS
 program名		  説明
 ========================= =========================================================================================================================================================
 MPExport.exe              ULVAC-PHI製変換ツール（.spe,.proのファイルからtxtファイルを作成するツール）
-txttocsvforphi.py	  txtファイルからFND(Formatted Numerical Data)のcsvファイルを作成するツール
+txt2csv.py	  txtファイルからFND(Formatted Numerical Data)のcsvファイルを作成するツール
 csv2graph.py		  FND(Formatted Numerical Data)のcsvファイルからスペクトルの図を作成するツール（グラフ表示、主要パラメータ表示なし）
 csv2graph_for_jupyter.py  FND(Formatted Numerical Data)のcsvファイルからスペクトルの図を作成するツール（jupyter notebookで使用時、グラフ表示、主要パラメータ表示あり）
 txt2raw_XPS_survey.py	  txtファイルから装置出力パラメータを抽出するツール
@@ -25,15 +25,15 @@ README.rst		  使い方の説明
 
 2．MPExport.exe: PHI作成変換ツール
 
-3．source/XPS_PHI_QUANTERA_survey.txt: #1を#2で変換したテキストデータ
+3．XPS_PHI_QUANTERA_survey.txt: #1を#2で変換したテキストデータ
 
-4．txttocsvforphi.py: #3から，FND(Formatted Numerical Data)を作るツール
+4．txt2csv.py: #3から，FND(Formatted Numerical Data)を作るツール
 
-5．source/XPS_PHI_QUANTERA_survey.csv: #3から#4で変換したFNDファイル
+5．XPS_PHI_QUANTERA_survey.csv: #3から#4で変換したFNDファイル
 
-6．csvtograph.py: FND(Formatted Numerical Data)ファイルからスペクトルの図を作成するツール
+6．csv2graph.py: FND(Formatted Numerical Data)ファイルからスペクトルの図を作成するツール
 
-7．source/XPS_PHI_QUANTERA_survey.png: #5から#6で作成したPNGファイル
+7．XPS_PHI_QUANTERA_survey.png: #5から#6で作成したPNGファイル
 
 コマンド
 --------
@@ -44,11 +44,23 @@ README.rst		  使い方の説明
 
 テキストファイルをフォーマットされた数値データ(csv)に変換します::
 
-	python txttocsvforphi.py XPS_PHI_QUANTERA_survey.txt
+	python txt2csv.py XPS_PHI_QUANTERA_survey.txt
 
 csvファイルから画像を作成します::
 
-	python csvtograph.py XPS_PHI_QUANTERA_survey.csv
+	python csv2graph.py XPS_PHI_QUANTERA_survey.csv
+
+rasファイルから装置出力パラメータを抽出します::
+
+	python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml
+
+第3引数で指定したファイル名で装置出力パラメータが作成されます。
+
+装置出力パラメータから主要パラメータを抽出します::
+
+	python raw2primary_XPS_survey.py raw.xml xps_primary_template.xml primary.xml
+
+第3引数で指定したファイルで主要パラメータが作成されます。
 
 バッチ処理
 ----------

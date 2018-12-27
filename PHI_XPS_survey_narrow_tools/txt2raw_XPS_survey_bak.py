@@ -1,5 +1,5 @@
 #-------------------------------------------------
-# txt2raw_XPS_survey_fileout.py
+# txt2raw_XPS_survey.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
@@ -15,7 +15,6 @@ from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
-import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
@@ -90,5 +89,3 @@ subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
 print(dom.toprettyxml())
-with open('raw.xml', 'w') as f:
-    f.write(dom.toprettyxml())

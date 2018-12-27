@@ -75,7 +75,7 @@ with open(readfile, 'r') as f:
                         xunit = "(" + unit_option[0] + ")"
                     if isinstance(scalename_option, list):
                         xaxis = scalename_option[0]
-                    xaxis = xaxis + xunit
+                    xaxis = xaxis + " " + xunit
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             xrevFlag = True
@@ -89,7 +89,7 @@ with open(readfile, 'r') as f:
                         yunit = "(" + unit_option[1] + ")"
                     if isinstance(scalename_option, list):
                         yaxis = scalename_option[1]
-                    yaxis = yaxis + yunit
+                    yaxis = yaxis + " " + yunit
 #                        yaxis = yaxis + "(" + row[2] + ")"
                     if len(row) > 3:
                         if row[3] == 'reverse':

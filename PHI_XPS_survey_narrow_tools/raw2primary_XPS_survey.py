@@ -15,6 +15,7 @@ from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
+import codecs
 
 def registdf(key, channel, value, metadata, unitlist, template):
     key_unit = 0
@@ -194,9 +195,11 @@ def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
 parser.add_argument("template_file")
+parser.add_argument("out_file")
 options = parser.parse_args()
 readfile = options.file_path
 templatefile = options.template_file
+outputfile = options.out_file
 channel = 0
 rawdata = ET.parse(readfile)
 rawcolumns=[]
@@ -264,4 +267,8 @@ column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
-print(dom.toprettyxml())
+#print(dom.toprettyxml())
+file = codecs.open(outputfile,'wb',encoding='utf-8')
+dom.writexml(file,'','\t','\n',encoding='utf-8')
+file.close()
+dom.unlink()
