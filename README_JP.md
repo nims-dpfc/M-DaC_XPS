@@ -27,7 +27,7 @@
 * 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
 http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-*各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
+* 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
 
 
@@ -39,7 +39,7 @@ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 * アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
 
-* 詳細は『Terms of Use and Lisence.md』をお読みください。
+* 詳細は『Terms of Use and License.md』をお読みください。
 
 
 
@@ -53,7 +53,7 @@ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD)
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/MDAC_XPS   or   https://github.com/nims-dpfc/MDAC_XRD)
 
 
 
