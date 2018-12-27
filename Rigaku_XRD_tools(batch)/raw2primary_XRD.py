@@ -62,7 +62,19 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 elif key == "Day":
                     dt = parse(value)
                     value = "{0:02d}".format(dt.day)
-
+                elif key == "Wavelength_Type":
+                    wavetype = value
+                    if wavetype.find('a'):
+                        wavetype = wavetype.replace('a', '_alpha')
+                    if wavetype.find('b'):
+                        wavetype = wavetype.replace('b', '_beta')
+                    value = wavetype
+                elif key == "Scan_Axis":
+                    xlabelname = value
+                    theta_list = ['TwoThetaTheta', '2θ/θ']
+                    if xlabelname in theta_list:
+                        xlabelname = '2Theta-Theta'
+                    value = xlabelname
             if value == None:
                 value =""
 

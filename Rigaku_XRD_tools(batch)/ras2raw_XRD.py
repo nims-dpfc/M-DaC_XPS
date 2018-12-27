@@ -62,29 +62,27 @@ for meta in metas:
         value = df.loc['value', key]
     else:
         value = ""
-    if 1:
-        subnode = dom.createElement('meta')
-        subnode.appendChild(dom.createTextNode(value))
-        subnode_attr = dom.createAttribute('key')
-        subnode_attr.value = key
+    subnode = dom.createElement('meta')
+    subnode.appendChild(dom.createTextNode(value))
+    subnode_attr = dom.createAttribute('key')
+    subnode_attr.value = key
+    subnode.setAttributeNode(subnode_attr)
+    metadata.appendChild(subnode)
+
+    subnode_attr = dom.createAttribute('type')
+    typename = template.find('meta[@key="{value}"]'.format(value=key))
+    if typename.get("type") != None:
+        subnode_attr.value = typename.get("type")
+    else:
+        subnode_attr.value = "String"
+    subnode.setAttributeNode(subnode_attr)
+    metadata.appendChild(subnode)
+
+    if channel != 0:
+        subnode_attr = dom.createAttribute('column')
+        subnode_attr.value = channel
         subnode.setAttributeNode(subnode_attr)
         metadata.appendChild(subnode)
-
-        subnode_attr = dom.createAttribute('type')
-        typename = template.find('meta[@key="{value}"]'.format(value=key))
-        if typename.get("type") != None:
-            subnode_attr.value = typename.get("type")
-        else:
-            subnode_attr.value = "String"
-        subnode.setAttributeNode(subnode_attr)
-        metadata.appendChild(subnode)
-
-        if channel != 0:
-            subnode_attr = dom.createAttribute('column')
-            subnode_attr.value = channel
-            subnode.setAttributeNode(subnode_attr)
-            metadata.appendChild(subnode)
-#print(df)
 subnode = dom.createElement('column_num')
 subnode.appendChild(dom.createTextNode(str(maxcolumn)))
 metadata.appendChild(subnode)
