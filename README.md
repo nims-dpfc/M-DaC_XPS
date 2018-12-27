@@ -24,8 +24,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ##### Method
 
-* After downloading the set to the working directory, please try a series of flows with sample data of the following tutorial.
-
+* After downloading the set to the working directory, please try a series of flows with sample data of the following tutorial.<br />
  http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 * If you have data on hand of each manufacturer, you can proceed in the same way.
