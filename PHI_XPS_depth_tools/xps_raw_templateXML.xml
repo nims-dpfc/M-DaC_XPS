@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+  <column_name>condition</column_name>
+  <meta key="Platform" type="String"/>
+  <meta key="Technique" type="String" />
+  <meta key="FileType" type="String" />
+  <meta key="FileDesc" type="String" />
+  <meta key="SoftwareVersion" type="String" />
+  <meta key="InstrumentModel" type="String" />
+  <meta key="AcqFilename" type="String" />
+  <meta key="FileDate" type="String" />
+  <meta key="AcqFileDate" type="String" />
+  <meta key="Institution" type="String" />
+  <meta key="Operator" type="String" />
+  <meta key="ExperimentID" type="String" />
+  <meta key="AnalyserWorkFcn" type="String" />
+  <meta key="PlatenID" type="String" />
+  <meta key="PlatenDesc" type="String" />
+  <meta key="PhotoFilename" type="String" />
+  <meta key="SXIFilename" type="String" />
+  <meta key="SourceAnalyserAngle" type="String" />
+  <meta key="AnalyserSolidAngle" type="String" />
+  <meta key="SputterIon" type="String" />
+  <meta key="SputterCurrent" type="String" />
+  <meta key="SputterEnergy" type="String" />
+  <meta key="FloatVolt" type="String" />
+  <meta key="SputterRaster" type="String" />
+  <meta key="AnalyserMode" type="String" />
+  <meta key="SurvNumCycles" type="String" />
+  <meta key="NoSpectralReg" type="String" />
+  <meta key="SpectralRegDef" type="String" />
+  <meta key="SpectralRegDef2" type="String" />
+  <meta key="NoSpatialArea" type="String" />
+  <meta key="SpatialAreaDef" type="String" />
+  <meta key="SpatialAreaDesc" type="String" />
+  <meta key="XraySource" type="String" />
+  <meta key="XrayPower" type="String" />
+  <meta key="XrayBeamDiameter" type="String" />
+  <meta key="XRayHighPower" type="String" />
+  <meta key="NeutralizerCurrent" type="String" />
+  <meta key="NeutralizerEnergy" type="String" />
+  <meta key="StagePosition" type="String" />
+  <meta key="ImageSizeXY" type="String" />
+</template>

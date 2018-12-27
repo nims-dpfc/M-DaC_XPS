@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+  <column_name>condition</column_name>
+  <meta key="Operator_identifier" type="String" />
+  <meta key="Operator_affiliation_identifier" type="String" />
+  <meta key="Institution_idendfier" type="String" />
+  <meta key="Technique" type="String" />
+  <meta key="Instrument_model_identifier" type="String" />
+  <meta key="Experiment_Identifier" type="Numeric" />
+  <meta key="Experiment_mode" type="String" />
+  <meta key="Year" type="Numeric" />
+  <meta key="Month" type="Numeric" />
+  <meta key="Day" type="Numeric" />
+  <meta key="Hour" type="Numeric" />
+  <meta key="Minute" type="Numeric" />
+  <meta key="Second" type="Numeric" />
+  <meta key="Analysis_source_label" type="String" />
+  <meta key="Analysis_source_characteristic_energy" type="Quantity" unit="eV" />
+  <meta key="Analysis_source_beam_width_x" type="Quantity" unit="um" />
+  <meta key="Analysis_source_beam_width_y" type="Quantity" unit="um" />
+  <meta key="Analysis_source_beam_diameter" type="Quantity" unit="um" />
+  <meta key="Analysis_source_strength" type="String" />
+  <meta key="Analysis_source_Irradiation_time" type="Quantity" unit="s">
+     <unit_option>h</unit_option>
+     <unit_option>min</unit_option>
+     <unit_option>s</unit_option>
+  </meta>
+  <meta key="Analysis_source_polar_angle_of_incidence" type="Quantity" unit="deg" />
+  <meta key="Analysis_source_azimuth" type="Quantity" unit="deg" />
+  <meta key="Analyser_mode" type="String" />
+  <meta key="Analyser_lens_mode" type="String" />
+  <meta key="Retard_ratio" type="Numeric" />
+  <meta key="Magnification_of_analyser_transfer_lens" type="String" />
+  <meta key="Analyser_work_function" type="Quantity" unit="eV" />
+  <meta key="Analyser_axis_take_off_polar_angle" type="Quantity" unit="deg" />
+  <meta key="Analyser_axis_take_off_azimuth" type="Quantity" unit="deg" />
+  <meta key="Analyser_acceptance_angle" type="Quantity" unit="deg" />
+  <meta key="Analyser_acceptance_solid_angle" type="Quantity" unit="sr" />
+  <meta key="Signal_mode" type="String" />
+  <meta key="Analyser_Pass_energy" type="Quantity" unit="eV" />
+  <meta key="Analyser_slit_width_x" type="Quantity" unit="mm" />
+  <meta key="Analyser_slit_width_y" type="Quantity" unit="mm" />
+  <meta key="Analyser_slit_shape" type="String" />
+  <meta key="Specimen_mounting" type="String" />
+  <meta key="Analysis_region" type="String" />
+  <meta key="Analysis_width_x" type="Quantity" unit="um" />
+  <meta key="Analysis_width_y" type="Quantity" unit="um" />
+  <meta key="Sample_normal_polar_angle_of_tilt" type="Quantity" unit="deg" />
+  <meta key="Sample_normal_tilt_azimuth" type="Quantity" unit="deg" />
+  <meta key="Sample_rotation_angle" type="Quantity" unit="deg" />
+  <meta key="Sample_bias" type="Quantity" unit="V" />
+  <meta key="Specimen_temperature" type="Quantity" unit="°C">
+     <unit_option>K</unit_option>
+     <unit_option>°C</unit_option>
+  </meta>
+  <meta key="Sample_current" type="Quantity" unit="nA" />
+  <meta key="Charge_control_conditions" type="String" />
+  <meta key="Neutralization_source_polar_angle_of_incidence" type="Quantity" unit="deg" />
+  <meta key="Neutralization_source_azimuth" type="Quantity" unit="deg" />
+  <meta key="Flood_gun_Manufacturer" type="String" />
+  <meta key="Flood_gun_Instrument_model" type="String" />
+  <meta key="Flood_gun_Voltage" type="Quantity" unit="V" />
+  <meta key="Flood_gun_Extractor_voltage" type="Quantity" unit="V" />
+  <meta key="Flood_gun_Emission_current" type="Quantity" unit="uA" />
+  <meta key="Flood_gun_Distance_from_sample" type="Quantity" unit="mm" />
+  <meta key="Flood_gun_Irradiation_time" type="Quantity" unit="s">
+     <unit_option>h</unit_option>
+     <unit_option>min</unit_option>
+     <unit_option>s</unit_option>
+  </meta>
+  <meta key="Ion_gun_Manufacturer" type="String" />
+  <meta key="Ion_gun_Instrument_model" type="String" />
+  <meta key="Ion_gun_Voltage" type="Quantity" unit="V" />
+  <meta key="Ion_gun_Extractor_voltage" type="Quantity" unit="V" />
+  <meta key="Ion_gun_Emission_current" type="Quantity" unit="uA" />
+  <meta key="Ion_gun_Distance_from_sample" type="Quantity" unit="mm" />
+  <meta key="Ion_gun_Irradiation_time" type="Quantity" unit="s">
+     <unit_option>h</unit_option>
+     <unit_option>min</unit_option>
+     <unit_option>s</unit_option>
+  </meta>
+  <meta key="Sputtering_ion_or_atom_atomic_number" type="Numeric" />
+  <meta key="Number_of_atoms_in_sputtering_ion_or_atom_particles" type="Numeric" />
+  <meta key="Sputtering_ion_or_atom_charge_sign_and_number" type="String" />
+  <meta key="Sputtering_mode" type="String" />
+  <meta key="Sputtering_source_energy" type="Quantity" unit="eV" />
+  <meta key="Sputtering_source_beam_current" type="Quantity" unit="nA" />
+  <meta key="Sputtering_source_polar_angle_of_incidence" type="Quantity" unit="deg" />
+  <meta key="Sputtering_source_azimuth" type="Quantity" unit="deg" />
+  <meta key="Sputtering_source_width_x" type="Quantity" unit="um" />
+  <meta key="Sputtering_source_width_y" type="Quantity" unit="um" />
+  <meta key="Sample_rotation" type="String" />
+  <meta key="sputtering_time_before_measurement" type="Quantity" unit="min" />
+  <meta key="Chamber_pressure" type="Quantity" unit="Pa">
+     <unit_option>Pa</unit_option>
+     <unit_option>Torr</unit_option>
+  </meta>
+  <meta key="Ambient_pressure" type="Quantity" unit="Pa">
+     <unit_option>Pa</unit_option>
+     <unit_option>Torr</unit_option>
+  </meta>
+  <meta key="Ambient_pressure_Gas_source" type="String" />
+  <meta key="Species_label" type="String" />
+  <meta key="Transitions" type="String" />
+  <meta key="Reference_spectrum_Species_label" type="String" />
+  <meta key="Reference_spectrum_Transitions" type="String" />
+  <meta key="Reference_spectrum_FWHM" type="Quantity" unit="eV" />
+  <meta key="Abscissa_start" type="Quantity" unit="eV" />
+  <meta key="Abscissa_end" type="Quantity" unit="eV" />
+  <meta key="Abscissa_increment" type="Quantity" unit="eV" />
+  <meta key="Collection_time" type="Quantity" unit="s" />
+  <meta key="Number_of_scans" type="Numeric" />
+  <meta key="Energy_scale_calibration" type="String" />
+  <meta key="Energy_scale_calibration_Energy_scale" type="String" />
+  <meta key="Energy_scale_calibration_feature_label" type="String" />
+  <meta key="Energy_scale_calibration_feature_measured_energy" type="String" />
+  <meta key="Energy_scale_calibration_Charge_compensation_Element_name" type="String" />
+  <meta key="Energy_scale_calibration_Charge_compensation_Peak_value" type="Quantity" unit="eV" />
+  <meta key="Energy_scale_calibration_procedure" type="String" />
+  <meta key="Energy_scale_calibration_Spectrum" type="String" />
+  <meta key="Intensity_scale_calibration_procedure" type="String" />
+  <meta key="Intensity_scale_calibration_Repeatability" type="String" />
+  <meta key="Intensity_scale_calibration_Repeatability_Procedure" type="String" />
+  <meta key="Intensity_scale_calibration_Repeatability_Spectrum" type="String" />
+  <meta key="Intensity_scale_calibration_Constancy" type="String" />
+  <meta key="Intensity_scale_calibration_Constancy_Procedure" type="String" />
+  <meta key="Intensity_scale_calibration_Constancy_Spectrum" type="String" />
+  <meta key="Intensity_scale_calibration_Linearity" type="String" />
+  <meta key="Intensity_scale_calibration_Linearity_Procedure" type="String" />
+  <meta key="Intensity_scale_calibration_Linearity_Spectrum" type="String" />
+  <meta key="Resolution_calibration" type="String" />
+  <meta key="Resolution_calibration_procedure" type="String" />
+  <meta key="Resolution_calibration_Feature_label" type="String" />
+  <meta key="Resolution_calibration_Energy_resolution" type="Quantity" unit="eV" />
+  <meta key="Resolution_calibration_Energy_Spectrum" type="String" />
+  <meta key="Comment" type="String" />
+</template>

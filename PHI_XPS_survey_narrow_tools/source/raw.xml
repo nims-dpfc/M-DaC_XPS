@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<metadata>
+	<meta key="Platform" type="String">PC</meta>
+	<meta key="Technique" type="String">XPS</meta>
+	<meta key="FileType" type="String">SPECTRUM</meta>
+	<meta key="FileDesc" type="String">MIDATA001</meta>
+	<meta key="SoftwareVersion" type="String">SS 3.6.1.16</meta>
+	<meta key="InstrumentModel" type="String">PHI Quantera SXM</meta>
+	<meta key="AcqFilename" type="String">C:\Datafiles\Yasufuku\20170606\MIDATA001.104.spe</meta>
+	<meta key="FileDate" type="String">2017 6 6</meta>
+	<meta key="AcqFileDate" type="String">2017 6 6</meta>
+	<meta key="Institution" type="String"></meta>
+	<meta key="Operator" type="String"></meta>
+	<meta key="ExperimentID" type="String">20170606</meta>
+	<meta key="AnalyserWorkFcn" type="String">4.250 eV</meta>
+	<meta key="PlatenID" type="String">MIDATA001</meta>
+	<meta key="PlatenDesc" type="String"></meta>
+	<meta key="PhotoFilename" type="String">MIDATA001.101.pho</meta>
+	<meta key="SXIFilename" type="String"></meta>
+	<meta key="SourceAnalyserAngle" type="String">45.0 d</meta>
+	<meta key="AnalyserSolidAngle" type="String">0.38 sr</meta>
+	<meta key="SputterIon" type="String">Ar+</meta>
+	<meta key="SputterCurrent" type="String">0.000 uA</meta>
+	<meta key="SputterEnergy" type="String">0.107 kV</meta>
+	<meta key="FloatVolt" type="String">-100.0 V</meta>
+	<meta key="SputterRaster" type="String">0.00 0.00 mm</meta>
+	<meta key="AnalyserMode" type="String">FAT</meta>
+	<meta key="SurvNumCycles" type="String">1</meta>
+	<meta key="NoSpectralReg" type="String">1</meta>
+	<meta key="SpectralRegDef" type="String">1 1 Su1s 111 2801 -0.5000 1380.0000 -20.0000 1379.0000 -19.0000 0.251496 280.00 AREA</meta>
+	<meta key="SpectralRegDef2" type="String">1 1400.0 7 0 2 1</meta>
+	<meta key="NoSpatialArea" type="String">1</meta>
+	<meta key="SpatialAreaDef" type="String">1 HP3 4 (-20651.4 -21601.7 24061.0 45.0 0.0) (-19251.4 -21601.7 24061.0 45.0 0.0) (-19251.4 -21501.7 24061.0 45.0 0.0) (-20651.4 -21501.7 24061.0 45.0 0.0)</meta>
+	<meta key="SpatialAreaDesc" type="String">1 #3 Cu foil</meta>
+	<meta key="XraySource" type="String">Al 1486.6 mono</meta>
+	<meta key="XrayPower" type="String">103.08 W</meta>
+	<meta key="XrayBeamDiameter" type="String">100.0 um</meta>
+	<meta key="XRayHighPower" type="String">yes</meta>
+	<meta key="NeutralizerCurrent" type="String">20.0 uA</meta>
+	<meta key="NeutralizerEnergy" type="String">1.40 V</meta>
+	<meta key="StagePosition" type="String">-20.1680 23.2019 24.0607 45.0000 0.0044</meta>
+	<meta key="ImageSizeXY" type="String">1400.0000 100.0000 Area</meta>
+	<column_num>1</column_num>
+	<column_name>condition</column_name>
+</metadata>

@@ -1,0 +1,38 @@
+1．XPS生データ（survey1本のでOK）:XPS_PHI_QUANTERA_survey_sample.spe
+2．PHI作成変換ツール:MPExport.exe
+3．#1を#2で変換したテキストデータ: XPS_PHI_QUANTERA_survey_sample.txt
+4．#3から，FNDを作るツール: txt2csv.py
+5．#3から#4で変換したFNDファイル: XPS_PHI_QUANTERA_survey_sample.csv
+6．FNDファイルからスペクトルの図を作成するツール: csv2graph.py
+7．#5から#6で作成したPNGファイル: XPS_PHI_QUANTERA_survey_sample.png
+8. #3から装置出力パラメータを作成するツール: txt2raw_XPS_survey.py
+9. 装置出力パラメータの語彙を管理するテンプレート: xps_raw_template.xml
+10. #8,#9から主要パラメータを作成するツール: raw2primary_XPS_survey.py
+11. 主要パラメータの語彙を管理するテンプレート: xps_primary_template.xml
+
+> MPExport.exe -Filename:XPS_PHI_QUANTERA_survey_sample.spe -TSV
+> python txt2csv.py XPS_PHI_QUANTERA_survey_sample.txt
+> python csv2graph.py XPS_PHI_QUANTERA_survey_sample.csv
+> python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey_sample.txt xps_raw_template.xml > raw.xml
+> python raw2primary_XPS_survey.py raw.xml xps_primary_template.xml > primary.xml
+
+matplotlib
+matplotlib-scalebar
+numpy
+pandas
+
+などのライブラリがない場合はpipなどでインストールしてください。
+動作中の環境にインストールされているライブラリ一覧は
+library_list.txt
+にあります。
+
+jupyter notebookで実行する場合は
+In [0]: cd source
+In [0]: %%bash
+	../MPExport.exe -Filename:XPS_PHI_QUANTERA_survey.spe -TSV
+In [1]: %run -i ../txt2csv.py XPS_PHI_QUANTERA_survey.txt
+In [2]: %run -i ../csv2graph_for_jupyter_plotly.py XPS_PHI_QUANTERA_survey.csv
+In [3]: %run -i ../txt2raw_XPS_survey_fileout.py XPS_PHI_QUANTERA_survey.txt ../xps_raw_template.xml
+In [4]: %run -i ../raw2primary_XPS_survey_fileout.py raw.xml ../xps_primary_template.xml
+
+のようにしてください。 
