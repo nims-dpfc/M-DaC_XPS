@@ -24,37 +24,36 @@
 
 ##### 操作方法
 
-・作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。
+* 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
+http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-　http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-・各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
+* 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
 
 
 ##### 利用ルールおよびライセンス
 
-・本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「*クリエイティブ・コモンズ・ライセンスの表示4.0国際*」のもとで「*CC-BY-SA*」での利用ができます。
+* 本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「*クリエイティブ・コモンズ・ライセンスの表示4.0国際*」のもとで「*CC-BY-SA*」での利用ができます。
 
-・本プログラム等のうち、ライセンス欄に「MITライセンス」の表記のある試験用ソースコードは別に示される『LICENSE_MIT.txt』に示されるMITライセンスのもと利用できます。
+* 本プログラム等のうち、ライセンス欄に「MITライセンス」の表記のある試験用ソースコードは別に示される『LICENSE_MIT.txt』に示されるMITライセンスのもと利用できます。
 
-・アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
+* アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
 
-・詳細は『Terms of Use and Lisence.md』をお読みください。
+* 詳細は『Terms of Use and License.md』をお読みください。
 
 
 
 ##### 論文などにおける引用の表記
 
-・M-DaCを使った研究や開発においての引用例を参照してください。
+* M-DaCを使った研究や開発においての引用例を参照してください。
 
 日本語引用文例）　
 
-長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
+長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 (https://github.com/nims-dpfc/MDAC_XPS   or   https://github.com/nims-dpfc/MDAC_XRD)
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/MDAC_XPS   or   https://github.com/nims-dpfc/MDAC_XRD)
 
 
 
