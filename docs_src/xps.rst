@@ -27,7 +27,7 @@ Jupyter notebook を立ち上げます。::
 	jupyter notebook
 
 Jupyter notebook から ``xps_survey.ipynb`` をクリックして実行します。
-Jupyter Notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>`_ を参照してください。
+Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>`_ を参照してください。
 
 
 コマンド
@@ -51,6 +51,10 @@ Jupyter Notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>
 		MPExport.exe
 
 	を単体で実行して参照してください。
+
+.. warning::
+
+	linuxなどで動作させる場合には、``wine`` などのwindowアプリケーション対応ソフトを使用して動作させてください。
 	
 
 ``.txt`` 形式のファイルをフォーマットした数値データ(``.csv``)に変換します::

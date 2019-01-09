@@ -40,9 +40,13 @@ Quick Start
 コマンドを実行します。::
 
 	MPExport.exe -Filename:"..\source\XPS_PHI_QUANTERA_survey.spe" -TSV
+
 	python txt2csv.py XPS_PHI_QUANTERA_survey.txt
+
 	python csv2graph.py XPS_PHI_QUANTERA_survey.csv
+
 	python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml
+
 	python raw2primary_XPS_survey.py raw.xml xps_primary_template.xml primary.xml
 
 カレントディレクトリに各種変換されたファイルが作成されます。
@@ -51,7 +55,8 @@ Quick Start
 
 	jupyter notebook
 
-チュートリアルにある「 `Jupyter Notebookでの実行`_ 」を参考に各種コマンドを実行します。``xps_survey.ipynb`` を使用すると簡単に実行できます。
+チュートリアルにある「 `Jupyter Notebookでの実行`_ 」を参考に各種コマンドを実行します。
+``xps_survey.ipynb`` を使用すると簡単に実行できます。
 
 Online documentation (and example of use):
     https://nims-dpfc.github.io/MDAC_XPS/
