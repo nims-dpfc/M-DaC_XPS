@@ -46,7 +46,7 @@
     }
    ],
    "source": [
-    "%run -i txt2csv.py XPS_PHI_QUANTERA_survey.txt"
+    "%run -i txt2csv.py \"XPS_PHI_QUANTERA_survey.txt\""
    ]
   },
   {
@@ -68,7 +68,7 @@
     }
    ],
    "source": [
-    "%run -i csv2graph.py XPS_PHI_QUANTERA_survey.csv --jupytermode"
+    "%run -i csv2graph.py \"XPS_PHI_QUANTERA_survey.csv\" --jupytermode"
    ]
   },
   {
@@ -132,7 +132,7 @@
     }
    ],
    "source": [
-    "%run -i txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml --stdout"
+    "%run -i txt2raw_XPS_survey.py \"XPS_PHI_QUANTERA_survey.txt\" xps_raw_template.xml raw.xml --stdout"
    ]
   },
   {
@@ -253,7 +253,7 @@
     }
    ],
    "source": [
-    "%run -i batch_exe_XPS.py ../source/XPS_PHI_QUANTERA_survey.spe --jupytermode"
+    "%run -i batch_exe_XPS.py \"../source/XPS_PHI_QUANTERA_survey.spe\" --jupytermode"
    ]
   }
  ],

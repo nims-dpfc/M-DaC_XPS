@@ -12,6 +12,8 @@ import csv
 import itertools
 import io
 import os.path
+import glob
+import codecs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path", help="input file")
@@ -39,7 +41,7 @@ acqdate = ''
 filetype = ''
 element = ['#legend']
 collection_time = ['#acq_time']
-with open(readfile, 'r', encoding=encoding_option) as f:
+with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
     for line in f:
         line = line.strip()
         if flag == 0:

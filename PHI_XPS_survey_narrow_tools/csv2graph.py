@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import ScalarFormatter
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.graph_objs as go
+import codecs
 
 def getKey(key, row):
     if row[0] == key:
@@ -122,7 +123,8 @@ with open(readfile, 'r') as f:
                 legends = row[:]
         else:
             break
-df = pd.read_csv(readfile, skiprows=line, header=None)
+with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
+    df = pd.read_csv(f, skiprows=line, header=None)
 num_columns = len(df.columns)
 if (len(legends) * len(axis) == num_columns):
     num = 0

@@ -322,7 +322,8 @@ with open(readfile2, 'r') as f:
                 legends = row[:]
         else:
             break
-df = pd.read_csv(readfile2, skiprows=line, header=None)
+with codecs.open(readfile2, 'r', 'utf-8', 'ignore') as f:
+    df = pd.read_csv(f, skiprows=line, header=None)
 num_columns = len(df.columns)
 if (len(legends) * len(axis) == num_columns):
     num = 0

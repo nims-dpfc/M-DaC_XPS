@@ -59,7 +59,7 @@ Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>
 
 ``.txt`` 形式のファイルをフォーマットした数値データ(``.csv``)に変換します::
 
-	python txt2csv.py XPS_PHI_QUANTERA_survey.txt
+	python txt2csv.py "XPS_PHI_QUANTERA_survey.txt"
 
 カレントディレクトリに ``XPS_PHI_QUANTERA_survey.csv`` を出力します
 
@@ -71,19 +71,19 @@ Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>
 
 ``.csv`` 形式のファイルから画像を作成します::
 
-	python csv2graph.py XPS_PHI_QUANTERA_survey.csv
+	python csv2graph.py "XPS_PHI_QUANTERA_survey.csv"
 
 カレントディレクトリに ``XPS_PHI_QUANTERA_survey.png`` を出力します
 
 ``.txt`` 形式のファイルから装置出力パラメータを抽出し、 ``raw.xml`` を出力します::
 
-	python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml
+	python txt2raw_XPS_survey.py "XPS_PHI_QUANTERA_survey.txt" xps_raw_template.xml raw.xml
 
 .. note::
 
 	``--stdout`` のオプションをつけると標準出力にも出力します。::
 
-		python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml --stdout
+		python txt2raw_XPS_survey.py "XPS_PHI_QUANTERA_survey.txt" xps_raw_template.xml raw.xml --stdout
 
 装置出力パラメータファイル ``raw.xml`` から主要パラメータを抽出し、 ``primary.xml`` に出力します::
 
@@ -95,7 +95,7 @@ Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>
 上記のコマンドをまとめて実行できると便利です。
 batch_exe_XPS.py は、上記のコマンドをまとめて行うプログラムです。::
 
-	python batch_exe_XPS.py ../source/XPS_PHI_QUANTERA_survey.spe
+	python batch_exe_XPS.py "../source/XPS_PHI_QUANTERA_survey.spe"
 
 を実行すると、 ``../result/XPS_PHI_QUANTERA_survey`` というフォルダを作成し、その中にFND(Formatted Numerical Data)、
 スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
