@@ -41,7 +41,7 @@ dom.appendChild(metadata)
 count = 0
 wide = 1
 maxcolumn = 1
-with open(readfile, 'r', encoding="utf8") as f:
+with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
     for line in f:
         line = line.strip()
         comment = line[0:2]
