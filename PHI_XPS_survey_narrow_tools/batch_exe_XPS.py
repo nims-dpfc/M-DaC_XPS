@@ -395,7 +395,6 @@ plt.close()
 if len(legends) > 1:
     num = 1
     for col in df.columns:
-        plt.figure()
         if num % dimension != 0:
             x=df[col]
         else:
