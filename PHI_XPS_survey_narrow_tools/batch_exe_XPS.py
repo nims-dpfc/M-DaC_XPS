@@ -9,6 +9,10 @@
 
 import argparse
 import os
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
 import shutil
 import subprocess
 import glob
@@ -257,7 +261,6 @@ xrange_option = ""
 yrange_option = ""
 axis = []
 readfile2 = name + ".csv"
-
 with open(readfile2, 'r') as f:
     reader = csv.reader(f)
     line = 1
