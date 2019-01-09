@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Usage of XRD tools for Jupyter Notebook &mdash; Materials_Data_Repository  documentation</title>
+  <title>Usage of XRD tools for Jupyter Notebook &mdash; M-DaC  ドキュメント</title>
   
 
   
@@ -26,10 +26,13 @@
 
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="XPS survey" href="xps_survey.html" />
-    <link rel="prev" title="XRD" href="xrd.html" /> 
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+ 
+<script>
+
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -48,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Materials_Data_Repository
+            <a href="index.html" class="icon icon-home"> M-DaC
           
 
           
@@ -78,18 +81,11 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="xps.html">XPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xrd.html">XRD</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">test</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">バッチ処理</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="xps_survey.html">xps_survey for jupyter notebook</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">xrd for jupyter notebook</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">バッチ処理</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terms_of_service.html">Terms of Service</a></li>
 </ul>
 
@@ -105,7 +101,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Materials_Data_Repository</a>
+          <a href="index.html">M-DaC</a>
         
       </nav>
 
@@ -175,14 +171,14 @@
 }
 </style>
 <div class="section" id="usage-of-xrd-tools-for-jupyter-notebook">
-<h1>Usage of XRD tools for Jupyter Notebook<a class="headerlink" href="#usage-of-xrd-tools-for-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<h1>Usage of XRD tools for Jupyter Notebook<a class="headerlink" href="#usage-of-xrd-tools-for-jupyter-notebook" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> -i ras2csv.py --encoding sjis ../source/XRD_RIGAKU.ras
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> -i csv2graph_for_jupyter.py XRD_RIGAKU.csv
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/newplot.png"><img alt="newplot.png" src="_images/newplot.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="newplot.png"><img alt="newplot.png" src="newplot.png" style="width: 800px;" /></a>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> -i ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis xrd_raw_template.xml raw.xml
 </pre></div>
 </div>
@@ -190,11 +186,11 @@
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h2>バッチ処理<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>バッチ処理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> -i execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/newplot2.png"><img alt="newplot2.png" src="_images/newplot2.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="newplot2.png"><img alt="newplot2.png" src="newplot2.png" style="width: 800px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; ?&gt;
 &lt;metadata&gt;
     &lt;meta key=&quot;Operator_identifier&quot; type=&quot;String&quot;&gt;English&lt;/meta&gt;
@@ -240,15 +236,6 @@
           </div>
           <footer>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="xps_survey.html" class="btn btn-neutral float-right" title="XPS survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="xrd.html" class="btn btn-neutral" title="XRD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
 
   <hr/>
 
@@ -279,7 +266,7 @@
           var DOCUMENTATION_OPTIONS = {
               URL_ROOT:'./',
               VERSION:'',
-              LANGUAGE:'None',
+              LANGUAGE:'ja',
               COLLAPSE_INDEX:false,
               FILE_SUFFIX:'.html',
               HAS_SOURCE:  true,
@@ -289,6 +276,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
     
 
   

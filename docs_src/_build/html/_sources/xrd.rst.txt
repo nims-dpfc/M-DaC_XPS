@@ -1,6 +1,3 @@
-XRD
-===
-
 フォルダに含まれるファイルの説明
 --------------------------------
 
@@ -14,73 +11,68 @@ ras2raw_XRD.py		 rasファイルから装置出力パラメータを抽出する
 xrd_raw_template.xml	 装置出力パラメータ抽出に使用するテンプレートファイル
 raw2primary_XRD.py	 装置出力パラメータファイルから主要パラメータを抽出するツール
 xrd_primary_template.xml 主要パラメータ抽出に使用するテンプレートファイル
-execute.py		 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール
-execute_jupyter.py	 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までをjupyter notebook上で一度に行い、図の表示、主要パラメータを表示するツール
+batch_exe_XRD.py	 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール
 README.rst		 使い方の説明
 ======================== =========================================================================================================================================================
+
+Jupyter Notebook での実行
+-------------------------
+
+Anaconda Prompt を立ち上げ、ダウンロードディレクトリ配下の ``Rigaku_XRD_tools`` に移動します。::
+
+	cd [download directory]/Rigaku_XRD_tools
+
+Jupyter notebook を立ち上げます。::
+
+	jupyter notebook
+
+Jupyter notebook から ``xrd_rigaku.ipynb`` をクリックして実行します。
+Jupyter Notebook での使い方は `XRD for jupyter notebook <rigaku_xrd.ipynb>`_ を参照してください。
 
 コマンド
 --------
 
-rasファイルをフォーマットされた数値データ(csv)に変換します::
+``.ras``形式のファイルをフォーマットした数値データ(``.csv``)に変換します::
 
 	python ras2csv.py --encoding sjis ../source/XRD_RIGAKU.ras
 
-カレントディレクトリにXRD_RIGAKU.csvが作成されます。
-
-csvファイルから画像を作成します::
-
-	python csv2graph.py XRD_RIGAKU.csv
-
-カレントディレクトリにXRD_RIGAKU.pngが作成されます。
-
-rasファイルから装置出力パラメータを抽出します::
-
-	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml
-
-第3引数で指定したファイル名で装置出力パラメータが作成されます。
-
-装置出力パラメータから主要パラメータを抽出します::
-
-	python raw2primary_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml primary.xml
-
-第3引数で指定したファイルで主要パラメータが作成されます。
+カレントディレクトリに ``XRD_RIGAKU.csv`` を出力します。
 
 .. note::
 
-	各プログラムの基本的な使い方は上に示した通りです。
+	``-h`` オプションをつけて実行すると、ヘルプを表示します。::
 
-	コマンドを一つずつ実行するのではなく、まとめて可視化、
-	メタ情報抽出を行うようにバッチ処理を行いたい場合は、
-	Rigaku_XRD_tools(batch) で、:
+		python ras2csv.py -h
 
-	execute_XRD.py
+``.csv`` 形式のファイルから画像を作成します::
 
-	を利用して処理を行います。
+	python csv2graph.py XRD_RIGAKU.csv
 
-	execute_XRD.py は、上記のコマンドをまとめて行うプログラムです。:
+カレントディレクトリに ``XRD_RIGAKU.png `` を出力します。
 
-	python execute_XRD.py ../source/XRD_RIGAKU.ras
+``.ras`` 形式のファイルから装置出力パラメータを抽出し、 ``raw.xml`` を出力します::
 
-	を実行すると、../XRD_RIGAKUというフォルダを作成し、その中にFND(Formatted Numerical Data)、
- 	スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
-	連続変換を行いたい場合などに使用します。
+	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml
 
-	jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_jupyter.py を使用してください。:
+.. note::
 
-	python execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
+	``--stdout`` のオプションをつけると標準出力にも出力します。::
 
+		python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml --stdout
 
-For more information, refer to the `the documentation`__.
+装置出力パラメータファイル ``raw.xml`` から主要パラメータを抽出し、 ``primary.xml`` に出力します::
 
-.. __: https://nims-dpfc.github.io/Materials_Data_Repository/
+	python raw2primary_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml primary.xml
 
-Instrallation
--------------
+バッチ処理
+----------
 
-ここにインストールの手順が入ります。
+上記のコマンドをまとめて実行できると便利です。
+batch_exe_XRD.py は、上記のコマンドをまとめて行うプログラムです。::
 
-Documentation
--------------
+	python batch_exe_XRD.py ../source/XRD_RIGAKU.ras
 
-ここにドキュメントがはいります。
+を実行すると、 ``../result/XRD_RIGAKU`` というフォルダを作成し、その中にFND(Formatted Numerical Data)、
+スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
+連続変換を行いたい場合などに使用します。
+

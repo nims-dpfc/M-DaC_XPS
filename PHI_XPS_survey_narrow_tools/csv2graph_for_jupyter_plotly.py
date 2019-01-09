@@ -25,18 +25,13 @@ def getKey(key, row):
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
 parser.add_argument("--encoding", default="utf_8")
-parser.add_argument("--scale", nargs=2, type=float)
-parser.add_argument("--unit", nargs=2)
-parser.add_argument("--scalename", nargs=2)
-parser.add_argument("--xrange", choices=['reverse'])
-parser.add_argument("--yrange", choices=['reverse'])
 options = parser.parse_args()
 readfile = options.file_path
-scale_option = options.scale
-unit_option = options.unit
-scalename_option = options.scalename
-xrange_option = options.xrange
-yrange_option = options.yrange
+scale_option = ""
+unit_option = ""
+scalename_option = ""
+xrange_option = ""
+yrange_option = ""
 name, ext = os.path.splitext(readfile)
 axis = []
 
@@ -150,7 +145,7 @@ if yrevFlag:
 layout = dict(
     width=800,
     height=700,
-    autosize=False,
+    autosize=True,
     title=title,
     scene = dict(
        xaxis = dict(
@@ -165,4 +160,4 @@ layout = dict(
 )
 
 fig = dict(data=data, layout=layout)
-iplot(fig, filename=title, validate=False)
+iplot(fig, show_link=False, filename=title, validate=False, config={"displaylogo":False, "modeBarButtonsToRemove":["sendDataToCloud"]})

@@ -1,52 +1,112 @@
-XPS
-===
+フォルダに含まれるファイルの説明
+--------------------------------
 
-XPSのデータ変換手順
--------------------
+========================= =========================================================================================================================================================
+program名		  説明
+========================= =========================================================================================================================================================
+MPExport.exe              ULVAC-PHI製変換ツール（.spe,.proのファイルからtxtファイルを作成するツール）
+txt2csv.py		  txtファイルからFND(Formatted Numerical Data)のcsvファイルを作成するツール
+csv2graph.py		  FND(Formatted Numerical Data)のcsvファイルからスペクトルの図を作成するツール
+txt2raw_XPS_survey.py	  txtファイルから装置出力パラメータを抽出するツール
+xps_raw_templateXML.xml	  装置出力パラメータ抽出に使用するテンプレートファイル
+raw2primary_XPS_survey.py 装置出力パラメータファイルから主要パラメータを抽出するツール
+xps_primary_template.xml  主要パラメータ抽出に使用するテンプレートファイル
+batch_exe_XPS.py	  speファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール
+README.rst		  使い方の説明
+========================= =========================================================================================================================================================
 
-1．XPS生データ（survey1本のでOK）:MIDATA001.104.spe
+Jupyter Notebook での実行
+-------------------------
 
-2．PHI作成変換ツール:MPExport.exe
+Anaconda Prompt を立ち上げ、ダウンロードディレクトリ配下の PHI_XPS_survey_narrow_tools に移動します。::
 
-3．#1を#2で変換したテキストデータ: MIDATA001.104.txt
+	cd [download directory]/PHI_XPS_survey_narrow_tools
 
-4．#3から，FNDを作るツール: txttocsvforphi.py
+Jupyter notebook を立ち上げます。::
 
-5．#3から#4で変換したFNDファイル: MIDATA001.104.csv
+	jupyter notebook
 
-6．FNDファイルからスペクトルの図を作成するツール: csvtograph.py
+Jupyter notebook から ``xps_survey.ipynb`` をクリックして実行します。
+Jupyter Notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>`_ を参照してください。
 
-7．#5から#6で作成したPNGファイル: MIDATA001.104.png
 
 コマンド
 --------
 
-.spe形式のファイルをテキストファイルに変換します::
+``.spe`` 形式のファイルをテキストファイルに変換します。::
 
-	MPExpoter.exe -Filename:MIDATA001.104.spe -TSV
+	MPExport.exe -Filename:"..\source\XPS_PHI_QUANTERA_survey.spe" -TSV
 
-テキストファイルをフォーマットされた数値データ(csv)に変換します::
+カレントディレクトリに ``XPS_PHI_QUANTERA_survey.txt`` を出力します
 
-	python txttocsvforphi.py MIDATA001.104.txt
+.. note::
 
-csvファイルから画像を作成します::
+	``MPExport.exe`` は Windows用実行ファイルです。``-Filename:`` の後に変換元のファイル名を記述します。
+	カレントディレクトリ以外の場所を指定する場合のパスは Windows の記述形式で指定します。
 
-	python csvtograph.py MIDATA001.104.csv
+	(例).. |yen| source |yen| XPS_PHI_QUANTERA_survey.spe
 
-For more information, refer to the `the documentation`__.
+	その他のオプションについては、::
 
-.. __: https://github.com/nims-dpfc/Materials_Data_Repository/
+		MPExport.exe
+
+	を単体で実行して参照してください。
+	
+
+``.txt`` 形式のファイルをフォーマットした数値データ(``.csv``)に変換します::
+
+	python txt2csv.py XPS_PHI_QUANTERA_survey.txt
+
+カレントディレクトリに ``XPS_PHI_QUANTERA_survey.csv`` を出力します
+
+.. note::
+
+	``-h`` オプションをつけて実行すると、ヘルプを表示します。::
+
+		python txt2csv.py -h
+
+``.csv`` 形式のファイルから画像を作成します::
+
+	python csv2graph.py XPS_PHI_QUANTERA_survey.csv
+
+カレントディレクトリに ``XPS_PHI_QUANTERA_survey.png`` を出力します
+
+``.txt`` 形式のファイルから装置出力パラメータを抽出し、 ``raw.xml`` を出力します::
+
+	python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml
+
+.. note::
+
+	``--stdout`` のオプションをつけると標準出力にも出力します。::
+
+		python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml --stdout
+
+装置出力パラメータファイル ``raw.xml`` から主要パラメータを抽出し、 ``primary.xml`` に出力します::
+
+	python raw2primary_XPS_survey.py raw.xml xps_primary_template.xml primary.xml
+
+バッチ処理
+----------
+
+上記のコマンドをまとめて実行できると便利です。
+batch_exe_XPS.py は、上記のコマンドをまとめて行うプログラムです。::
+
+	python batch_exe_XPS.py ../source/XPS_PHI_QUANTERA_survey.spe
+
+を実行すると、 ``../result/XPS_PHI_QUANTERA_survey`` というフォルダを作成し、その中にFND(Formatted Numerical Data)、
+スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
+連続変換を行いたい場合などに使用します。
 
 Movie
 -----
 
+NIMS のサンプル動画です。こんな感じで動画が入ります。↓
 
-Instrallation
--------------
+.. raw:: html
 
-ここにインストールの手順が入ります。
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="100%" height="350" src="https://www.youtube.com/embed/J9K0bDkOFxU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
-Documentation
--------------
-
-ここにドキュメントがはいります。
+.. |yen| unicode:: U+00A5
+   :trim:

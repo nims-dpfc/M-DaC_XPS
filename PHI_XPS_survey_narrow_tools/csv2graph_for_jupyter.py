@@ -1,5 +1,5 @@
 #-------------------------------------------------
-# csvtograph_for_jupyter.py
+# csv2graph_for_jupyter.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
@@ -25,6 +25,12 @@ parser.add_argument("file_path")
 parser.add_argument("--encoding", default="utf_8")
 options = parser.parse_args()
 readfile = options.file_path
+scale_option = ""
+unit_option = ""
+scalename_option = ""
+xrange_option = ""
+yrange_option = ""
+
 name, ext = os.path.splitext(readfile)
 axis = []
 

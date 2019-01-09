@@ -16,13 +16,15 @@ import io
 import os.path
 
 parser = argparse.ArgumentParser()
-parser.add_argument("file_path")
+parser.add_argument("file_path", help="input file")
 parser.add_argument("--encoding", default="utf_8")
 options = parser.parse_args()
 readfile = options.file_path
 encoding_option = options.encoding
-#readfile = 'SNP159.113.txt'
-name, ext = os.path.splitext(readfile)
+basename = os.path.basename(readfile)
+dirname = os.path.dirname(readfile)
+name, ext = os.path.splitext(basename)
+
 flag = 0
 count = 0
 column = 0
@@ -84,7 +86,8 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                 line = line.rstrip()
                 temp = []
                 if column == 0 and count == 1:
-                    meta = ['#title', description]
+                    title = name + ext
+                    meta = ['#title', title]
                     header.append(meta)
                     meta = ['#dimension', 'x', 'y']
                     header.append(meta)

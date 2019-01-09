@@ -193,13 +193,15 @@ def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
     return(metadata)
 
 parser = argparse.ArgumentParser()
-parser.add_argument("file_path")
-parser.add_argument("template_file")
-parser.add_argument("out_file")
+parser.add_argument("file_path", help="input file")
+parser.add_argument("template_file", help="template file")
+parser.add_argument("out_file", help="output file")
+parser.add_argument("--stdout", help="show meta information", action="store_true")
 options = parser.parse_args()
 readfile = options.file_path
 templatefile = options.template_file
 outputfile = options.out_file
+print_option = options.stdout
 channel = 0
 rawdata = ET.parse(readfile)
 rawcolumns=[]
@@ -267,7 +269,8 @@ column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
-#print(dom.toprettyxml())
+if print_option == True:
+    print(dom.toprettyxml())
 file = codecs.open(outputfile,'wb',encoding='utf-8')
 dom.writexml(file,'','\t','\n',encoding='utf-8')
 file.close()

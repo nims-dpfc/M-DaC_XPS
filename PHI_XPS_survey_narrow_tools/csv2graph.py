@@ -1,5 +1,5 @@
 #-------------------------------------------------
-# csvtograph.py
+# csv2graph.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
@@ -13,6 +13,8 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import ScalarFormatter
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+import plotly.graph_objs as go
 
 def getKey(key, row):
     if row[0] == key:
@@ -20,23 +22,44 @@ def getKey(key, row):
     else:
         return 0
 
+def plotlygraph(xrevFlag, yrevFlag, title, data, fig):
+    x_axis = 'false'
+    y_axis = 'false'
+    if xrevFlag:
+        x_axis = 'reversed'
+    if yrevFlag:
+        y_axis = 'reversed'
+
+    layout = dict(
+        width=800,
+        height=700,
+        autosize=False,
+        title=title,
+        xaxis=dict(title=xaxis, autorange=x_axis),
+        yaxis=dict(title=yaxis, autorange=y_axis),
+        showlegend=True
+    )
+
+    fig = dict(data=data, layout=layout)
+    iplot(fig, show_link=False, filename=title, validate=False, config={"displaylogo":False, "modeBarButtonsToRemove":["sendDataToCloud"]})
+
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
 parser.add_argument("--encoding", default="utf_8")
-parser.add_argument("--scale", nargs=2, type=float)
-parser.add_argument("--unit", nargs=2)
-parser.add_argument("--scalename", nargs=2)
-parser.add_argument("--xrange", choices=['reverse'])
-parser.add_argument("--yrange", choices=['reverse'])
+parser.add_argument("--jupytermode", help="for jupyter mode", action="store_true")
 options = parser.parse_args()
 readfile = options.file_path
-scale_option = options.scale
-unit_option = options.unit
-scalename_option = options.scalename
-xrange_option = options.xrange
-yrange_option = options.yrange
+jupytermode = options.jupytermode
+scale_option = ""
+unit_option = ""
+scalename_option = ""
+xrange_option = ""
+yrange_option = ""
 name, ext = os.path.splitext(readfile)
 axis = []
+
+if jupytermode == True:
+    init_notebook_mode(connected=True)
 
 with open(readfile, 'r') as f:
     reader = csv.reader(f)
@@ -90,7 +113,6 @@ with open(readfile, 'r') as f:
                     if isinstance(scalename_option, list):
                         yaxis = scalename_option[1]
                     yaxis = yaxis + " " + yunit
-#                        yaxis = yaxis + "(" + row[2] + ")"
                     if len(row) > 3:
                         if row[3] == 'reverse':
                             yrevFlag = True
@@ -126,8 +148,8 @@ plt.ticklabel_format(style="sci",  axis="y",scilimits=(0,0))
 plt.grid(True)
 plt.subplots_adjust(left=0.155, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None)
 
-
 num = 1
+data = []
 for col in df.columns:
     if num % dimension != 0:
         if isinstance(scale_option, list):
@@ -140,6 +162,13 @@ for col in df.columns:
         else:
             y=df[col]
         plt.plot(x,y,lw=1)
+        if jupytermode == True:
+            trace = dict(
+                name = col,
+                x = x, y = y,
+                type = "lines",
+                mode = 'lines')
+            data.append( trace )
     num += 1
 length = 35
 if len(title) > length:
@@ -197,3 +226,7 @@ if len(legends) > 1:
             plt.savefig(writefile)
             plt.close()
         num += 1
+
+if jupytermode == True:
+    plotlygraph(xrevFlag, yrevFlag, title, data, fig)
+
