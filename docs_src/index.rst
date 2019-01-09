@@ -41,11 +41,11 @@ Quick Start
 
 	MPExport.exe -Filename:"..\source\XPS_PHI_QUANTERA_survey.spe" -TSV
 
-	python txt2csv.py XPS_PHI_QUANTERA_survey.txt
+	python txt2csv.py "XPS_PHI_QUANTERA_survey.txt"
 
-	python csv2graph.py XPS_PHI_QUANTERA_survey.csv
+	python csv2graph.py "XPS_PHI_QUANTERA_survey.csv"
 
-	python txt2raw_XPS_survey.py XPS_PHI_QUANTERA_survey.txt xps_raw_template.xml raw.xml
+	python txt2raw_XPS_survey.py "XPS_PHI_QUANTERA_survey.txt" xps_raw_template.xml raw.xml
 
 	python raw2primary_XPS_survey.py raw.xml xps_primary_template.xml primary.xml
 
