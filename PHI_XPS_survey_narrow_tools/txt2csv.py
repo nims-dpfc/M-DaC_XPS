@@ -86,7 +86,7 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                 line = line.rstrip()
                 temp = []
                 if column == 0 and count == 1:
-                    title = name + ext
+                    title = name
                     meta = ['#title', title]
                     header.append(meta)
                     meta = ['#dimension', 'x', 'y']
