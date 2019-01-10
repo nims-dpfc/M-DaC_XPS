@@ -12,6 +12,7 @@ import os
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
 from matplotlib.ticker import ScalarFormatter
 import shutil
 import subprocess
@@ -226,6 +227,15 @@ def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
             metadata = regist(column, temp_name, rawdata, metadata, columnnum, node.text, unitlist, template)
     return(metadata)
 
+def is_japanese(titlestring):
+    for ch in string:
+        name = unicodedata.name(ch) 
+        if "CJK UNIFIED" in name or "HIRAGANA" in name or "KATAKANA" in name:
+            return(True)
+    return(False)
+
+fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryo.ttc', size=14)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
 parser.add_argument("--encoding", default="utf_8")
@@ -376,8 +386,11 @@ if len(title) > length:
     string = title[:length] + '...'
 else:
     string = title
-    
-plt.title(string)
+
+if is_japanese(string) == True:
+    plt.title(string, fontproperties=fp)
+else:
+    plt.title(string)
 
 plt.rcParams['font.family'] ='sans-serif'
 plt.rcParams['xtick.direction'] = 'in'
@@ -414,7 +427,10 @@ if len(legends) > 1:
             plt.grid(True)
             plt.subplots_adjust(left=0.155, bottom=0.155, right=0.95, top=0.9, wspace=None, hspace=None)
             plt.plot(x,y,lw=1,label=col)
-            plt.title(title + '_' + col)
+            if is_japanese(title) == True:
+                plt.title(title + '_' + col, fontproperties=fp)
+            else:
+                plt.title(title + '_' + col)
             plt.rcParams['font.family'] ='sans-serif'
             plt.rcParams['xtick.direction'] = 'in'
             plt.rcParams['ytick.direction'] = 'in'
