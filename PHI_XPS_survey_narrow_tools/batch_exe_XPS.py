@@ -24,6 +24,7 @@ import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
 import codecs
+import unicodedata
 
 def getKey(key, row):
     if row[0] == key:
