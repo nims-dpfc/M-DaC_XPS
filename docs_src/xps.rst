@@ -26,7 +26,7 @@ Jupyter notebook を立ち上げます。::
 
 	jupyter notebook
 
-Jupyter notebook から ``xps_survey.ipynb`` をクリックして実行します。
+Jupyter notebook から ``xps_survey.ipynb`` を利用すると簡単に実行できます。
 Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>`_ を参照してください。
 
 
