@@ -26,7 +26,16 @@
   <meta key="FloatVolt" type="String" />
   <meta key="SputterRaster" type="String" />
   <meta key="AnalyserMode" type="String" />
-  <meta key="SurvNumCycles" type="String" />
+  <meta key="NoDPDataCyc" type="String" />
+  <meta key="NoPreSputterCyc" type="String" />
+  <meta key="ProfSputterDelay" type="String" />
+  <meta key="ProfXrayOffDuringSputter" type="String" />
+  <meta key="ProfSourceBlankDuringSputter" type="String" />
+  <meta key="ProfZalarHighAccuracyInterval" type="String" />
+  <meta key="SampleRotation" type="String" />
+  <meta key="SputterMode" type="String" />
+  <meta key="NoDepthReg" type="String" />
+  <meta key="DepthCalDef" type="String" />
   <meta key="NoSpectralReg" type="String" />
   <meta key="SpectralRegDef" type="String" />
   <meta key="SpectralRegDef2" type="String" />

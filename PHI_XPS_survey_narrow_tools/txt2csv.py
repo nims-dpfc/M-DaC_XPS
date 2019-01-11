@@ -12,7 +12,6 @@ import csv
 import itertools
 import io
 import os.path
-import glob
 import codecs
 
 parser = argparse.ArgumentParser()
@@ -41,7 +40,7 @@ acqdate = ''
 filetype = ''
 element = ['#legend']
 collection_time = ['#acq_time']
-with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
+with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
     for line in f:
         line = line.strip()
         if flag == 0:
@@ -99,8 +98,6 @@ with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
                     xlabelname = xlabel[0]
                     xlabelunit = xlabel[1].replace(')', '')
                     xoption = itemList[1]
-#                    print(xlabelunit)
-#                    print(xoption)
                     xlabelList = itemList
                 elif count == 6 and column == 0:
                     itemList = line.split(',')

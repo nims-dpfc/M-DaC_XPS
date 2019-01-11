@@ -1,11 +1,8 @@
-#-------------------------------------------------
-# txt2raw_XPS_survey.py
-#
-# Copyright (c) 2018, Data PlatForm Center, NIMS
-#
-# This software is released under the MIT License.
-#-------------------------------------------------
-# coding: utf-8
+# To change this license header, choose License Headers in Project Properties.
+# To change this template file, choose Tools | Templates
+# and open the template in the editor.
+__author__ = "nagao"
+__date__ = "$2018/07/02 17:42:00$"
 
 import argparse
 import os.path
@@ -33,7 +30,8 @@ dom = xml.dom.minidom.Document()
 metadata = dom.createElement('metadata')
 dom.appendChild(metadata)
 count = 0
-wide = 1
+depth = 1
+spectral = 1
 maxcolumn = 1
 with open(readfile, 'r', encoding="utf8") as f:
     for line in f:
@@ -50,15 +48,24 @@ with open(readfile, 'r', encoding="utf8") as f:
                 for index,item in enumerate(lines):
                     if index > 1:
                         value = value + ':' + item
-            if key == "NoSpectralReg" and 1 < int(value):
-                wide = 0
-            if wide == 0 and key == "SpectralRegDef":
+            if key == "NoDepthReg":
+                depth = int(value) - 1
+            if key == "NoSpectralReg":
+                spectral = int(value) - 1
+            if key == "DepthCalDef":
                 values = value.split()
-                channel = values[0]
-                if maxcolumn < int(channel):
-                    maxcolumn = int(channel)
+                channel = int(values[0])
+            if key == "SpectralRegDef":
+                values = value.split()
+                channel = int(values[0])
+                temp = (depth + 1) * channel
+                if maxcolumn < temp:
+                    maxcolumn = temp
+            if key == "NoSpectralReg":
+                channel = 0
             if key == "NoSpatialArea":
                 channel = 0
+
             subnode = dom.createElement('meta')
             subnode.appendChild(dom.createTextNode(value))
             subnode_attr = dom.createAttribute('key')
@@ -77,9 +84,34 @@ with open(readfile, 'r', encoding="utf8") as f:
 
             if channel != 0:
                 subnode_attr = dom.createAttribute('column')
-                subnode_attr.value = channel
+                subnode_attr.value = str(channel)
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
+
+depth_count = 0
+spectral_count = 0
+metas = dom.getElementsByTagName("meta")
+for element in metas:
+    if element.getAttribute("key") == "DepthCalDef":
+        original = element.attributes["column"].value
+        new_depth = int(original) + (depth_count * spectral)
+        element.attributes["column"].value = str(new_depth)
+        for i in range(spectral):
+            element2 = element.cloneNode(element)
+            temp = new_depth + i + 1
+            element2.attributes["column"].value = str(temp)
+            metadata.appendChild(element2)
+        depth_count = depth_count + 1
+
+    if "SpectralRegDef" in element.getAttribute("key"):
+        original = element.attributes["column"].value
+        for i in range(depth):
+            element2 = element.cloneNode(element)
+            temp = int(original) + (i + 1) * depth
+            element2.attributes["column"].value = str(temp)
+            metadata.appendChild(element2)
+        if element.getAttribute("key") == "SpectralRegDef2":
+            spectral_count = spectral_count + 1
 
 subnode = dom.createElement('column_num')
 subnode.appendChild(dom.createTextNode(str(maxcolumn)))

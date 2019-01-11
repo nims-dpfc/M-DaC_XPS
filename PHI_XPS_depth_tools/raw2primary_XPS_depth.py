@@ -1,11 +1,8 @@
-#-------------------------------------------------
-# raw2primary_XPS_survey.py
-#
-# Copyright (c) 2018, Data PlatForm Center, NIMS
-#
-# This software is released under the MIT License.
-#-------------------------------------------------
-# coding: utf-8
+# To change this license header, choose License Headers in Project Properties.
+# To change this template file, choose Tools | Templates
+# and open the template in the editor.
+__author__ = "nagao"
+__date__ = "$2018/07/02 17:42:00$"
 
 import argparse
 import os.path
@@ -30,7 +27,8 @@ def registdf(key, channel, value, metadata, unitlist, template):
             unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
             transition = 0
             if unitcolumn != None:
-                value_unit = arrayvalue[1]
+                if len(arrayvalue) > 1:
+                    value_unit = arrayvalue[1]
                 value = arrayvalue[0] 
                 if key == "Analyser_axis_take_off_polar_angle":
                     value_unit = unitcolumn.get("unit")
@@ -65,6 +63,15 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 elif key == "Collection_time":
                     value_unit = unitcolumn.get("unit")
                     value = arrayvalue[10]
+                elif key == "Analyser_work_function":
+                    value_unit = arrayvalue[1]
+                    value = arrayvalue[0]
+                elif key == "Sputtering_interval_time":
+                    value = arrayvalue[7]
+                    value_unit = unitcolumn.get("unit")
+                elif key == "Sputtering_to_measurement_time":
+                    value = arrayvalue[0]
+                    value_unit = unitcolumn.get("unit")
             else:
                 value_unit=""
                 if key == "Year":
@@ -87,9 +94,6 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     else:
                         value = itemarray
                 elif key == "Analysis_source_beam_diameter":
-                    value_unit = arrayvalue[1]
-                    value = arrayvalue[0]
-                elif key == "Analyser_work_function":
                     value_unit = arrayvalue[1]
                     value = arrayvalue[0]
                 elif key == "Analysis_region":
@@ -115,10 +119,13 @@ def registdf(key, channel, value, metadata, unitlist, template):
                                 value2 = value2 + x
                                 
                 elif key == "Number_of_scans":
-                    SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
-                    if SurvNumCycles == None:
+                    if rawdata.find('meta[@key="SurvNumCycles"]') != None:
+                        SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
+                    else:
                         SurvNumCycles = 1
                     value = int(SurvNumCycles) * int(arrayvalue[2])
+                elif key == "Sputtering_cycle":
+                    value = arrayvalue[8]
                     
             subnode = dom.createElement('meta')
             subnode.appendChild(dom.createTextNode(str(value)))
@@ -227,8 +234,9 @@ metalist = {"Technique":"Technique",
             "Analyser_work_function":"AnalyserWorkFcn",
             "Flood_gun_Voltage":"NeutralizerEnergy",
             "Flood_gun_Emission_current":"NeutralizerCurrent",
-            "Sputtering_interval_time":"ProfSputterDelay",
-            "Sputtering_cycle":"ProfSputterDelay",
+            "Sputtering_to_measurement_time":"ProfSputterDelay",
+            "Sputtering_interval_time":"DepthCalDef",
+            "Sputtering_cycle":"DepthCalDef",
             "Species_label":"SpectralRegDef",
             "Abscissa_increment":"SpectralRegDef",
             "Abscissa_start":"SpectralRegDef",
@@ -249,13 +257,15 @@ metalist = {"Technique":"Technique",
 columns_unique = list(dict.fromkeys(columns))
 unitlist=[]
 maxcolumn = 0
+depthcolumn = rawdata.find('meta[@key="NoDepthReg"]').text
+spectralcolumn = rawdata.find('meta[@key="NoSpectralReg"]').text
 for k in columns_unique:
     if k in metalist:
         v = metalist[k]
-        tempcolumn = len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))-1
-        if maxcolumn < tempcolumn + 1:
-            maxcolumn = tempcolumn + 1
-        metadata = conv(v, k, rawdata, metadata, len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))-1, unitlist, template)
+        column_num = len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))
+        if maxcolumn < column_num:
+            maxcolumn = column_num
+        metadata = conv(v, k, rawdata, metadata, column_num - 1, unitlist, template)
 
 subnode = dom.createElement('column_num')
 subnode.appendChild(dom.createTextNode(str(maxcolumn)))
