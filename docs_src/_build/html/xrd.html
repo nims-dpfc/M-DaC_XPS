@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XRD &mdash; Materials_Data_Repository  documentation</title>
+  <title>フォルダに含まれるファイルの説明 &mdash; M-DaC  documentation</title>
   
 
   
@@ -28,8 +28,13 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="XPS survey" href="xps_survey.html" />
-    <link rel="prev" title="XPS" href="xps.html" /> 
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="フォルダに含まれるファイルの説明" href="xpsdepth.html" />
+ 
+<script>
+
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -48,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Materials_Data_Repository
+            <a href="index.html" class="icon icon-home"> M-DaC
           
 
           
@@ -79,9 +84,21 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="xps.html">XPS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">XRD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xps_survey.html">xps_survey for jupyter notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#xps-survey-narrow-ulvac-phi">XPS(survey, narrow)[ulvac-phi]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#xps-depth-ulvac-phi">XPS(depth)[ulvac-phi]</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Tutorial.html#xrd-rigaku">XRD[rigaku]</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">フォルダに含まれるファイルの説明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jupyter-notebook">Jupyter Notebook での実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">コマンド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">バッチ処理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terms_of_service.html">Terms of Service</a></li>
 </ul>
 
@@ -97,7 +114,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Materials_Data_Repository</a>
+          <a href="index.html">M-DaC</a>
         
       </nav>
 
@@ -128,7 +145,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>XRD</li>
+          <li><a href="Tutorial.html">Tutorial</a> &raquo;</li>
+        
+      <li>フォルダに含まれるファイルの説明</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,11 +185,107 @@
     margin-right: 4px;  /* make room for the exclamation icon */
 }
 </style>
-<div class="section" id="xrd">
-<h1>XRD<a class="headerlink" href="#xrd" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">ここに説明が入ります。</div>
+<div class="section" id="id1">
+<h1>フォルダに含まれるファイルの説明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">program名</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ras2csv.py</td>
+<td>rasファイルからFND(Formatted Numerical Data)のcsvファイルを作成するツール</td>
+</tr>
+<tr class="row-odd"><td>csv2graph.py</td>
+<td>FND(Formatted Numerical Data)のcsvファイルからスペクトルの図を作成するツール（グラフ表示、主要パラメータ表示なし）</td>
+</tr>
+<tr class="row-even"><td>csv2graph_for_jupyter.py</td>
+<td>FND(Formatted Numerical Data)のcsvファイルからスペクトルの図を作成するツール（jupyter notebookで使用時、グラフ表示、主要パラメータ表示あり）</td>
+</tr>
+<tr class="row-odd"><td>ras2raw_XRD.py</td>
+<td>rasファイルから装置出力パラメータを抽出するツール</td>
+</tr>
+<tr class="row-even"><td>xrd_raw_template.xml</td>
+<td>装置出力パラメータ抽出に使用するテンプレートファイル</td>
+</tr>
+<tr class="row-odd"><td>raw2primary_XRD.py</td>
+<td>装置出力パラメータファイルから主要パラメータを抽出するツール</td>
+</tr>
+<tr class="row-even"><td>xrd_primary_template.xml</td>
+<td>主要パラメータ抽出に使用するテンプレートファイル</td>
+</tr>
+<tr class="row-odd"><td>batch_exe_XRD.py</td>
+<td>rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール</td>
+</tr>
+<tr class="row-even"><td>README.rst</td>
+<td>使い方の説明</td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="section" id="jupyter-notebook">
+<h1>Jupyter Notebook での実行<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<p>Anaconda Prompt を立ち上げ、ダウンロードディレクトリ配下の <code class="docutils literal notranslate"><span class="pre">Rigaku_XRD_tools</span></code> に移動します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">[</span><span class="n">download</span> <span class="n">directory</span><span class="p">]</span><span class="o">/</span><span class="n">Rigaku_XRD_tools</span>
+</pre></div>
+</div>
+<p>Jupyter notebook を立ち上げます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>Jupyter notebook から <code class="docutils literal notranslate"><span class="pre">xrd_rigaku.ipynb</span></code> をクリックして実行します。
+Jupyter Notebook での使い方は <a class="reference internal" href="rigaku_xrd.html"><span class="doc">XRD for jupyter notebook</span></a> を参照してください。</p>
+</div>
+<div class="section" id="id2">
+<h1>コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">.ras``形式のファイルをフォーマットした数値データ(</span></code>.csv``)に変換します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ras2csv</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">encoding</span> <span class="n">sjis</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">ras</span>
+</pre></div>
+</div>
+<p>カレントディレクトリに <code class="docutils literal notranslate"><span class="pre">XRD_RIGAKU.csv</span></code> を出力します。</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">-h</span></code> オプションをつけて実行すると、ヘルプを表示します。:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ras2csv</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.csv</span></code> 形式のファイルから画像を作成します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">csv2graph</span><span class="o">.</span><span class="n">py</span> <span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p>カレントディレクトリに <a href="#id3"><span class="problematic" id="id4">``</span></a>XRD_RIGAKU.png `` を出力します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">.ras</span></code> 形式のファイルから装置出力パラメータを抽出し、 <code class="docutils literal notranslate"><span class="pre">raw.xml</span></code> を出力します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ras2raw_XRD</span><span class="o">.</span><span class="n">py</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">ras</span> <span class="o">--</span><span class="n">encoding</span> <span class="n">sjis</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">xrd_raw_template</span><span class="o">.</span><span class="n">xml</span> <span class="n">raw</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">--stdout</span></code> のオプションをつけると標準出力にも出力します。:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ras2raw_XRD</span><span class="o">.</span><span class="n">py</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">ras</span> <span class="o">--</span><span class="n">encoding</span> <span class="n">sjis</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">xrd_raw_template</span><span class="o">.</span><span class="n">xml</span> <span class="n">raw</span><span class="o">.</span><span class="n">xml</span> <span class="o">--</span><span class="n">stdout</span>
+</pre></div>
+</div>
+</div>
+<p>装置出力パラメータファイル <code class="docutils literal notranslate"><span class="pre">raw.xml</span></code> から主要パラメータを抽出し、 <code class="docutils literal notranslate"><span class="pre">primary.xml</span></code> に出力します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">raw2primary_XRD</span><span class="o">.</span><span class="n">py</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">ras</span> <span class="o">--</span><span class="n">encoding</span> <span class="n">sjis</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">xrd_raw_template</span><span class="o">.</span><span class="n">xml</span> <span class="n">primary</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>バッチ処理<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>上記のコマンドをまとめて実行できると便利です。
+batch_exe_XRD.py は、上記のコマンドをまとめて行うプログラムです。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">batch_exe_XRD</span><span class="o">.</span><span class="n">py</span> <span class="o">../</span><span class="n">source</span><span class="o">/</span><span class="n">XRD_RIGAKU</span><span class="o">.</span><span class="n">ras</span>
+</pre></div>
+</div>
+<p>を実行すると、 <code class="docutils literal notranslate"><span class="pre">../result/XRD_RIGAKU</span></code> というフォルダを作成し、その中にFND(Formatted Numerical Data)、
+スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
+連続変換を行いたい場合などに使用します。</p>
 </div>
 
 
@@ -181,10 +296,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="xps_survey.html" class="btn btn-neutral float-right" title="XPS survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="xps.html" class="btn btn-neutral" title="XPS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="xpsdepth.html" class="btn btn-neutral" title="フォルダに含まれるファイルの説明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -214,7 +329,17 @@
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>

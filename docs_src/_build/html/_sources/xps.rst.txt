@@ -26,7 +26,7 @@ Jupyter notebook を立ち上げます。::
 
 	jupyter notebook
 
-Jupyter notebook から ``xps_survey.ipynb`` をクリックして実行します。
+Jupyter notebook から ``xps_survey.ipynb`` を利用すると簡単に実行できます。
 Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>`_ を参照してください。
 
 
@@ -74,6 +74,30 @@ Jupyter notebook での使い方は `XPS for jupyter notebook <xps_survey.ipynb>
 	python csv2graph.py "XPS_PHI_QUANTERA_survey.csv"
 
 カレントディレクトリに ``XPS_PHI_QUANTERA_survey.png`` を出力します
+
+.. note::
+
+	ファイル名に日本語が含まれる場合、対応するフォントが存在しないとエラーとなり画像が作成されない場合があります。
+	その場合は、csv2graph.py、batch_exe_XPS.py の日本語フォント対応部分を確認してください。
+
+	csv2graph.py: 56行目 or batch_exe_XPS.py: 237行目 ::
+
+		fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryo.ttc', size=14)
+
+	フォントがない場合には、独立行政法人 情報処理推進機構が提供しているIPAフォントなどを利用することができます。
+
+	https://ipafont.ipa.go.jp/old/ipafont/download.html
+
+	上記サイトからTTFファイルのIPAゴシックをダウンロードし、解凍した ``ipag.ttf`` を適当なフォルダ(ex. PHI_XPS_survey_narrow_tools)にコピーして::
+
+		cp ipag.ttf [download directory]/PHI_XPS_survey_narrow_tools
+
+	FontPropertiesのfnameに指定します。
+
+	csv2graph.py: 56行目 or batch_exe_XPS.py: 237行目 ::
+
+		fp = FontProperties(fname=r'ipag.ttf', size=14)
+
 
 ``.txt`` 形式のファイルから装置出力パラメータを抽出し、 ``raw.xml`` を出力します::
 

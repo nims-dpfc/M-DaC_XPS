@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XPS survey &mdash; Materials_Data_Repository  documentation</title>
+  <title>Usage of XPS tools for Jupyter Notebook &mdash; M-DaC  documentation</title>
   
 
   
@@ -28,8 +28,11 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="LICENSE.html" />
-    <link rel="prev" title="XRD" href="xrd.html" /> 
+ 
+<script>
+
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -48,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Materials_Data_Repository
+            <a href="index.html" class="icon icon-home"> M-DaC
           
 
           
@@ -78,10 +81,11 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="xps.html">XPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xrd.html">XRD</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">xps_survey for jupyter notebook</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terms_of_service.html">Terms of Service</a></li>
 </ul>
 
@@ -97,7 +101,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Materials_Data_Repository</a>
+          <a href="index.html">M-DaC</a>
         
       </nav>
 
@@ -128,7 +132,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>XPS survey</li>
+      <li>Usage of XPS tools for Jupyter Notebook</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -330,54 +334,36 @@ div.nboutput div.output_area.stderr {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
 </style>
-<div class="section" id="XPS-survey">
-<h1>XPS survey<a class="headerlink" href="#XPS-survey" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Usage-of-XPS-tools-for-Jupyter-Notebook">
+<h1>Usage of XPS tools for Jupyter Notebook<a class="headerlink" href="#Usage-of-XPS-tools-for-Jupyter-Notebook" title="Permalink to this headline">¶</a></h1>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
 <span></span>In [1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cd</span> <span class="n">source</span>
+<span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;MPExport.exe&quot;</span><span class="p">,</span> <span class="s2">&quot;-Filename:..\source\XPS_PHI_QUANTERA_survey.spe&quot;</span><span class="p">,</span> <span class="s2">&quot;-TSV&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[1]:
+</pre></div>
 </div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-C:\Users\nagao\Documents\RCMデータ蓄積\ビデオ撮影用デモ\XPS_survey_narrow\source
-</pre></div></div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>CompletedProcess(args=[&#39;MPExport.exe&#39;, &#39;-Filename:..\\source\\XPS_PHI_QUANTERA_survey.spe&#39;, &#39;-TSV&#39;], returncode=0)
+</pre></div>
+</div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
 <span></span>In [2]:
 </pre></div>
 </div>
-<div class="input_area highlight-bash notranslate"><div class="highlight"><pre>
-<span></span>%%bash
-../MPExport.exe -Filename:XPS_PHI_QUANTERA_survey.spe -TSV
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-1 files
-XPS_PHI_QUANTERA_survey.spe -&gt; C:\Users\nagao\Documents\RCMデータ蓄積\ビデオ撮影用デモ\XPS_survey_narrow\source\XPS_PHI_QUANTERA_survey.txt
-0.078sec 1files.
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [3]:
-</pre></div>
-</div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">run</span> -i ../txt2csv.py XPS_PHI_QUANTERA_survey.txt
+<span></span><span class="o">%</span><span class="k">run</span> -i txt2csv.py &quot;XPS_PHI_QUANTERA_survey.txt&quot;
 </pre></div>
 </div>
 </div>
@@ -391,11 +377,11 @@ SPECTRUM
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [4]:
+<span></span>In [3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">run</span> -i ../csv2graph_for_jupyter.py XPS_PHI_QUANTERA_survey.csv
+<span></span><span class="o">%</span><span class="k">run</span> -i csv2graph.py &quot;XPS_PHI_QUANTERA_survey.csv&quot; --jupytermode
 </pre></div>
 </div>
 </div>
@@ -403,16 +389,16 @@ SPECTRUM
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/xps_survey_4_0.png" src="_images/xps_survey_4_0.png" />
+<img alt="_images/xps_survey_3_0.png" src="_images/xps_survey_3_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [5]:
+<span></span>In [4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">run</span> -i ../txt2raw_XPS_survey_fileout.py XPS_PHI_QUANTERA_survey.txt ../xps_raw_template.xml
+<span></span><span class="o">%</span><span class="k">run</span> -i txt2raw_XPS_survey.py &quot;XPS_PHI_QUANTERA_survey.txt&quot; xps_raw_template.xml raw.xml --stdout
 </pre></div>
 </div>
 </div>
@@ -471,11 +457,11 @@ SPECTRUM
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [6]:
+<span></span>In [5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">run</span> -i ../raw2primary_XPS_survey_fileout.py raw.xml ../xps_primary_template.xml
+<span></span><span class="o">%</span><span class="k">run</span> -i raw2primary_XPS_survey.py raw.xml xps_primary_template.xml primary.xml --stdout
 </pre></div>
 </div>
 </div>
@@ -520,14 +506,66 @@ SPECTRUM
 
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="section" id="バッチ処理">
+<h2>バッチ処理<a class="headerlink" href="#バッチ処理" title="Permalink to this headline">¶</a></h2>
+<p>上記のコマンドを一括して実行します。グラフと主要パラメータを表示します。</p>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [ ]:
+<span></span>In [6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<span></span><span class="o">%</span><span class="k">run</span> -i batch_exe_XPS.py &quot;../source/XPS_PHI_QUANTERA_survey.spe&quot; --jupytermode
 </pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/xps_survey_7_0.png" src="_images/xps_survey_7_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;?xml version=&#34;1.0&#34; ?&gt;
+&lt;metadata&gt;
+        &lt;meta key=&#34;Technique&#34; type=&#34;String&#34;&gt;XPS&lt;/meta&gt;
+        &lt;meta key=&#34;Instrument_model_identifier&#34; type=&#34;String&#34;&gt;PHI Quantera SXM&lt;/meta&gt;
+        &lt;meta key=&#34;Experiment_Identifier&#34; type=&#34;Numeric&#34;&gt;20170606&lt;/meta&gt;
+        &lt;meta key=&#34;Experiment_mode&#34; type=&#34;String&#34;&gt;SPECTRUM&lt;/meta&gt;
+        &lt;meta key=&#34;Year&#34; type=&#34;Numeric&#34;&gt;2017&lt;/meta&gt;
+        &lt;meta key=&#34;Month&#34; type=&#34;Numeric&#34;&gt;06&lt;/meta&gt;
+        &lt;meta key=&#34;Day&#34; type=&#34;Numeric&#34;&gt;06&lt;/meta&gt;
+        &lt;meta key=&#34;Analysis_source_beam_diameter&#34; type=&#34;Quantity&#34; unit=&#34;um&#34;&gt;100.0&lt;/meta&gt;
+        &lt;meta key=&#34;Analysis_source_strength&#34; type=&#34;String&#34;&gt;103.08W_HP&lt;/meta&gt;
+        &lt;meta key=&#34;Analyser_mode&#34; type=&#34;String&#34;&gt;FAT&lt;/meta&gt;
+        &lt;meta key=&#34;Analyser_work_function&#34; type=&#34;Quantity&#34; unit=&#34;eV&#34;&gt;4.250&lt;/meta&gt;
+        &lt;meta key=&#34;Analyser_axis_take_off_polar_angle&#34; type=&#34;Quantity&#34; unit=&#34;deg&#34;&gt;45.0&lt;/meta&gt;
+        &lt;meta key=&#34;Analyser_acceptance_solid_angle&#34; type=&#34;Quantity&#34; unit=&#34;sr&#34;&gt;0.38&lt;/meta&gt;
+        &lt;meta key=&#34;Analyser_Pass_energy&#34; type=&#34;Quantity&#34; unit=&#34;eV&#34;&gt;280.00&lt;/meta&gt;
+        &lt;meta key=&#34;Analysis_region&#34; type=&#34;String&#34;&gt;Area&lt;/meta&gt;
+        &lt;meta key=&#34;Analysis_width_x&#34; type=&#34;Quantity&#34; unit=&#34;um&#34;&gt;1400.0000&lt;/meta&gt;
+        &lt;meta key=&#34;Analysis_width_y&#34; type=&#34;Quantity&#34; unit=&#34;um&#34;&gt;100.0000&lt;/meta&gt;
+        &lt;meta key=&#34;Flood_gun_Voltage&#34; type=&#34;Quantity&#34; unit=&#34;V&#34;&gt;1.40&lt;/meta&gt;
+        &lt;meta key=&#34;Flood_gun_Emission_current&#34; type=&#34;Quantity&#34; unit=&#34;uA&#34;&gt;20.0&lt;/meta&gt;
+        &lt;meta key=&#34;Ion_gun_Voltage&#34; type=&#34;Quantity&#34; unit=&#34;V&#34;&gt;7&lt;/meta&gt;
+        &lt;meta key=&#34;Species_label&#34; type=&#34;String&#34;&gt;Survey&lt;/meta&gt;
+        &lt;meta key=&#34;Transitions&#34; type=&#34;String&#34;&gt;&lt;/meta&gt;
+        &lt;meta key=&#34;Abscissa_start&#34; type=&#34;Quantity&#34; unit=&#34;eV&#34;&gt;1380.0000&lt;/meta&gt;
+        &lt;meta key=&#34;Abscissa_end&#34; type=&#34;Quantity&#34; unit=&#34;eV&#34;&gt;-20.0000&lt;/meta&gt;
+        &lt;meta key=&#34;Abscissa_increment&#34; type=&#34;Quantity&#34; unit=&#34;eV&#34;&gt;-0.5000&lt;/meta&gt;
+        &lt;meta key=&#34;Collection_time&#34; type=&#34;Quantity&#34; unit=&#34;s&#34;&gt;0.251496&lt;/meta&gt;
+        &lt;meta key=&#34;Number_of_scans&#34; type=&#34;Numeric&#34;&gt;7&lt;/meta&gt;
+        &lt;meta key=&#34;Comment&#34; type=&#34;String&#34;&gt;1 #3 Cu foil&lt;/meta&gt;
+        &lt;column_num&gt;1&lt;/column_num&gt;
+        &lt;column_name&gt;condition&lt;/column_name&gt;
+&lt;/metadata&gt;
+
+</pre></div></div>
 </div>
 </div>
 </div>
@@ -537,15 +575,6 @@ SPECTRUM
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="LICENSE.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="xrd.html" class="btn btn-neutral" title="XRD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -573,7 +602,17 @@ SPECTRUM
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>

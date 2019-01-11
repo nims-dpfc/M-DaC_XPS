@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Materials_Data_Repository’s documentation! &mdash; Materials_Data_Repository  documentation</title>
+  <title>Welcome to M-DaC Tutorial &mdash; M-DaC  documentation</title>
   
 
   
@@ -28,7 +28,12 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="XPS" href="xps.html" /> 
+    <link rel="next" title="About" href="About.html" />
+ 
+<script>
+
+</script>
+
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -47,7 +52,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Materials_Data_Repository
+            <a href="#" class="icon icon-home"> M-DaC
           
 
           
@@ -78,9 +83,10 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="xps.html">XPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xrd.html">XRD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xps_survey.html">xps_survey for jupyter notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terms_of_service.html">Terms of Service</a></li>
 </ul>
 
@@ -96,7 +102,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Materials_Data_Repository</a>
+          <a href="#">M-DaC</a>
         
       </nav>
 
@@ -127,7 +133,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to Materials_Data_Repository’s documentation!</li>
+      <li>Welcome to M-DaC Tutorial</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,50 +171,80 @@
     margin-right: 4px;  /* make room for the exclamation icon */
 }
 </style>
-<div class="section" id="welcome-to-materials-data-repository-s-documentation">
-<h1>Welcome to Materials_Data_Repository’s documentation!<a class="headerlink" href="#welcome-to-materials-data-repository-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-m-dac-tutorial">
+<h1>Welcome to M-DaC Tutorial<a class="headerlink" href="#welcome-to-m-dac-tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
-<div class="line">ここに説明が入ります。</div>
-<div class="line">これらのツールは <a class="reference external" href="http://jupyter.org/">Jupyter Notebook</a> で実行できます。</div>
+<div class="line"><a class="reference external" href="https://www.nims.go.jp/">NIMS</a> では計測機器メーカーなどと協力して材料データに関する各種変換ツール(Materials Data Conversion Tools)を開発しています。</div>
+<div class="line">M-Dac では、これらのツールをMITライセンスのもとで公開しています。</div>
+<div class="line">これらのツールは <a class="reference external" href="http://jupyter.org/">Jupyter Notebook</a> でも実行できます。</div>
 </div>
 </div>
 <div class="section" id="news">
 <h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
-<div class="line">[2018 December 7] version 0.0.1 released. XPSのツールを公開しました。</div>
+<div class="line">[2019 January 30] version 1.0.0 released. XPS(Ulvac PHI対応)、XRD(RIGAKU対応)のツールを公開しました。</div>
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Install <code class="docutils literal notranslate"><span class="pre">hoge</span></code></li>
-<li>コマンドを実行する.</li>
-<li>いろいろ</li>
-</ol>
-</div></blockquote>
+<p>リポジトリをクローンまたはzipでダウンロードします。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nims</span><span class="o">-</span><span class="n">dpfc</span><span class="o">/</span><span class="n">M</span><span class="o">-</span><span class="n">DaC_XPS</span><span class="o">.</span><span class="n">git</span> <span class="n">myproject</span>
+<span class="n">cd</span> <span class="n">myproject</span>
+</pre></div>
+</div>
+<div class="admonition note" id="index-0">
+<p class="first admonition-title">Note</p>
+<p>fatal: unable to access ‘<a class="reference external" href="https://github.com/">https://github.com/</a>…’: Couldn’t resolve host ‘github.com’ のエラーが出た場合はプロキシの設定を行ってください。</p>
+<p>プロキシの設定は以下のように行います。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">http</span><span class="o">.</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nims</span><span class="o">-</span><span class="n">dpfc</span><span class="o">/</span><span class="n">M</span><span class="o">-</span><span class="n">DaC_XPS</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">proxy</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="p">[</span><span class="n">proxy</span><span class="p">]:[</span><span class="n">port</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="last">[proxy],[port]は使用環境に合わせて設定します。</p>
+</div>
+<p>ツールディレクトリに移動します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">PHI_XPS_survey_narrow_tools</span>
+</pre></div>
+</div>
+<p>コマンドを実行します。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MPExport</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">Filename</span><span class="p">:</span><span class="s2">&quot;..\source\XPS_PHI_QUANTERA_survey.spe&quot;</span> <span class="o">-</span><span class="n">TSV</span>
+
+<span class="n">python</span> <span class="n">txt2csv</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;XPS_PHI_QUANTERA_survey.txt&quot;</span>
+
+<span class="n">python</span> <span class="n">csv2graph</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;XPS_PHI_QUANTERA_survey.csv&quot;</span>
+
+<span class="n">python</span> <span class="n">txt2raw_XPS_survey</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;XPS_PHI_QUANTERA_survey.txt&quot;</span> <span class="n">xps_raw_template</span><span class="o">.</span><span class="n">xml</span> <span class="n">raw</span><span class="o">.</span><span class="n">xml</span>
+
+<span class="n">python</span> <span class="n">raw2primary_XPS_survey</span><span class="o">.</span><span class="n">py</span> <span class="n">raw</span><span class="o">.</span><span class="n">xml</span> <span class="n">xps_primary_template</span><span class="o">.</span><span class="n">xml</span> <span class="n">primary</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+<p>カレントディレクトリに各種変換されたファイルが作成されます。</p>
+<p><a class="reference external" href="http://jupyter.org/">Jupyter Notebook</a> で実行する場合は jupyter notebook を立ち上げます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>チュートリアルにある「 <a class="reference internal" href="xps_survey.html"><span class="doc">Jupyter Notebookでの実行</span></a> 」を参考に各種コマンドを実行します。
+<code class="docutils literal notranslate"><span class="pre">xps_survey.ipynb</span></code> を使用すると簡単に実行できます。</p>
 <dl class="docutils">
 <dt>Online documentation (and example of use):</dt>
-<dd><a class="reference external" href="https://nims-dpfc.github.io/Materials_Data_Repository/">https://nims-dpfc.github.io/Materials_Data_Repository/</a></dd>
+<dd><a class="reference external" href="https://nims-dpfc.github.io/MDAC_XPS/">https://nims-dpfc.github.io/MDAC_XPS/</a></dd>
 <dt>Source code repository (and issue tracker):</dt>
-<dd><a class="reference external" href="https://github.com/nims-dpfc/Materials_Data_Repository">https://github.com/nims-dpfc/Materials_Data_Repository</a></dd>
+<dd><a class="reference external" href="https://github.com/nims-dpfc/">https://github.com/nims-dpfc/</a></dd>
 </dl>
 </div>
 <div class="section" id="contents">
 <h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="xps.html">XPS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="xps.html#id1">XPSのデータ変換手順</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xps.html#id2">コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xps.html#movie">Movie</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xps.html#instrallation">Instrallation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xps.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#xps-survey-narrow-ulvac-phi">XPS(survey, narrow)[ulvac-phi]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#xps-depth-ulvac-phi">XPS(depth)[ulvac-phi]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#xrd-rigaku">XRD[rigaku]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="xrd.html">XRD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xps_survey.html">xps_survey for jupyter notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terms_of_service.html">Terms of Service</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="terms_of_service.html#id1">吉川プログラム（仮称）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="terms_of_service.html#id2">吉川プログラム（仮称）の利用について</a></li>
@@ -220,7 +256,7 @@
 <div class="section" id="license">
 <h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>MIT – see the file <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> for details.</div></blockquote>
+<div>MIT – see the file <code class="docutils literal notranslate"><span class="pre">LICENSE_MIT.txt</span></code> for details.</div></blockquote>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -239,7 +275,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="xps.html" class="btn btn-neutral float-right" title="XPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="About.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -270,7 +306,17 @@
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
