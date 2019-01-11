@@ -52,17 +52,17 @@ Jupyter Notebook での使い方は `XRD for jupyter notebook <rigaku_xrd.ipynb>
 
 ``.ras`` 形式のファイルから装置出力パラメータを抽出し、 ``raw.xml`` を出力します::
 
-	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml
+	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis xrd_raw_template.xml raw.xml
 
 .. note::
 
 	``--stdout`` のオプションをつけると標準出力にも出力します。::
 
-		python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml --stdout
+		python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis xrd_raw_template.xml raw.xml --stdout
 
 装置出力パラメータファイル ``raw.xml`` から主要パラメータを抽出し、 ``primary.xml`` に出力します::
 
-	python raw2primary_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml primary.xml
+	python raw2primary_XRD.py raw.xml xrd_primary_template.xml primary.xml
 
 バッチ処理
 ----------
