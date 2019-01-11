@@ -1,19 +1,19 @@
-﻿# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
-# coding: utf-8
+﻿#-------------------------------------------------
+# txt2csv_depth.py
 #
-#__author__ = "nagao"
-#__date__ = "$2017/03/09 17:18:43$"
+# Copyright (c) 2018, Data PlatForm Center, NIMS
+#
+# This software is released under the MIT License.
+#-------------------------------------------------
+# coding: utf-8
 
-from __future__ import print_function
-from __future__ import unicode_literals
 import argparse
 import csv
 import itertools
 import io
 import os.path
 import numpy as np
+import codecs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
@@ -21,8 +21,10 @@ parser.add_argument("--encoding", default="utf_8")
 options = parser.parse_args()
 readfile = options.file_path
 encoding_option = options.encoding
-#readfile = 'SNP159.113.txt'
-name, ext = os.path.splitext(readfile)
+basename = os.path.basename(readfile)
+dirname = os.path.dirname(readfile)
+name, ext = os.path.splitext(basename)
+
 flag = 0
 depthflag = 0
 count = 0
@@ -50,10 +52,9 @@ element = ['#legend']
 element2 = ['##Sputter Time']
 cyclearray = []
 collection_time = ['#acq_time']
-with open(readfile, 'r', encoding=encoding_option) as f:
+with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
     for line in f:
         line = line.strip()
-#        print('flag=',flag,'depthflag=',depthflag,' column=',column,' count=',count,' line=',line)
         if flag == 0:
             if line.find('Area Comment,RegionNo,AtomicName,Cycle,XLabel,YLabel,DataCount') > -1:
                 array = line.lstrip('//')
@@ -79,7 +80,6 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                 dimension = 2
                 description_line = 1
             else:
-#                print('line=',line)
                 if line.find('AcqFileDate') > -1:
                     value = line.split(':')
                     date = value[-1].split()
@@ -101,10 +101,8 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                 if line.find('NoDPDataCyc') > -1:
                     value = line.split(':')
                     cycle = value[-1].strip()
-#                    print('cycle=',cycle)
                     element2.append(cycle)
                     cyclearray.append(element2)
-#                    print(cyclearray)
                 if line.find('DepthCalDef:') > -1:
                     value = line.split(':')
                     depthcal_reg = value[-1].split()
@@ -119,25 +117,14 @@ with open(readfile, 'r', encoding=encoding_option) as f:
             if line == '' and description_line != 1:
                 flag = 0
                 if depthflag == 0:
-#                    print('arr=',arr)
                     allData.insert(column, arr)
-#                    print('depthflag=',depthflag, 'column=',column,'allData=',allData)
                 else:
-#                    print(len(allData))
-#                    allData_depth.insert(column, arr)
                     if column == len(allData):
-#                        print('column=',column)
                         allData_depth_np = np.array(arr)
-#                        allData_depth = arr
-#                        print(allData_depth_np)
-#                        allData_depth.insert(column, arr)
                     else:
                         arr_np = np.array(arr)
                         arr_np = arr_np[:,1:]
-#                        print('arr_np=',arr_np)
                         allData_depth_np = np.append(allData_depth_np, arr_np, axis=1)
-#                        print('depthflag=',depthflag, 'column=',column,'allData_depthnp=',allData_depth_np)
-#                    print('column=',column, 'allData_depth=',allData_depth)
                 column += 1
                 description_line = 0
                 templine += 1
@@ -149,15 +136,7 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                 headm1 = header_num - 1
                 if column == 0 and count == 1:
                     print("")
-#                    meta = ['#title', description]
-#                    header.append(meta)
-#                    header_depth.append(meta)
-#                    dimension = ['#dimension', 'x', 'y', 'z']
-#                    dimension_depth = ['#dimension', 'x', 'y']
-#                    header.append(dimension)
-#                    header_depth.append(dimension_depth)
                 elif count == headm2 and column == 0:
-#                    print('count5=',line)
                     itemList = line.split(',')
                     for i, j in enumerate(itemList):
                         temp.insert(i, j)
@@ -166,15 +145,13 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                     xlabelunit = xlabel[1].replace(')', '')
                     if len(itemList) > 1:
                         xoption = itemList[1]
-#                        print(xoption)
-#                    print(xlabelunit)
                     xlabelList = itemList
                 elif count == headm1 and column == 0:
                     meta = ['##Spectra in depth profile']
                     header.append(meta)
                     meta = ['##Intensity in depth profile']
                     header_depth.append(meta)
-                    meta = ['#title', description]
+                    meta = ['#title', name]
                     header.append(meta)
                     header_depth.append(meta)
                     dimension = ['#dimension', 'x', 'y', 'z']
@@ -204,14 +181,9 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                     header.append(meta)
                     meta = ['#y', 'Intensity', 'arb.units']
                     header_depth.append(meta)
-#                    print("element=",element)
                     header_depth.append(element_org)
-#                    element.append('%Cycle')
                     meta = element
                     header.append(meta)
-#                    meta = element2
-#                    header.append(meta)
-#                    element2.insert(0, 'Sputter Time')
                     for x in cyclearray:
                         header.append(x)
                     meta = ['##block', 'depth_intensity']
@@ -229,7 +201,6 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                         itemList = line.split('\t')
                     for i, j in enumerate(itemList):
                         temp.insert(i, j)
-##                        print('column=',column, 'depthflag=',depthflag,'j=',j)
                         if depthflag == 1 and column == zcolumn and i == 0:
                             zaxis.append(j)
                     arr.insert(count-header_num+1, temp)
@@ -237,13 +208,9 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                         maxlen = count-header_num
                 count += 1
                 description_line += 1
-#print('header=',header)
-#print(zcolumn)
 header.append('')
 header_depth.append('')
 allData_depth = list(allData_depth_np)
-#print(allData_depth_np)
-#print('zaxis=',zaxis)
 writefile = name + '.csv'
 with open(writefile, 'w', newline='') as f:
     writer = csv.writer(f)
@@ -259,7 +226,3 @@ with open(writefile, 'w', newline='') as f:
     writer.writerow(temp)
     for i, j in enumerate(allData_depth):
         writer.writerow(j)
-#        print(i)
-#        print(len(allData_depth))
-#        if i < len(allData_depth)-1:
-#            writer.writerow('')

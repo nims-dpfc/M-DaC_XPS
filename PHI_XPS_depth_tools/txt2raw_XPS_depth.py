@@ -1,8 +1,11 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
-__author__ = "nagao"
-__date__ = "$2018/07/02 17:42:00$"
+#-------------------------------------------------
+# txt2raw_XPS_depth.py
+#
+# Copyright (c) 2018, Data PlatForm Center, NIMS
+#
+# This software is released under the MIT License.
+#-------------------------------------------------
+# coding: utf-8
 
 import argparse
 import os.path
@@ -12,13 +15,18 @@ from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
+import codecs
 
 parser = argparse.ArgumentParser()
-parser.add_argument("file_path")
-parser.add_argument("template_file")
+parser.add_argument("file_path", help="input file")
+parser.add_argument("template_file", help="template file")
+parser.add_argument("out_file", help="output file")
+parser.add_argument("--stdout", help="show meta information", action="store_true")
 options = parser.parse_args()
 readfile = options.file_path
 templatefile = options.template_file
+outputfile = options.out_file
+print_option = options.stdout
 channel = 0
 
 template = ET.parse(templatefile)
@@ -33,7 +41,7 @@ count = 0
 depth = 1
 spectral = 1
 maxcolumn = 1
-with open(readfile, 'r', encoding="utf8") as f:
+with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
     for line in f:
         line = line.strip()
         comment = line[0:2]
@@ -120,4 +128,11 @@ column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
 metadata.appendChild(subnode)
-print(dom.toprettyxml())
+if print_option == True:
+    print(dom.toprettyxml())
+file = codecs.open(outputfile,'wb',encoding='utf-8')
+
+dom.writexml(file,'','\t','\n',encoding='utf-8')
+
+file.close()
+dom.unlink()
