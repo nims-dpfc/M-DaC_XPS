@@ -37,7 +37,6 @@
   <meta key="Analyser_acceptance_angle" type="Quantity" unit="deg" />
   <meta key="Analyser_acceptance_solid_angle" type="Quantity" unit="sr" />
   <meta key="Signal_mode" type="String" />
-  <meta key="Analyser_Pass_energy" type="Quantity" unit="eV" />
   <meta key="Analyser_slit_width_x" type="Quantity" unit="mm" />
   <meta key="Analyser_slit_width_y" type="Quantity" unit="mm" />
   <meta key="Analyser_slit_shape" type="String" />
@@ -59,9 +58,7 @@
   <meta key="Neutralization_source_azimuth" type="Quantity" unit="deg" />
   <meta key="Flood_gun_Manufacturer" type="String" />
   <meta key="Flood_gun_Instrument_model" type="String" />
-  <meta key="Flood_gun_Voltage" type="Quantity" unit="V" />
   <meta key="Flood_gun_Extractor_voltage" type="Quantity" unit="V" />
-  <meta key="Flood_gun_Emission_current" type="Quantity" unit="uA" />
   <meta key="Flood_gun_Distance_from_sample" type="Quantity" unit="mm" />
   <meta key="Flood_gun_Irradiation_time" type="Quantity" unit="s">
      <unit_option>h</unit_option>
@@ -70,7 +67,6 @@
   </meta>
   <meta key="Ion_gun_Manufacturer" type="String" />
   <meta key="Ion_gun_Instrument_model" type="String" />
-  <meta key="Ion_gun_Voltage" type="Quantity" unit="V" />
   <meta key="Ion_gun_Extractor_voltage" type="Quantity" unit="V" />
   <meta key="Ion_gun_Emission_current" type="Quantity" unit="uA" />
   <meta key="Ion_gun_Distance_from_sample" type="Quantity" unit="mm" />
@@ -102,6 +98,7 @@
   <meta key="Ambient_pressure_Gas_source" type="String" />
   <meta key="Species_label" type="String" />
   <meta key="Transitions" type="String" />
+  <meta key="Analyser_Pass_energy" type="Quantity" unit="eV" />
   <meta key="Reference_spectrum_Species_label" type="String" />
   <meta key="Reference_spectrum_Transitions" type="String" />
   <meta key="Reference_spectrum_FWHM" type="Quantity" unit="eV" />
@@ -109,6 +106,8 @@
   <meta key="Abscissa_end" type="Quantity" unit="eV" />
   <meta key="Abscissa_increment" type="Quantity" unit="eV" />
   <meta key="Collection_time" type="Quantity" unit="s" />
+  <meta key="Measurement_Acquisition_Number" type="Numeric" />
+  <meta key="Peak_Sweep_Number" type="Numeric" />
   <meta key="Number_of_scans" type="Numeric" />
   <meta key="Energy_scale_calibration" type="String" />
   <meta key="Energy_scale_calibration_Energy_scale" type="String" />

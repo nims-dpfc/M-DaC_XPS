@@ -76,6 +76,13 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 elif key == "Sputtering_to_measurement_time":
                     value = arrayvalue[0]
                     value_unit = unitcolumn.get("unit")
+                elif key == "Sputtering_Ion_Energy":
+                    value_unit = arrayvalue[1]
+                    value = arrayvalue[0]
+                elif key == "Sputtering_Raster_Area":
+                    value_unit = arrayvalue[2]
+                    value = arrayvalue[0] + 'x' + arrayvalue[1]
+
             else:
                 value_unit=""
                 if key == "Year":
@@ -121,7 +128,17 @@ def registdf(key, channel, value, metadata, unitlist, template):
                         for i, x in enumerate(peak):
                             if 0 < i:
                                 value2 = value2 + x
-                                
+
+                elif key == "Measurement_Acquisition_Number":
+                    value = 1
+                elif key == "Peak_Sweep_Number":
+                    value = int(arrayvalue[2])
+                elif key == "Software_Preset_Sputtering_Layer_Name":
+                    value = arrayvalue[1]
+                elif key == "Total_Cycle_Number":
+                    value = "***"
+                elif key == "Cycle_Control":
+                    value = "***"
                 elif key == "Number_of_scans":
                     if rawdata.find('meta[@key="SurvNumCycles"]') != None:
                         SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
@@ -240,8 +257,6 @@ metalist = {"Technique":"Technique",
             "Experiment_mode":"FileType",
             "Analyser_mode":"AnalyserMode",
             "Analyser_work_function":"AnalyserWorkFcn",
-            "Flood_gun_Voltage":"NeutralizerEnergy",
-            "Flood_gun_Emission_current":"NeutralizerCurrent",
             "Sputtering_to_measurement_time":"ProfSputterDelay",
             "Sputtering_interval_time":"DepthCalDef",
             "Sputtering_cycle":"DepthCalDef",
@@ -250,14 +265,22 @@ metalist = {"Technique":"Technique",
             "Abscissa_start":"SpectralRegDef",
             "Abscissa_end":"SpectralRegDef",
             "Collection_time":"SpectralRegDef",
+            "Measurement_Acquisition_Number":"Technique",
+            "Peak_Sweep_Number":"SpectralRegDef2",
             "Analyser_Pass_energy":"SpectralRegDef",
             "Number_of_scans":"SpectralRegDef2",
-            "Ion_gun_Voltage":"FloatVolt",
             "Analyser_axis_take_off_polar_angle":"SourceAnalyserAngle",
             "Analyser_acceptance_solid_angle":"AnalyserSolidAngle",
             "Analysis_source_beam_diameter":"XrayBeamDiameter",
             "Analysis_source_strength":"XRayHighPower",
             "Comment":"SpatialAreaDesc",
+            "Sputtering_Ion_Energy":"SputterEnergy",
+            "Sputtering_Raster_Area":"SputterRaster",
+            "Specimen_Stage_Rotation_Setting_During_Sputtering":"SampleRotation",
+            "Depth_Profiling_Preset_Layer_Number":"NoDepthReg",
+            "Total_Cycle_Number":"DepthCalDef",
+            "Cycle_Control":"DepthCalDef",
+            "Software_Preset_Sputtering_Layer_Name":"DepthCalDef",
             "Analysis_width_x":"ImageSizeXY",
             "Analysis_width_y":"ImageSizeXY",
             "Analysis_region":"ImageSizeXY"}
