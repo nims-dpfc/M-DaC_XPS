@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="Technique" type="String">XPS</meta>
+	<meta key="Instrument_model_identifier" type="String">PHI Quantera SXM</meta>
+	<meta key="Experiment_Identifier" type="Numeric">20170606</meta>
+	<meta key="Experiment_mode" type="String">DEPTHPRO</meta>
+	<meta key="Year" type="Numeric">2017</meta>
+	<meta key="Month" type="Numeric">06</meta>
+	<meta key="Day" type="Numeric">07</meta>
+	<meta key="Analysis_source_beam_diameter" type="Quantity" unit="um">100.0</meta>
+	<meta key="Analysis_source_strength" type="String">24.94W</meta>
+	<meta key="Analyser_mode" type="String">FAT</meta>
+	<meta key="Analyser_work_function" type="Quantity" unit="eV">4.250</meta>
+	<meta key="Analyser_axis_take_off_polar_angle" type="Quantity" unit="deg">45.0</meta>
+	<meta key="Analyser_acceptance_solid_angle" type="Quantity" unit="sr">0.38</meta>
+	<meta key="Analysis_region" type="String">Spot</meta>
+	<meta key="Analysis_width_x" type="Quantity" unit="um">100.0000</meta>
+	<meta key="Analysis_width_y" type="Quantity" unit="um">100.0000</meta>
+	<meta key="Sputtering_Ion_Energy" type="Quantity" unit="kV">1.000</meta>
+	<meta key="Sputtering_Raster_Area" type="Quantity" unit="mm">2.00x2.00</meta>
+	<meta key="Specimen_Stage_Rotation_Setting_During_Sputtering" type="String">off</meta>
+	<meta key="Depth_Profiling_Preset_Layer_Number" type="Numeric">3</meta>
+	<meta key="Total_Cycle_Number" type="Numeric">24</meta>
+	<meta key="Cycle_Control" type="String">1.00min 6cyc, 0.50min 12cyc, 1.00min 6cyc</meta>
+	<meta column="1" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer1</meta>
+	<meta column="3" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer2</meta>
+	<meta column="5" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer3</meta>
+	<meta column="2" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer1</meta>
+	<meta column="4" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer2</meta>
+	<meta column="6" key="Software_Preset_Sputtering_Layer_Name" type="String">Layer3</meta>
+	<meta column="1" key="Sputtering_interval_time" type="Quantity" unit="min">1.00</meta>
+	<meta column="3" key="Sputtering_interval_time" type="Quantity" unit="min">0.50</meta>
+	<meta column="5" key="Sputtering_interval_time" type="Quantity" unit="min">1.00</meta>
+	<meta column="2" key="Sputtering_interval_time" type="Quantity" unit="min">1.00</meta>
+	<meta column="4" key="Sputtering_interval_time" type="Quantity" unit="min">0.50</meta>
+	<meta column="6" key="Sputtering_interval_time" type="Quantity" unit="min">1.00</meta>
+	<meta column="1" key="Sputtering_cycle" type="Numeric">6</meta>
+	<meta column="3" key="Sputtering_cycle" type="Numeric">12</meta>
+	<meta column="5" key="Sputtering_cycle" type="Numeric">6</meta>
+	<meta column="2" key="Sputtering_cycle" type="Numeric">6</meta>
+	<meta column="4" key="Sputtering_cycle" type="Numeric">12</meta>
+	<meta column="6" key="Sputtering_cycle" type="Numeric">6</meta>
+	<meta key="Sputtering_to_measurement_time" type="Quantity" unit="s">5.0</meta>
+	<meta column="1" key="Species_label" type="String">O</meta>
+	<meta column="1" key="Transitions" type="String">1s</meta>
+	<meta column="2" key="Species_label" type="String">Si</meta>
+	<meta column="2" key="Transitions" type="String">2p</meta>
+	<meta column="3" key="Species_label" type="String">O</meta>
+	<meta column="3" key="Transitions" type="String">1s</meta>
+	<meta column="5" key="Species_label" type="String">O</meta>
+	<meta column="5" key="Transitions" type="String">1s</meta>
+	<meta column="4" key="Species_label" type="String">Si</meta>
+	<meta column="4" key="Transitions" type="String">2p</meta>
+	<meta column="6" key="Species_label" type="String">Si</meta>
+	<meta column="6" key="Transitions" type="String">2p</meta>
+	<meta column="1" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="2" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="3" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="5" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="4" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="6" key="Analyser_Pass_energy" type="Quantity" unit="eV">112.00</meta>
+	<meta column="1" key="Abscissa_start" type="Quantity" unit="eV">543.0000</meta>
+	<meta column="2" key="Abscissa_start" type="Quantity" unit="eV">112.0000</meta>
+	<meta column="3" key="Abscissa_start" type="Quantity" unit="eV">543.0000</meta>
+	<meta column="5" key="Abscissa_start" type="Quantity" unit="eV">543.0000</meta>
+	<meta column="4" key="Abscissa_start" type="Quantity" unit="eV">112.0000</meta>
+	<meta column="6" key="Abscissa_start" type="Quantity" unit="eV">112.0000</meta>
+	<meta column="1" key="Abscissa_end" type="Quantity" unit="eV">523.0000</meta>
+	<meta column="2" key="Abscissa_end" type="Quantity" unit="eV">92.0000</meta>
+	<meta column="3" key="Abscissa_end" type="Quantity" unit="eV">523.0000</meta>
+	<meta column="5" key="Abscissa_end" type="Quantity" unit="eV">523.0000</meta>
+	<meta column="4" key="Abscissa_end" type="Quantity" unit="eV">92.0000</meta>
+	<meta column="6" key="Abscissa_end" type="Quantity" unit="eV">92.0000</meta>
+	<meta column="1" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="2" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="3" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="5" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="4" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="6" key="Abscissa_increment" type="Quantity" unit="eV">-0.1000</meta>
+	<meta column="1" key="Collection_time" type="Quantity" unit="s">0.240000</meta>
+	<meta column="2" key="Collection_time" type="Quantity" unit="s">0.640000</meta>
+	<meta column="3" key="Collection_time" type="Quantity" unit="s">0.240000</meta>
+	<meta column="5" key="Collection_time" type="Quantity" unit="s">0.240000</meta>
+	<meta column="4" key="Collection_time" type="Quantity" unit="s">0.640000</meta>
+	<meta column="6" key="Collection_time" type="Quantity" unit="s">0.640000</meta>
+	<meta key="Measurement_Acquisition_Number" type="Numeric">1</meta>
+	<meta column="1" key="Peak_Sweep_Number" type="Numeric">3</meta>
+	<meta column="2" key="Peak_Sweep_Number" type="Numeric">8</meta>
+	<meta column="3" key="Peak_Sweep_Number" type="Numeric">3</meta>
+	<meta column="5" key="Peak_Sweep_Number" type="Numeric">3</meta>
+	<meta column="4" key="Peak_Sweep_Number" type="Numeric">8</meta>
+	<meta column="6" key="Peak_Sweep_Number" type="Numeric">8</meta>
+	<meta column="1" key="Number_of_scans" type="Numeric">3</meta>
+	<meta column="2" key="Number_of_scans" type="Numeric">8</meta>
+	<meta column="3" key="Number_of_scans" type="Numeric">3</meta>
+	<meta column="5" key="Number_of_scans" type="Numeric">3</meta>
+	<meta column="4" key="Number_of_scans" type="Numeric">8</meta>
+	<meta column="6" key="Number_of_scans" type="Numeric">8</meta>
+	<meta key="Comment" type="String">1 #7 SiO2 25nm</meta>
+	<column_num>6</column_num>
+	<column_name>condition</column_name>
+</metadata>

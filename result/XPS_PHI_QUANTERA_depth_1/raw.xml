@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="Platform" type="String">PC</meta>
+	<meta key="Technique" type="String">XPS</meta>
+	<meta key="FileType" type="String">DEPTHPRO</meta>
+	<meta key="FileDesc" type="String">MIDATA001</meta>
+	<meta key="SoftwareVersion" type="String">SS 3.6.1.16</meta>
+	<meta key="InstrumentModel" type="String">PHI Quantera SXM</meta>
+	<meta key="AcqFilename" type="String">C:\Datafiles\Butsuzai\XPS_PHI_QUANTERA_depth_1.pro</meta>
+	<meta key="FileDate" type="String">2017 6 7</meta>
+	<meta key="AcqFileDate" type="String">2017 6 7</meta>
+	<meta key="Institution" type="String"></meta>
+	<meta key="Operator" type="String"></meta>
+	<meta key="ExperimentID" type="String">20170606</meta>
+	<meta key="AnalyserWorkFcn" type="String">4.250 eV</meta>
+	<meta key="PlatenID" type="String">MIDATA001</meta>
+	<meta key="PlatenDesc" type="String"></meta>
+	<meta key="PhotoFilename" type="String">MIDATA001.101.pho</meta>
+	<meta key="SXIFilename" type="String"></meta>
+	<meta key="SourceAnalyserAngle" type="String">45.0 d</meta>
+	<meta key="AnalyserSolidAngle" type="String">0.38 sr</meta>
+	<meta key="SputterIon" type="String">Ar+</meta>
+	<meta key="SputterCurrent" type="String">0.000 uA</meta>
+	<meta key="SputterEnergy" type="String">1.000 kV</meta>
+	<meta key="FloatVolt" type="String">0.0 V</meta>
+	<meta key="SputterRaster" type="String">2.00 2.00 mm</meta>
+	<meta key="AnalyserMode" type="String">FAT</meta>
+	<meta key="NoDPDataCyc" type="String">25</meta>
+	<meta key="NoPreSputterCyc" type="String">1</meta>
+	<meta key="ProfSputterDelay" type="String">5.0</meta>
+	<meta key="ProfXrayOffDuringSputter" type="String">no</meta>
+	<meta key="ProfSourceBlankDuringSputter" type="String">no</meta>
+	<meta key="ProfZalarHighAccuracyInterval" type="String">20</meta>
+	<meta key="SampleRotation" type="String">off</meta>
+	<meta key="SputterMode" type="String">Alternating</meta>
+	<meta key="NoDepthReg" type="String">3</meta>
+	<meta column="1" key="DepthCalDef" type="String">1 Layer1 1 0.0000 0.0000 Ar+ 6.00 1.00 6 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta column="3" key="DepthCalDef" type="String">2 Layer2 7 0.0000 0.0000 Ar+ 6.00 0.50 12 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta column="5" key="DepthCalDef" type="String">3 Layer3 19 0.0000 0.0000 Ar+ 6.00 1.00 6 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta key="NoSpectralReg" type="String">2</meta>
+	<meta column="1" key="SpectralRegDef" type="String">1 1 O1s 8 201 -0.1000 543.0000 523.0000 542.0000 524.0000 0.240000 112.00 AREA</meta>
+	<meta column="1" key="SpectralRegDef2" type="String">1 20.0 3 0 4 1</meta>
+	<meta column="2" key="SpectralRegDef" type="String">2 1 Si2p 14 201 -0.1000 112.0000 92.0000 111.0000 93.0000 0.640000 112.00 AREA</meta>
+	<meta column="2" key="SpectralRegDef2" type="String">2 20.0 8 0 4 1</meta>
+	<meta key="NoSpatialArea" type="String">1</meta>
+	<meta key="SpatialAreaDef" type="String">1 Point7 1 (-23673.4 8299.0 23281.0 45.0 0.0)</meta>
+	<meta key="SpatialAreaDesc" type="String">1 #7 SiO2 25nm</meta>
+	<meta key="XraySource" type="String">Al 1486.6 mono</meta>
+	<meta key="XrayPower" type="String">24.94 W</meta>
+	<meta key="XrayBeamDiameter" type="String">100.0 um</meta>
+	<meta key="XRayHighPower" type="String">no</meta>
+	<meta key="NeutralizerCurrent" type="String">20.0 uA</meta>
+	<meta key="NeutralizerEnergy" type="String">1.40 V</meta>
+	<meta key="StagePosition" type="String">-23.9293 -6.9335 23.2812 45.0000 0.0044</meta>
+	<meta key="ImageSizeXY" type="String">100.0000 100.0000 Spot</meta>
+	<meta column="2" key="DepthCalDef" type="String">1 Layer1 1 0.0000 0.0000 Ar+ 6.00 1.00 6 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta column="4" key="DepthCalDef" type="String">2 Layer2 7 0.0000 0.0000 Ar+ 6.00 0.50 12 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta column="6" key="DepthCalDef" type="String">3 Layer3 19 0.0000 0.0000 Ar+ 6.00 1.00 6 '1KV2x2' 1.000 150 25.00 0 0 719 765 39 2.0 2.0 0.79 -0.87 0.00 0.00 Ar</meta>
+	<meta column="3" key="SpectralRegDef" type="String">1 1 O1s 8 201 -0.1000 543.0000 523.0000 542.0000 524.0000 0.240000 112.00 AREA</meta>
+	<meta column="5" key="SpectralRegDef" type="String">1 1 O1s 8 201 -0.1000 543.0000 523.0000 542.0000 524.0000 0.240000 112.00 AREA</meta>
+	<meta column="3" key="SpectralRegDef2" type="String">1 20.0 3 0 4 1</meta>
+	<meta column="5" key="SpectralRegDef2" type="String">1 20.0 3 0 4 1</meta>
+	<meta column="4" key="SpectralRegDef" type="String">2 1 Si2p 14 201 -0.1000 112.0000 92.0000 111.0000 93.0000 0.640000 112.00 AREA</meta>
+	<meta column="6" key="SpectralRegDef" type="String">2 1 Si2p 14 201 -0.1000 112.0000 92.0000 111.0000 93.0000 0.640000 112.00 AREA</meta>
+	<meta column="4" key="SpectralRegDef2" type="String">2 20.0 8 0 4 1</meta>
+	<meta column="6" key="SpectralRegDef2" type="String">2 20.0 8 0 4 1</meta>
+	<column_num>6</column_num>
+	<column_name>condition</column_name>
+</metadata>
