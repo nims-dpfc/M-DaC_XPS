@@ -136,9 +136,28 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 elif key == "Software_Preset_Sputtering_Layer_Name":
                     value = arrayvalue[1]
                 elif key == "Total_Cycle_Number":
-                    value = "***"
+                    items = rawdata.findall('meta[@key="DepthCalDef"]')
+                    itemlist = []
+                    cyclenum = 0
+                    for item in items:
+                        if item.text not in itemlist:
+                            itemlist.append(item.text)
+                            myitem = item.text
+                            myitems = myitem.split()
+                            cyclenum = cyclenum + int(myitems[8])
+                    value = cyclenum
                 elif key == "Cycle_Control":
-                    value = "***"
+                    items = rawdata.findall('meta[@key="DepthCalDef"]')
+                    itemlist = []
+                    cyclecontrol = ""
+                    for item in items:
+                        if item.text not in itemlist:
+                            itemlist.append(item.text)
+                            myitem = item.text
+                            myitems = myitem.split()
+                            cont_value = myitems[7] + "min " + myitems[8] + "cyc, "
+                            cyclecontrol = cyclecontrol + cont_value
+                    value = cyclecontrol[0:len(cyclecontrol)-2]
                 elif key == "Number_of_scans":
                     if rawdata.find('meta[@key="SurvNumCycles"]') != None:
                         SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
@@ -206,6 +225,8 @@ def registdf(key, channel, value, metadata, unitlist, template):
 
 def regist(column, key, rawdata, metadata, channel, value, unitlist, template):
     if column in rawcolumns:
+        if key == "Measurement_Acquisition_Number":
+            value = template.find('meta[@key="Measurement_Acquisition_Number"]').text
         registdf(key, channel, value, metadata, unitlist, template)
     return metadata
 
@@ -213,6 +234,8 @@ def regist(column, key, rawdata, metadata, channel, value, unitlist, template):
 def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
     if channel == 0:
         metadata = regist(column, temp_name, rawdata, metadata, 0, rawdata.find('meta[@key="{value}"]'.format(value=column)).text, unitlist, template)
+    elif channel == -1 and temp_name == "Measurement_Acquisition_Number":
+        metadata = regist(column, temp_name, rawdata, metadata, 0, 1, unitlist, template)
     else:
         for node in rawdata.findall('meta[@key="{value}"]'.format(value=column)):
             columnnum = node.attrib.get('column')
@@ -235,6 +258,7 @@ rawcolumns=[]
 rawmetas = rawdata.findall('meta')
 for meta in rawmetas:
     rawcolumns.append(meta.attrib["key"])
+rawcolumns.append("SurvNumCycles")
 rawcolumns = list(set(rawcolumns))
 template = ET.parse(templatefile)
 columns=[]
@@ -265,7 +289,7 @@ metalist = {"Technique":"Technique",
             "Abscissa_start":"SpectralRegDef",
             "Abscissa_end":"SpectralRegDef",
             "Collection_time":"SpectralRegDef",
-            "Measurement_Acquisition_Number":"Technique",
+            "Measurement_Acquisition_Number":"SurvNumCycles",
             "Peak_Sweep_Number":"SpectralRegDef2",
             "Analyser_Pass_energy":"SpectralRegDef",
             "Number_of_scans":"SpectralRegDef2",
@@ -293,7 +317,10 @@ spectralcolumn = rawdata.find('meta[@key="NoSpectralReg"]').text
 for k in columns_unique:
     if k in metalist:
         v = metalist[k]
-        column_num = len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))
+        if k == "Total_Cycle_Number" or k == "Cycle_Control":
+            column_num = 1
+        else:
+            column_num = len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))
         if maxcolumn < column_num:
             maxcolumn = column_num
         metadata = conv(v, k, rawdata, metadata, column_num - 1, unitlist, template)
