@@ -151,6 +151,9 @@ def registdf(key, channel, value, metadata, unitlist, template):
                             if 0 < i:
                                 value2 = value2 + x
                                 
+                elif key == "Peak_Sweep_Number":
+                    value = int(arrayvalue[2])
+
                 elif key == "Number_of_scans":
                     SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
                     if SurvNumCycles == None:
@@ -483,8 +486,6 @@ metalist = {"Technique":"Technique",
             "Experiment_mode":"FileType",
             "Analyser_mode":"AnalyserMode",
             "Analyser_work_function":"AnalyserWorkFcn",
-            "Flood_gun_Voltage":"NeutralizerEnergy",
-            "Flood_gun_Emission_current":"NeutralizerCurrent",
             "Sputtering_interval_time":"ProfSputterDelay",
             "Sputtering_cycle":"ProfSputterDelay",
             "Species_label":"SpectralRegDef",
@@ -492,9 +493,10 @@ metalist = {"Technique":"Technique",
             "Abscissa_start":"SpectralRegDef",
             "Abscissa_end":"SpectralRegDef",
             "Collection_time":"SpectralRegDef",
+            "Measurement_Acquisition_Number":"SurvNumCycles",
+            "Peak_Sweep_Number":"SpectralRegDef2",
             "Analyser_Pass_energy":"SpectralRegDef",
             "Number_of_scans":"SpectralRegDef2",
-            "Ion_gun_Voltage":"FloatVolt",
             "Analyser_axis_take_off_polar_angle":"SourceAnalyserAngle",
             "Analyser_acceptance_solid_angle":"AnalyserSolidAngle",
             "Analysis_source_beam_diameter":"XrayBeamDiameter",
