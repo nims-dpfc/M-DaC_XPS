@@ -6,7 +6,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ###### Tutorial
 
- <https://nims-dpfc.github.io/M-DaC_XPS/Tutorial.html#xps-survey-narrow-ulvac-phi>
+ <https://nims-dpfc.github.io/M-DaC_XPS/xps.html
 
 ##### Instruments (As of Jan. 30, 2019) 
 
@@ -27,7 +27,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 ##### Method
 
 * After downloading the set to the working directory, please try a series of flows with sample data of the following tutorial.<br />
- <https://nims-dpfc.github.io/M-DaC_XPS/Tutorial.html#xps-survey-narrow-ulvac-phi>
+ https://nims-dpfc.github.io/M-DaC_XPS/xps.html
 
 * If you have data on hand of each manufacturer, you can proceed in the same way.
 
