@@ -4,11 +4,11 @@ The National Institute for Materials Science (hereafter NIMS) develops high valu
 
 We hereby release the trial program, trial source code, and source data, etc. (hereafter “the Program”), free of charge, so that they may be used widely by researchers to promote related technological developments.
 
-## Tutorial
+### Tutorial
 
  https://nims-dpfc.github.io/M-DaC_XPS/xps.html
 
-##### Instruments (As of Jan. 30, 2019) 
+### Instruments (As of Jan. 30, 2019) 
 
  X-ray Photoelectron Spectroscopy (XPS)(ULVAC-PHI, Inc.)
 
@@ -16,7 +16,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 
 
-##### Environment
+### Environment
 
  python 3.X
 
@@ -24,7 +24,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 
 
-##### Method
+### Method
 
 * After downloading the set to the working directory, please try a series of flows with sample data of the following tutorial.<br />
  https://nims-dpfc.github.io/M-DaC_XPS/xps.html
@@ -33,7 +33,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 
 
-##### Terms of Use and License
+### Terms of Use and License
 
 * Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
 
@@ -45,7 +45,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 
 
-##### How to Cite M-DaC
+### How to Cite M-DaC
 
 * Please refer to the cited example of the research and development using the M-DaC
 
@@ -55,7 +55,7 @@ H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)
 
 
 
-##### Contact Us
+### Contact Us
 
 Please contact below if you have any questions about licensing and how to use this program.
 
