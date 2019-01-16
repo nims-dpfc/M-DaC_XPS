@@ -1,27 +1,27 @@
 Tutorial
 ========
 
-XPS(survey, narrow)[ulvac-phi]
+XPS(survey, narrow)[ULVAC-PHI]
 ++++++++++++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 2
 
-   XPS(survey, narrow)[ulvac-phi] <xps>
+   XPS(survey, narrow)[ULVAC-PHI] <xps>
 
-XPS(depth)[ulvac-phi]
+XPS(depth)[ULVAC-PHI]
 +++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 2
 
-   XPS(depth)[ulvac-phi] <xpsdepth>
+   XPS(depth)[ULVAC-PHI] <xpsdepth>
 
 
-XRD[rigaku]
+XRD[Rigaku]
 +++++++++++
 
 .. toctree::
    :maxdepth: 2
 
-   XRD[rigaku] <xrd>
+   XRD[Rigaku] <xrd>

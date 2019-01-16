@@ -8,7 +8,7 @@ Welcome to M-DaC Tutorial
 News
 ===========
 
-| [2019 January 30] version 1.0.0 released. XPS(Ulvac PHI対応)、XRD(RIGAKU対応)のツールを公開しました。
+| [2019 January 30] version 1.0.0 released. XPS(ULVAC-PHI対応)、XRD(Rigaku対応)のツールを公開しました。
 |
 
 Quick Start
