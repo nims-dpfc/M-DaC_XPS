@@ -4,7 +4,7 @@ Terms of Use
 
 1. The National Institute for Materials Science (hereafter NIMS) develops high value-adding technologies and efficient techniques for collecting test data as a part of materials research. The “NIMS Materials Data Conversion Tools (M-DaC),” which is provided with this development, refers to programs and source code that can (1) automatically extract the principle requirements and metadata of tests developed in cooperation with measurement instrument manufacturers and then automate the translation (decoding) thereof, as well as (2) perform Schema-on-Read decoding of multidimensional arrays of numerical data. We hereby release the trial program, trial source code, and source data, etc. (hereafter “the Program”), free of charge, so that they may be used widely by researchers to promote related technological developments.
 
-2. Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
+2. Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-NonCommercial 4.0 International license.
 
 
 
