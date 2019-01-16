@@ -4,9 +4,9 @@
 
 今回開発した M-DaC を研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
 
-##### チュートリアル
+###### チュートリアル
 
-https:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  https:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ##### 対象装置およびメーカ　（2019年１月30日現在）
 
