@@ -6,7 +6,7 @@
 
 ###### チュートリアル
 
-  https:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<http://***>
+  <http://***>
 
 ##### 対象装置およびメーカ　（2019年１月30日現在）
 
