@@ -1,16 +1,18 @@
 # 「NIMS Materials Data Conversion Tools (M-DaC)」について
 
-国立研究開発法人物質・材料研究（以下、NIMS）では、物質・材料研究の一環として、実験データの効率的な収集と高付加価値化の技術開発を行っています。本開発で提供される「NIMS Materials Data Conversion Tools (M-DaC)」とは、NIMSが計測機器メーカーの協力を得て開発した実験の主要条件やメタデータの自動抽出とその翻訳作業（可読化）の自動化、ならびに多次元の数値データ行列のScheme on Read型の可読化を行うことができるプログラムおよびソースコード群を指します。
+国立研究開発法人物質・材料研究機構（以下、NIMS）では、物質・材料研究の一環として、実験データの効率的な収集と高付加価値化の技術開発を行っています。本開発で提供される「NIMS Materials Data Conversion Tools (M-DaC)」とは、NIMS が計測機器メーカーの協力を得て開発した実験の主要条件やメタデータの自動抽出とその翻訳作業（可読化）の自動化、ならびに多次元の数値データ行列の Schema on Read 型の可読化を行うことができるプログラムおよびソースコード群を指します。
 
-今回開発したM-DaCを研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
+今回開発した M-DaC を研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
 
+##### チュートリアル
 
+https:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ##### 対象装置およびメーカ　（2019年１月30日現在）
 
-　X線光電子分光/ X-ray Photoelectron Spectroscopy（XPS）　（アルバック・ファイ株式会社）
+　X線光電子分光/ X-ray Photoelectron Spectroscopy (XPS)　（アルバック・ファイ株式会社）
 
-　X線回折/ X-ray Diffraction (XRD)   （株式会社リガク）
+　X線回折/ X-ray Diffraction (XRD) （株式会社リガク）
 
 
 
@@ -39,7 +41,7 @@ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 * アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
 
-* 詳細は『Terms of Use and License.md』をお読みください。
+* 詳細は『Terms of Use and License_JP.md』をお読みください。
 
 
 
