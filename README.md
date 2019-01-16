@@ -41,7 +41,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 * Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
 
-* In more detail, please read the following license agreement; "Terms of Use and License.md"
+* In more detail, please read the following license agreement; "Terms of Use and License_MIT.md"
 
 
 
