@@ -6,7 +6,7 @@
 
 ###### チュートリアル
 
-  <http://***>
+  <https://nims-dpfc.github.io/M-DaC_XPS/Tutorial.html#xps-survey-narrow-ulvac-phi>
 
 ##### 対象装置およびメーカ　（2019年１月30日現在）
 
@@ -27,7 +27,7 @@
 ##### 操作方法
 
 * 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
-http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<https://nims-dpfc.github.io/M-DaC_XPS/Tutorial.html#xps-survey-narrow-ulvac-phi>
 
 * 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
