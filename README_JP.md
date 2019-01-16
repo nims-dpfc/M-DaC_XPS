@@ -47,7 +47,7 @@ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ##### 論文などにおける引用の表記
 
-* M-DaCを使った研究や開発においての引用例を参照してください。
+* M-DaCを使った研究や開発では、下記の引用例を参照してください。
 
 日本語引用文例）　
 
@@ -55,7 +55,7 @@ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
+H. Nagao, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 
 
