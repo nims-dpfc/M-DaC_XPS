@@ -6,9 +6,9 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ### Tutorial
 
- *M-DaC Tutorial*   https://nims-dpfc.github.io/M-DaC_doc
+ *M-DaC Tutorial:*   https://nims-dpfc.github.io/M-DaC_doc
  
- *M-DaC for XPS*    https://nims-dpfc.github.io/M-DaC_doc/xps.html
+ *M-DaC for XPS:*    https://nims-dpfc.github.io/M-DaC_doc/xps.html
 
 ### Instruments (As of Jan. 30, 2019) 
 
