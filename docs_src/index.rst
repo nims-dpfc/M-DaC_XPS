@@ -58,6 +58,15 @@ Quick Start
 チュートリアルにある「 `Jupyter Notebookでの実行`_ 」を参考に各種コマンドを実行します。
 ``xps_survey.ipynb`` を使用すると簡単に実行できます。
 
+XPS_surveyの実行方法についての動画です。
+
+.. raw:: html
+
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="100%" height="350" src="https://www.youtube.com/embed/Nr256kGc-6o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+
 Online documentation (and example of use):
     https://nims-dpfc.github.io/MDAC_XPS/
 
