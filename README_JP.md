@@ -6,7 +6,9 @@
 
 ### チュートリアル
 
-  <https://nims-dpfc.github.io/M-DaC_XPS/xps.html>
+ [M-Dac チュートリアル] https://nims-dpfc.github.io/M-DaC_doc
+ 
+ [M-Dac for XPS]  https://nims-dpfc.github.io/M-DaC_doc/xps.html
 
 ### 対象装置およびメーカ　（2019年１月30日現在）
 
@@ -27,7 +29,7 @@
 ### 操作方法
 
 * 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
-<https://nims-dpfc.github.io/M-DaC_XPS/xps.html>
+<https://nims-dpfc.github.io/M-DaC_doc/xps.html>
 
 * 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
