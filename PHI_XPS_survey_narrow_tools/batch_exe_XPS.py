@@ -7,6 +7,9 @@
 #-------------------------------------------------
 # coding: utf-8
 
+__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
+__version__ = "1.0.0"
+
 import argparse
 import os
 import csv
@@ -523,6 +526,31 @@ metadata.appendChild(subnode)
 column_name = template.find('column_name').text
 subnode = dom.createElement('column_name')
 subnode.appendChild(dom.createTextNode(column_name))
+metadata.appendChild(subnode)
+tool_package = __package__
+subnode = dom.createElement('tool_package')
+subnode.appendChild(dom.createTextNode(tool_package))
+metadata.appendChild(subnode)
+tool_filename = os.path.basename(__file__)
+subnode = dom.createElement('tool_filename')
+subnode.appendChild(dom.createTextNode(tool_filename))
+metadata.appendChild(subnode)
+tool_version = __version__
+subnode = dom.createElement('tool_version')
+subnode.appendChild(dom.createTextNode(tool_version))
+metadata.appendChild(subnode)
+
+template_package = template.getroot().attrib['package']
+subnode = dom.createElement('template_package')
+subnode.appendChild(dom.createTextNode(template_package))
+metadata.appendChild(subnode)
+template_filename = os.path.basename(templatefile)
+subnode = dom.createElement('template_filename')
+subnode.appendChild(dom.createTextNode(template_filename))
+metadata.appendChild(subnode)
+template_version = template.getroot().attrib['version']
+subnode = dom.createElement('template_version')
+subnode.appendChild(dom.createTextNode(template_version))
 metadata.appendChild(subnode)
 if jupytermode == True:
     print(dom.toprettyxml())

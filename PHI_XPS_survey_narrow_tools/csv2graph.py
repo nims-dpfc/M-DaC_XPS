@@ -7,6 +7,9 @@
 #-------------------------------------------------
 # coding: utf-8
 
+__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
+__version__ = "1.0.0"
+
 import argparse
 import os.path
 import csv
@@ -14,8 +17,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 from matplotlib.ticker import ScalarFormatter
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-import plotly.graph_objs as go
 import codecs
 import unicodedata
 
@@ -71,6 +72,8 @@ name, ext = os.path.splitext(readfile)
 axis = []
 
 if jupytermode == True:
+    from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+    import plotly.graph_objs as go
     init_notebook_mode(connected=True)
 
 with open(readfile, 'r') as f:

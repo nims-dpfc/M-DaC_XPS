@@ -7,6 +7,9 @@
 #-------------------------------------------------
 # coding: utf-8
 
+__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
+__version__ = "1.0.0"
+
 import argparse
 import csv
 import itertools
@@ -118,6 +121,12 @@ with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
                     meta = element
                     header.append(meta)
                     meta = ['##acq_date', acqdate]
+                    header.append(meta)
+                    meta = ['##tool_package', __package__]
+                    header.append(meta)
+                    meta = ['##tool_filename', os.path.basename(__file__)]
+                    header.append(meta)
+                    meta = ['##tool_version', __version__]
                     header.append(meta)
                     meta = ['##comment', filetype]
                     header.append(meta)
