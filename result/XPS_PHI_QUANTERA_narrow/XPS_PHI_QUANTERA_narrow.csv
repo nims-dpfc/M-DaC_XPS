@@ -4,6 +4,9 @@
 #y,Intensity,cps
 #legend,Cu2p,Cu_LMM,O1s,C1s
 ##acq_date,20170606
+##tool_package,M-DaC_XPS/PHI_XPS_survey_narrow_tools
+##tool_filename,txt2csv.py
+##tool_version,1.0.0
 ##comment,SPECTRUM
 
 974.0000,53572.4219,620.0000,39808.3203,543.0000,11753.1357,298.0000,10430.1191

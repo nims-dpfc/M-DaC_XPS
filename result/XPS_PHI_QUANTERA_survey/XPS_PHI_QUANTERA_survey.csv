@@ -4,6 +4,9 @@
 #y,Intensity,cps
 #legend,Survey
 ##acq_date,20170606
+##tool_package,M-DaC_XPS/PHI_XPS_survey_narrow_tools
+##tool_filename,txt2csv.py
+##tool_version,1.0.0
 ##comment,SPECTRUM
 
 1380.0000,333762.7500

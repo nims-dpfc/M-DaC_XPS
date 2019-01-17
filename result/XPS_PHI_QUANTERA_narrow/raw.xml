@@ -48,4 +48,10 @@
 	<meta key="ImageSizeXY" type="String">1400.0000 100.0000 Area</meta>
 	<column_num>4</column_num>
 	<column_name>condition</column_name>
+	<tool_package>M-DaC_XPS/PHI_XPS_survey_narrow_tools</tool_package>
+	<tool_filename>txt2raw_XPS_survey.py</tool_filename>
+	<tool_version>1.0.0</tool_version>
+	<template_package>M-DaC_XPS/PHI_XPS_survey_narrow_tools</template_package>
+	<template_filename>xps_raw_template.xml</template_filename>
+	<template_version>1.0.0</template_version>
 </metadata>
