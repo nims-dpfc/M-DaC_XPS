@@ -1,4 +1,4 @@
-##tool_package,M-DaC_XPS/PHI_XPS_survey_narrow_tools
+##tool_package,M-DaC_XPS/PHI_XPS_depth_tools
 ##tool_filename,txt2csv_depth.py
 ##tool_version,1.0.0
 ##Spectra in depth profile

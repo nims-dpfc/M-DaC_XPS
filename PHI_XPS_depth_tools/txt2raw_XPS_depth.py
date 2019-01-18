@@ -7,7 +7,7 @@
 #-------------------------------------------------
 # coding: utf-8
 
-__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
+__package__ = "M-DaC_XPS/PHI_XPS_depth_tools"
 __version__ = "1.0.0"
 
 import argparse
