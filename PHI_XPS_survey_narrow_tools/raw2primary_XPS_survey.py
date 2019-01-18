@@ -7,6 +7,9 @@
 #-------------------------------------------------
 # coding: utf-8
 
+__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
+__version__ = "1.0.0"
+
 import argparse
 import os.path
 import csv
@@ -16,9 +19,6 @@ import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
 import codecs
-
-__package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
-__version__ = "1.0.0"
 
 def registdf(key, channel, value, metadata, unitlist, template):
     key_unit = 0
