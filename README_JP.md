@@ -71,4 +71,4 @@ H. Nagao, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-
 
  　統合型材料開発・情報基盤部門 材料データプラットフォームセンター　
 
-　 M-DaC代表窓口  E-mail: m-dac@nims.go.jp
+　 M-DaC代表窓口  E-mail: m-dac@ml.nims.go.jp
