@@ -67,4 +67,4 @@ National Institutes for Materials Science
 
   Research and Services Division of Materials Data and Integrated System (MaDIS), Materials Data Platform Center
 
-  M-DaC Office  E-mail: m-dac@ml.nims.go.jp
+  Materials Data Analysis Group (M-DaC in charge) E-mail: m-dac@ml.nims.go.jp
