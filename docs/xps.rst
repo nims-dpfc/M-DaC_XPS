@@ -125,16 +125,5 @@ batch_exe_XPS.py は、上記のコマンドをまとめて行うプログラム
 スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
 連続変換を行いたい場合などに使用します。
 
-Movie
------
-
-XPS_surveyの実行方法についての動画です。
-
-.. raw:: html
-
-    <div style="text-align: center; margin-bottom: 2em;">
-    <iframe width="100%" height="350" src="https://www.youtube.com/embed/Nr256kGc-6o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
 .. |yen| unicode:: U+00A5
    :trim:
