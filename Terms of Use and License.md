@@ -8,7 +8,7 @@
 
 
 
-   2.2.Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE.txt. Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
+   2.2.Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE_MIT.txt. Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
 
 
 
