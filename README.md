@@ -37,7 +37,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ### Terms of Use and License
 
-* Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-NonCommercial 4.0 International license.
+* Data and articles within the Program with “CC-BY-NC” in the License field may be used under the [Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/).
 
 * Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE_MIT.txt. 
 
@@ -60,8 +60,6 @@ H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)
 ### Contact Us
 
 Please contact below if you have any questions about licensing and how to use this program.
-
-
 
 National Institutes for Materials Science 
 
