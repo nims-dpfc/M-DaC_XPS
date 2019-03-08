@@ -1,10 +1,10 @@
-#-------------------------------------------------
+# -------------------------------------------------
 # txt2csv.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
-#-------------------------------------------------
+# -------------------------------------------------
 # coding: utf-8
 
 __package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
@@ -47,8 +47,9 @@ with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
     for line in f:
         line = line.strip()
         if flag == 0:
-            if line.find('Area Comment,RegionNo,AtomicName,Area No,XLabel,YLabel,DataCount') > -1:
-                templine  = 1
+            if line.find('Area Comment,RegionNo,AtomicName,Area No,\
+            XLabel,YLabel,DataCount') > -1:
+                templine = 1
                 flag = 1
                 count = 1
                 arr = []
@@ -100,7 +101,8 @@ with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
                     xlabel = itemList[0].split('(')
                     xlabelname = xlabel[0]
                     xlabelunit = xlabel[1].replace(')', '')
-                    xoption = itemList[1]
+                    if len(itemList) > 1:
+                        xoption = itemList[1]
                     xlabelList = itemList
                 elif count == 6 and column == 0:
                     itemList = line.split(',')
@@ -151,6 +153,8 @@ for col in elements:
     atomName_array.append(col + '_x')
     atomName_array.append(col)
 
+"""test line.
+"""
 header.append('')
 lst = [[[''] * 2 for i in range(maxlen)] for j in range(column+1)]
 for i, j in enumerate(allData):
