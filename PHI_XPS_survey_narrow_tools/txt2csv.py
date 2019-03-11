@@ -8,7 +8,7 @@
 # coding: utf-8
 
 __package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse
 import csv
@@ -43,12 +43,12 @@ acqdate = ''
 filetype = ''
 element = ['#legend']
 collection_time = ['#acq_time']
+checkline = "Area Comment,RegionNo,AtomicName,Area No,XLabel,YLabel,DataCount"
 with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
     for line in f:
         line = line.strip()
         if flag == 0:
-            if line.find('Area Comment,RegionNo,AtomicName,Area No,\
-            XLabel,YLabel,DataCount') > -1:
+            if line.find(checkline) > -1:
                 templine = 1
                 flag = 1
                 count = 1
@@ -153,8 +153,6 @@ for col in elements:
     atomName_array.append(col + '_x')
     atomName_array.append(col)
 
-"""test line.
-"""
 header.append('')
 lst = [[[''] * 2 for i in range(maxlen)] for j in range(column+1)]
 for i, j in enumerate(allData):
