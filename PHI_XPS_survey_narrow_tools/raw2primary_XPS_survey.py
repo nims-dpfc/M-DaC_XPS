@@ -1,14 +1,14 @@
-#-------------------------------------------------
+# -------------------------------------------------
 # raw2primary_XPS_survey.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
-#-------------------------------------------------
+# -------------------------------------------------
 # coding: utf-8
 
 __package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse
 import os.path
@@ -20,22 +20,37 @@ import re
 import xml.etree.ElementTree as ET
 import codecs
 
+
+def is_float(num):
+    try:
+        float(num)
+    except ValueError:
+        return False
+    return True
+
+
 def registdf(key, channel, value, metadata, unitlist, template):
     key_unit = 0
     column = key
-
     tempflag = 1
-    if not column in columns:
+
+    if column not in columns:
         tempflag = 0
     if tempflag == 1:
         org_column = column
-        if value != None:
+        list = ["Analysis_width_x", "Analysis_width_y", "Analysis_region"]
+        if key in list:
+            arrayvalue = value.split()
+            if not is_float(arrayvalue[0]):
+                value = None
+
+        if value is not None:
             arrayvalue = value.split()
             unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
             transition = 0
-            if unitcolumn != None:
+            if unitcolumn is not None:
                 value_unit = arrayvalue[1]
-                value = arrayvalue[0] 
+                value = arrayvalue[0]
                 if key == "Analyser_axis_take_off_polar_angle":
                     value_unit = unitcolumn.get("unit")
                 elif key == "Analyser_Pass_energy":
@@ -70,7 +85,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     value_unit = unitcolumn.get("unit")
                     value = arrayvalue[10]
             else:
-                value_unit=""
+                value_unit = ""
                 if key == "Year":
                     dt = parse(value)
                     value = dt.year
@@ -103,10 +118,10 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     peak = re.findall(r'(\d+|\D+)', arrayvalue[2])
                     if peak[0] == "Su":
                         value = "Survey"
-                        value2= ""
+                        value2 = ""
                     elif peak[0] == "Va":
                         value = "Valence"
-                        value2= ""
+                        value2 = ""
                     elif "_" in peak[0]:
                         peak2 = peak[0].split("_", 1)
                         value = peak2[0]
@@ -117,15 +132,15 @@ def registdf(key, channel, value, metadata, unitlist, template):
                         for i, x in enumerate(peak):
                             if 0 < i:
                                 value2 = value2 + x
-                                
+
                 elif key == "Peak_Sweep_Number":
                     value = int(arrayvalue[2])
                 elif key == "Number_of_scans":
                     SurvNumCycles = rawdata.find('meta[@key="SurvNumCycles"]').text
-                    if SurvNumCycles == None:
+                    if SurvNumCycles is None:
                         SurvNumCycles = 1
                     value = int(SurvNumCycles) * int(arrayvalue[2])
-                    
+
             subnode = dom.createElement('meta')
             subnode.appendChild(dom.createTextNode(str(value)))
             subnode_attr = dom.createAttribute('key')
@@ -139,10 +154,10 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
                 unitlist.append(key)
-                
+
             subnode_attr = dom.createAttribute('type')
             typename = template.find('meta[@key="{value}"]'.format(value=key))
-            if typename.get("type") != None:
+            if typename.get("type") is not None:
                 subnode_attr.value = typename.get("type")
             else:
                 subnode_attr.value = "String"
@@ -165,7 +180,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
 
                 subnode_attr = dom.createAttribute('type')
                 typename = template.find('meta[@key="Transitions"]')
-                if typename.get("type") != None:
+                if typename.get("type") is not None:
                     subnode_attr.value = typename.get("type")
                 else:
                     subnode_attr.value = "String"
@@ -182,6 +197,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
 
         return metadata
 
+
 def regist(column, key, rawdata, metadata, channel, value, unitlist, template):
     if column in rawcolumns:
         registdf(key, channel, value, metadata, unitlist, template)
@@ -197,6 +213,7 @@ def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
             metadata = regist(column, temp_name, rawdata, metadata, columnnum, node.text, unitlist, template)
     return(metadata)
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path", help="input file")
 parser.add_argument("template_file", help="template file")
@@ -209,54 +226,54 @@ outputfile = options.out_file
 print_option = options.stdout
 channel = 0
 rawdata = ET.parse(readfile)
-rawcolumns=[]
+rawcolumns = []
 rawmetas = rawdata.findall('meta')
 for meta in rawmetas:
     rawcolumns.append(meta.attrib["key"])
 rawcolumns = list(set(rawcolumns))
 template = ET.parse(templatefile)
-columns=[]
+columns = []
 metas = template.findall('meta')
 for meta in metas:
     columns.append(meta.attrib["key"])
 dom = xml.dom.minidom.Document()
 metadata = dom.createElement('metadata')
 dom.appendChild(metadata)
-count = 0;
+count = 0
 
-metalist = {"Technique":"Technique",
-            "Year":"AcqFileDate",
-            "Month":"AcqFileDate",
-            "Day":"AcqFileDate",
-            "Instrument_model_identifier":"InstrumentModel",
-            "Operator_identifier":"Operator",
-            "Institution_idendfier":"Institution",
-            "Experiment_Identifier":"ExperimentID",
-            "Experiment_mode":"FileType",
-            "Analyser_mode":"AnalyserMode",
-            "Analyser_work_function":"AnalyserWorkFcn",
-            "Sputtering_interval_time":"ProfSputterDelay",
-            "Sputtering_cycle":"ProfSputterDelay",
-            "Species_label":"SpectralRegDef",
-            "Abscissa_increment":"SpectralRegDef",
-            "Abscissa_start":"SpectralRegDef",
-            "Abscissa_end":"SpectralRegDef",
-            "Collection_time":"SpectralRegDef",
-            "Measurement_Acquisition_Number":"SurvNumCycles",
-            "Peak_Sweep_Number":"SpectralRegDef2",
-            "Analyser_Pass_energy":"SpectralRegDef",
-            "Number_of_scans":"SpectralRegDef2",
-            "Analyser_axis_take_off_polar_angle":"SourceAnalyserAngle",
-            "Analyser_acceptance_solid_angle":"AnalyserSolidAngle",
-            "Analysis_source_beam_diameter":"XrayBeamDiameter",
-            "Analysis_source_strength":"XRayHighPower",
-            "Comment":"SpatialAreaDesc",
-            "Analysis_width_x":"ImageSizeXY",
-            "Analysis_width_y":"ImageSizeXY",
-            "Analysis_region":"ImageSizeXY"}
+metalist = {"Technique": "Technique",
+            "Year": "AcqFileDate",
+            "Month": "AcqFileDate",
+            "Day": "AcqFileDate",
+            "Instrument_model_identifier": "InstrumentModel",
+            "Operator_identifier": "Operator",
+            "Institution_idendfier": "Institution",
+            "Experiment_Identifier": "ExperimentID",
+            "Experiment_mode": "FileType",
+            "Analyser_mode": "AnalyserMode",
+            "Analyser_work_function": "AnalyserWorkFcn",
+            "Sputtering_interval_time": "ProfSputterDelay",
+            "Sputtering_cycle": "ProfSputterDelay",
+            "Species_label": "SpectralRegDef",
+            "Abscissa_increment": "SpectralRegDef",
+            "Abscissa_start": "SpectralRegDef",
+            "Abscissa_end": "SpectralRegDef",
+            "Collection_time": "SpectralRegDef",
+            "Measurement_Acquisition_Number": "SurvNumCycles",
+            "Peak_Sweep_Number": "SpectralRegDef2",
+            "Analyser_Pass_energy": "SpectralRegDef",
+            "Number_of_scans": "SpectralRegDef2",
+            "Analyser_axis_take_off_polar_angle": "SourceAnalyserAngle",
+            "Analyser_acceptance_solid_angle": "AnalyserSolidAngle",
+            "Analysis_source_beam_diameter": "XrayBeamDiameter",
+            "Analysis_source_strength": "XRayHighPower",
+            "Comment": "SpatialAreaDesc",
+            "Analysis_width_x": "ImageSizeXY",
+            "Analysis_width_y": "ImageSizeXY",
+            "Analysis_region": "ImageSizeXY"}
 
 columns_unique = list(dict.fromkeys(columns))
-unitlist=[]
+unitlist = []
 maxcolumn = 0
 for k in columns_unique:
     if k in metalist:
@@ -298,9 +315,9 @@ template_version = template.getroot().attrib['version']
 subnode = dom.createElement('template_version')
 subnode.appendChild(dom.createTextNode(template_version))
 metadata.appendChild(subnode)
-if print_option == True:
+if print_option is True:
     print(dom.toprettyxml())
-file = codecs.open(outputfile,'wb',encoding='utf-8')
-dom.writexml(file,'','\t','\n',encoding='utf-8')
+file = codecs.open(outputfile, 'wb', encoding='utf-8')
+dom.writexml(file, '', '\t', '\n', encoding='utf-8')
 file.close()
 dom.unlink()
