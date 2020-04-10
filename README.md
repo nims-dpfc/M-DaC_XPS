@@ -69,5 +69,5 @@ National Institutes for Materials Science
   Materials Data Analysis Group (M-DaC in charge) E-mail: m-dac@ml.nims.go.jp
 
 
-2019.1.30 1st Ed.
+2019.1.30 1st Ed.  
 2020.4.10  2nd Ed.
