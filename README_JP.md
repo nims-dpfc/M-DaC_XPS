@@ -16,7 +16,7 @@
 
 　X線回折/ X-ray Diffraction (XRD) （株式会社リガク）
 
- オージェ電子分光/ Auger electron spectroscopy (AES)（日本電子株式会社）
+ オージェ電子分光/ Auger electron spectroscopy (AES)（日本電子株式会社、アルバック・ファイ株式会社）
 
 
 
