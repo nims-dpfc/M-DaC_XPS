@@ -6,45 +6,33 @@
 
 ### チュートリアル
 
-  *M-Dac チュートリアル:* https://nims-dpfc.github.io/M-DaC_doc
- 
-  *M-Dac for XPS:*  https://nims-dpfc.github.io/M-DaC_doc/xps.html
+  https://nims-dpfc.github.io/M-DaC_doc/
 
-### 対象装置およびメーカ　（2020年4月10日現在）
+### 対象装置およびメーカー　（2020年4月10日現在）
 
-　X線光電子分光/ X-ray Photoelectron Spectroscopy (XPS)　（アルバック・ファイ株式会社）
-
-　X線回折/ X-ray Diffraction (XRD) （株式会社リガク）
-
- オージェ電子分光/ Auger electron spectroscopy (AES)（日本電子株式会社、アルバック・ファイ株式会社）
-
-
+| 測定法 | 略称 | メーカー |
+| --- | --- | --- |
+| X線光電子分光 | XPS | アルバック・ファイ株式会社 |
+| X線回折 | XRD | 株式会社リガク |
+| オージェ電子分光 | AES | 日本電子株式会社、アルバック・ファイ株式会社 |
 
 ### 動作環境
 
-　python 3.X
-
-　Jupyter Notebook (http://jupyter.org/)
-
-
+* python 3.X
+* Jupyter Notebook (http://jupyter.org/)
 
 ### 操作方法
 
 * 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
-<https://nims-dpfc.github.io/M-DaC_doc/xps.html>
-
+ https://nims-dpfc.github.io/M-DaC_doc/
 * 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
 
 
 ### 利用ルールおよびライセンス
 
-* 本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「[クリエイティブ・コモンズ・ライセンスの表示-非営利4.0国際](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)」のもとで「CC-BY-NC」での利用ができます。
-
+* 本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「*クリエイティブ・コモンズ・ライセンスの表示-非営利4.0国際*」のもとで「*CC-BY-NC*」での利用ができます。
 * 本プログラム等のうち、ライセンス欄に「MITライセンス」の表記のある試験用ソースコードは別に示される『LICENSE_MIT.txt』に示されるMITライセンスのもと利用できます。
-
-* アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
-
 * 詳細は『Terms of Use and License_JP.md』をお読みください。
 
 
