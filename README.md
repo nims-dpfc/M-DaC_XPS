@@ -8,7 +8,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 　　https://nims-dpfc.github.io/M-DaC_doc/
 
-### Instruments (As of April 10, 2020) 
+### Instruments (As of April 15, 2020) 
 
 | measurement method | abb. | maker |
 | --- | --- | --- |
@@ -65,4 +65,4 @@ National Institutes for Materials Science
 
 
 2019.1.30 1st Ed.  
-2020.4.10  2nd Ed.
+2020.4.15  2nd Ed.

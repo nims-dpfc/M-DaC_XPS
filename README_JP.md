@@ -8,7 +8,7 @@
 
   https://nims-dpfc.github.io/M-DaC_doc/
 
-### 対象装置およびメーカー　（2020年4月10日現在）
+### 対象装置およびメーカー　（2020年4月15日現在）
 
 | 測定法 | 略称 | メーカー |
 | --- | --- | --- |
@@ -65,4 +65,4 @@ H. Nagao, S. Matsunami, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conver
 
 
 2019.1.30 初版  
-2020.4.10　改定
+2020.4.15　改定
