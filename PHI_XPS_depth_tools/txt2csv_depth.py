@@ -224,7 +224,7 @@ writefile = name + '.csv'
 with open(writefile, 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerows(header)
-    writer.writerows(header_depth)    
+    writer.writerows(header_depth)
     for i, j in enumerate(allData):
         writer.writerow(zaxis)
         writer.writerows(j)

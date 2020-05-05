@@ -71,7 +71,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
             transition = 0
             if unitcolumn != None:
                 value_unit = arrayvalue[1]
-                value = arrayvalue[0] 
+                value = arrayvalue[0]
                 if key == "Analyser_axis_take_off_polar_angle":
                     value_unit = unitcolumn.get("unit")
                 elif key == "Analyser_Pass_energy":
@@ -153,7 +153,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                         for i, x in enumerate(peak):
                             if 0 < i:
                                 value2 = value2 + x
-                                
+
                 elif key == "Peak_Sweep_Number":
                     value = int(arrayvalue[2])
 
@@ -162,7 +162,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     if SurvNumCycles == None:
                         SurvNumCycles = 1
                     value = int(SurvNumCycles) * int(arrayvalue[2])
-                    
+
             subnode = dom.createElement('meta')
             subnode.appendChild(dom.createTextNode(str(value)))
             subnode_attr = dom.createAttribute('key')
@@ -176,7 +176,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
                 unitlist.append(key)
-                
+
             subnode_attr = dom.createAttribute('type')
             typename = template.find('meta[@key="{value}"]'.format(value=key))
             if typename.get("type") != None:
@@ -236,7 +236,7 @@ def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
 
 def is_japanese(titlestring):
     for ch in string:
-        name = unicodedata.name(ch) 
+        name = unicodedata.name(ch)
         if "CJK UNIFIED" in name or "HIRAGANA" in name or "KATAKANA" in name:
             return(True)
     return(False)

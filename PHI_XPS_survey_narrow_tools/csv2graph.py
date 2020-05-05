@@ -49,7 +49,7 @@ def plotlygraph(xrevFlag, yrevFlag, title, data, fig):
 
 def is_japanese(titlestring):
     for ch in string:
-        name = unicodedata.name(ch) 
+        name = unicodedata.name(ch)
         if "CJK UNIFIED" in name or "HIRAGANA" in name or "KATAKANA" in name:
             return(True)
     return(False)

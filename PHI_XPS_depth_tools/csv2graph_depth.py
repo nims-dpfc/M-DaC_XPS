@@ -20,7 +20,7 @@ from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.graph_objs as go
 import numpy as np
 from scipy import integrate
-from mpl_toolkits.mplot3d import Axes3D   
+from mpl_toolkits.mplot3d import Axes3D
 import codecs
 import unicodedata
 import matplotlib.ticker as ticker
@@ -83,7 +83,7 @@ def plotlygraph3D(xrevFlag, yrevFlag, zrevFlag, title, data, fig):
                         center=dict(x=0, y=0, z=0),
                         eye=dict(x=2.5, y=0.1, z=0.1)
                     ),
-            ),  
+            ),
     )
 
     fig = dict(data=data, layout=layout)
@@ -117,7 +117,7 @@ spectrablock = 0
 
 if jupytermode == True:
     init_notebook_mode(connected=True)
-    
+
 with open(readfile, 'r') as f:
     reader = csv.reader(f)
     line = 1
@@ -399,7 +399,7 @@ for atom in titleList:
         trace = dict(
             name = atom,
             x = z_d, y = x_d, z = y_d,
-            type = "scatter3d",    
+            type = "scatter3d",
             mode = 'lines')
         data2.append( trace )
     index += 1

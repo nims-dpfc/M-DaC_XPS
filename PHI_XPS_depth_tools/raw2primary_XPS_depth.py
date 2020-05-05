@@ -36,7 +36,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
             if unitcolumn != None:
                 if len(arrayvalue) > 1:
                     value_unit = arrayvalue[1]
-                value = arrayvalue[0] 
+                value = arrayvalue[0]
                 if key == "Analyser_axis_take_off_polar_angle":
                     value_unit = unitcolumn.get("unit")
                 elif key == "Analyser_Pass_energy":
@@ -169,7 +169,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     value = int(SurvNumCycles) * int(arrayvalue[2])
                 elif key == "Sputtering_cycle":
                     value = arrayvalue[8]
-                    
+
             subnode = dom.createElement('meta')
             subnode.appendChild(dom.createTextNode(str(value)))
             subnode_attr = dom.createAttribute('key')
@@ -183,7 +183,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
                 unitlist.append(key)
-                
+
             subnode_attr = dom.createAttribute('type')
             typename = template.find('meta[@key="{value}"]'.format(value=key))
             if typename.get("type") != None:
