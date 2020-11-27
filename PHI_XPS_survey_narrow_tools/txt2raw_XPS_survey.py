@@ -1,14 +1,14 @@
-#-------------------------------------------------
+# -------------------------------------------------
 # txt2raw_XPS_survey.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
-#-------------------------------------------------
+# -------------------------------------------------
 # coding: utf-8
 
 __package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse
 import os.path
@@ -25,7 +25,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("file_path", help="input file")
 parser.add_argument("template_file", help="template file")
 parser.add_argument("out_file", help="output file")
-parser.add_argument("--stdout", help="show meta information", action="store_true")
+helpword = "show meta information"
+parser.add_argument("--stdout", help=helpword, action="store_true")
 options = parser.parse_args()
 readfile = options.file_path
 templatefile = options.template_file
@@ -34,7 +35,7 @@ print_option = options.stdout
 channel = 0
 
 template = ET.parse(templatefile)
-columns=[]
+columns = []
 metas = template.findall('meta')
 for meta in metas:
     columns.append(meta.attrib["key"])
@@ -56,7 +57,7 @@ with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
             key = lines[0]
             value = lines[1]
             if 2 < len(lines):
-                for index,item in enumerate(lines):
+                for index, item in enumerate(lines):
                     if index > 1:
                         value = value + ':' + item
             if key == "NoSpectralReg" and 1 < int(value):
@@ -77,18 +78,19 @@ with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
 
             subnode_attr = dom.createAttribute('type')
             typename = template.find('meta[@key="{value}"]'.format(value=key))
-            if typename.get("type") != None:
-                subnode_attr.value = typename.get("type")
-            else:
-                subnode_attr.value = "String"
-            subnode.setAttributeNode(subnode_attr)
-            metadata.appendChild(subnode)
-
-            if channel != 0:
-                subnode_attr = dom.createAttribute('column')
-                subnode_attr.value = channel
+            if typename is not None:
+                if typename.get("type") is not None:
+                    subnode_attr.value = typename.get("type")
+                else:
+                    subnode_attr.value = "String"
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
+
+                if channel != 0:
+                    subnode_attr = dom.createAttribute('column')
+                    subnode_attr.value = channel
+                    subnode.setAttributeNode(subnode_attr)
+                    metadata.appendChild(subnode)
 
 subnode = dom.createElement('column_num')
 subnode.appendChild(dom.createTextNode(str(maxcolumn)))
@@ -122,11 +124,11 @@ template_version = template.getroot().attrib['version']
 subnode = dom.createElement('template_version')
 subnode.appendChild(dom.createTextNode(template_version))
 metadata.appendChild(subnode)
-if print_option == True:
+if print_option is True:
     print(dom.toprettyxml())
-file = codecs.open(outputfile,'wb',encoding='utf-8')
+file = codecs.open(outputfile, 'wb', encoding='utf-8')
 
-dom.writexml(file,'','\t','\n',encoding='utf-8')
+dom.writexml(file, '', '\t', '\n', encoding='utf-8')
 
 file.close()
 dom.unlink()

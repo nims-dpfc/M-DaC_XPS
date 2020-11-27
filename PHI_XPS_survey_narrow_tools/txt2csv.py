@@ -1,14 +1,14 @@
-#-------------------------------------------------
+# -------------------------------------------------
 # txt2csv.py
 #
 # Copyright (c) 2018, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
-#-------------------------------------------------
+# -------------------------------------------------
 # coding: utf-8
 
 __package__ = "M-DaC_XPS/PHI_XPS_survey_narrow_tools"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse
 import csv
@@ -43,12 +43,13 @@ acqdate = ''
 filetype = ''
 element = ['#legend']
 collection_time = ['#acq_time']
+checkline = "Area Comment,RegionNo,AtomicName,Area No,XLabel,YLabel,DataCount"
 with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
     for line in f:
         line = line.strip()
         if flag == 0:
-            if line.find('Area Comment,RegionNo,AtomicName,Area No,XLabel,YLabel,DataCount') > -1:
-                templine  = 1
+            if line.find(checkline) > -1:
+                templine = 1
                 flag = 1
                 count = 1
                 arr = []
@@ -100,7 +101,8 @@ with codecs.open(readfile, 'r', encoding_option, 'ignore') as f:
                     xlabel = itemList[0].split('(')
                     xlabelname = xlabel[0]
                     xlabelunit = xlabel[1].replace(')', '')
-                    xoption = itemList[1]
+                    if len(itemList) > 1:
+                        xoption = itemList[1]
                     xlabelList = itemList
                 elif count == 6 and column == 0:
                     itemList = line.split(',')
